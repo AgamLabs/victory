@@ -64,7 +64,7 @@ function BannerOne() {
                             <div
                                 className="th-hero-bg"
                                 style={{
-                                    backgroundImage: "url(/assets/img/hero/hero_bg_1_1.jpg)",
+                                    backgroundImage: "url(/assets/img/hero/hero_bg1.avif)",
                                     backgroundRepeat: "no-repeat",
                                     backgroundSize: "cover",
                                 }}
@@ -108,7 +108,7 @@ function BannerOne() {
                             <div
                                 className="th-hero-bg"
                                 style={{
-                                    backgroundImage: "url(/assets/img/hero/hero_bg_1_2.jpg)", 
+                                    backgroundImage: "url(/assets/img/hero/hero_bg3.avif)", 
                                     backgroundRepeat: "no-repeat",
                                     backgroundSize: "cover",
                                 }}
@@ -150,7 +150,7 @@ function BannerOne() {
                             <div
                                 className="th-hero-bg"
                                 style={{
-                                    backgroundImage: "url(/assets/img/hero/hero_bg_1_3.jpg)",
+                                    backgroundImage: "url(/assets/img/hero/hero_bg3.avif)",
                                     backgroundRepeat: "no-repeat",
                                     backgroundSize: "cover",
                                 }}

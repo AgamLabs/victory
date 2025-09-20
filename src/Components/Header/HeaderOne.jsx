@@ -89,120 +89,17 @@ function HeaderOne() {
                                 <div className="col-auto">
                                     <div className="header-logo">
                                         <Link to="/">
-                                            <img src="/assets/img/logo.svg" alt="Tourm" />
+                                            <img src="/assets/img/logo_1.png" alt="Victory"  style={{maxHeight: "80px", width: "240px"}} />
                                         </Link>
                                     </div>
                                 </div>
                                 <div className="col-auto me-xl-auto">
                                     <nav className="main-menu d-none d-xl-inline-block">
                                         <ul>
-                                            <li className="menu-item-has-children mega-menu-wrap">
+                                            <li>
                                                 <Link className="active" to="/">
                                                     Home
                                                 </Link>
-                                                <ul className="mega-menu mega-menu-content">
-                                                    <li>
-                                                        <div className="container">
-                                                            <div className="row gy-4">
-                                                                <div className="col-lg-3">
-                                                                    <div className="mega-menu-box">
-                                                                        <div className="mega-menu-img">
-                                                                            <img
-                                                                                src="/assets/img/pages/home-travel.jpg"
-                                                                                alt="Home One"
-                                                                            />
-                                                                            <div className="btn-wrap">
-                                                                                <Link
-
-                                                                                    to="/"
-                                                                                    className="th-btn"
-                                                                                >
-                                                                                    View Demo
-                                                                                </Link>
-                                                                            </div>
-                                                                        </div>
-                                                                        <h3 className="mega-menu-title">
-                                                                            <Link to="/">
-                                                                                <span>01.</span>Home Travel
-                                                                            </Link>
-                                                                        </h3>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="col-lg-3">
-                                                                    <div className="mega-menu-box">
-                                                                        <div className="mega-menu-img">
-                                                                            <img
-                                                                                src="/assets/img/pages/home-tour.jpg"
-                                                                                alt="Home Two"
-                                                                            />
-                                                                            <div className="btn-wrap">
-                                                                                <Link
-                                                                                    to="/home-tour"
-                                                                                    className="th-btn "
-                                                                                >
-                                                                                    View Demo
-                                                                                </Link>
-                                                                            </div>
-                                                                        </div>
-                                                                        <h3 className="mega-menu-title">
-                                                                            <Link to="/home-tour">
-                                                                                <span>02.</span>Home Tour
-                                                                            </Link>
-                                                                        </h3>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="col-lg-3">
-                                                                    <div className="mega-menu-box">
-                                                                        <div className="mega-menu-img">
-                                                                            <img
-                                                                                src="/assets/img/pages/home-agency.jpg"
-                                                                                alt="Home Three"
-                                                                            />
-                                                                            <div className="btn-wrap">
-                                                                                <Link
-
-                                                                                    to="/home-agency"
-                                                                                    className="th-btn "
-                                                                                >
-                                                                                    View Demo
-                                                                                </Link>
-                                                                            </div>
-                                                                        </div>
-                                                                        <h3 className="mega-menu-title">
-                                                                            <Link to="/home-agency">
-                                                                                <span>03.</span>Home Agency
-                                                                            </Link>
-                                                                        </h3>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="col-lg-3">
-                                                                    <div className="mega-menu-box">
-                                                                        <div className="mega-menu-img">
-                                                                            <img
-                                                                                src="/assets/img/pages/home-yacht.jpg"
-                                                                                alt="Home Four"
-                                                                            />
-                                                                            <div className="btn-wrap">
-                                                                                <Link
-
-                                                                                    to="/home-yacht"
-                                                                                    className="th-btn "
-                                                                                >
-                                                                                    View Demo
-                                                                                </Link>
-                                                                            </div>
-                                                                        </div>
-                                                                        <h3 className="mega-menu-title">
-                                                                            <Link to="/home-yacht">
-                                                                                <span>04.</span>Home Yacht
-                                                                            </Link>
-                                                                        </h3>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
                                             </li>
                                             <li>
                                                 <Link to="/about">About Us</Link>
@@ -245,26 +142,6 @@ function HeaderOne() {
                                             <li className="menu-item-has-children">
                                                 <Link to="#">Pages</Link>
                                                 <ul className="sub-menu">
-                                                    <li className="menu-item-has-children">
-                                                        <Link to="#">Shop</Link>
-                                                        <ul className="sub-menu">
-                                                            <li>
-                                                                <Link to="/shop">Shop</Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link to="/shop/1">Shop Details</Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link to="/cart">Cart Page</Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link to="/checkout">Checkout</Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link to="/wishlist">Wishlist</Link>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
                                                     <li>
                                                         <Link to="/gallery">Gallery</Link>
                                                     </li>
@@ -279,9 +156,6 @@ function HeaderOne() {
                                                     </li>
                                                     <li>
                                                         <Link to="/resort/1">Resort Details</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/tour-details">Tour Details</Link>
                                                     </li>
                                                     <li>
                                                         <Link to="/tour-guide">Tour Guider</Link>

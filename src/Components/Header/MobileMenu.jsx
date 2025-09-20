@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 function MobileMenu({ isOpen, onClose }) {
     const [activeMenu, setActiveMenu] = useState(null);
-    const [activeShopMenu, setActiveShopMenu] = useState(false); // Shop submenu state
     const menuRefs = useRef({});
 
     // Toggle dropdown menu
@@ -13,11 +12,6 @@ function MobileMenu({ isOpen, onClose }) {
         }
     };
 
-    // Handle Shop menu separately
-    const toggleShopMenu = (e) => {
-        e.stopPropagation(); // Prevent menu from closing
-        setActiveShopMenu(!activeShopMenu);
-    };
 
     // Apply height animation when activeMenu changes
     useEffect(() => {
@@ -40,7 +34,7 @@ function MobileMenu({ isOpen, onClose }) {
 
                 <div className="mobile-logo">
                     <Link to="/">
-                        <img src="/assets/img/logo2.svg" alt="Tourm" />
+                        <img src="/assets/img/logo.png" alt="Victory" style={{maxHeight: "40px", width: "auto"}} />
                     </Link>
                 </div>
 
@@ -113,16 +107,11 @@ function MobileMenu({ isOpen, onClose }) {
                                 className="th-submenu"
                                 style={{ height: "0px", overflow: "hidden", transition: "height 0.3s ease-in-out" }}
                             >
-                                <li><Link to="/shop">Shop</Link></li>
-                                <li><Link to="/shop-details">Shop Details</Link></li>
-                                <li><Link to="/cart">Cart Page</Link></li>
-                                <li><Link to="/checkout">Checkout</Link></li>
-                                <li><Link to="/wishlist">Wishlist</Link></li>
                                 <li><Link to="/gallery">Gallery</Link></li>
                                 <li><Link to="/tour">Our Tour</Link></li>
                                 <li><Link to="/tour-details">Tour Details</Link></li>
                                 <li><Link to="/resort">Resort Page</Link></li>
-                                <li><Link to="/resot/1">Resort Details</Link></li>
+                                <li><Link to="/resort/1">Resort Details</Link></li>
                                 <li><Link to="/tour-guide">Tour Guide</Link></li>
                                 <li><Link to="/tour-guide/1">Tour Guider Details</Link></li>
                                 <li><Link to="/faq">Faq Page</Link></li>
