@@ -92,11 +92,11 @@ function BannerOne() {
                                         data-ani="slideinup"
                                         data-ani-delay="0.6s"
                                     >
-                                        <Link to="/tour" className="th-btn th-icon">
-                                            Explore Tours
+                                        <Link to="/destination" className="th-btn th-icon">
+                                            Explore Destinations
                                         </Link>
-                                        <Link to="/service" className="th-btn style2 th-icon">
-                                            Our Services
+                                        <Link to="/contact" className="th-btn style2 th-icon">
+                                            Request Quote
                                         </Link>
                                     </div>
                                 </div>
@@ -127,18 +127,18 @@ function BannerOne() {
                                         data-ani="slideinup"
                                         data-ani-delay="0.4s"
                                     >
-                                        Let’s make your best trip with us{" "}
+                                        Let's make your best trip with us{" "}
                                     </h1>
                                     <div
                                         className="btn-group"
                                         data-ani="slideinup"
                                         data-ani-delay="0.6s"
                                     >
-                                        <Link to="/tour" className="th-btn th-icon">
-                                            Explore Tours
+                                        <Link to="/service" className="th-btn th-icon">
+                                            Our DMC Services
                                         </Link>
-                                        <Link to="/service" className="th-btn style2 th-icon">
-                                            Our Services
+                                        <Link to="/contact" className="th-btn style2 th-icon">
+                                            Get Started
                                         </Link>
                                     </div>
                                 </div>
@@ -176,11 +176,11 @@ function BannerOne() {
                                         data-ani="slideinup"
                                         data-ani-delay="0.6s"
                                     >
-                                        <Link to="/tour" className="th-btn th-icon">
-                                            Explore Tours
+                                        <Link to="/gallery" className="th-btn th-icon">
+                                            View Gallery
                                         </Link>
-                                        <Link to="/service" className="th-btn style2 th-icon">
-                                            Our Services
+                                        <Link to="/contact" className="th-btn style2 th-icon">
+                                            Partner With Us
                                         </Link>
                                     </div>
                                 </div>

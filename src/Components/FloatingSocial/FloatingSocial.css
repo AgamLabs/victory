@@ -1,0 +1,116 @@
+.floating-social {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.social-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    color: white;
+}
+
+.whatsapp-btn {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+.whatsapp-btn:hover {
+    background: linear-gradient(135deg, #128C7E, #25D366);
+    color: white;
+}
+
+.line-btn {
+    background: linear-gradient(135deg, #00C300, #00B900);
+}
+
+.line-btn:hover {
+    background: linear-gradient(135deg, #00B900, #00C300);
+    color: white;
+}
+
+.line-btn i {
+    font-size: 32px;
+}
+
+.messenger-btn {
+    background: linear-gradient(135deg, #0084FF, #0066CC);
+}
+
+.messenger-btn:hover {
+    background: linear-gradient(135deg, #0066CC, #0084FF);
+    color: white;
+}
+
+/* Animation for entrance */
+.social-btn {
+    animation: slideInRight 0.6s ease-out;
+}
+
+.social-btn:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.social-btn:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .floating-social {
+        bottom: 15px;
+        left: 15px;
+    }
+    
+    .social-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-social {
+        bottom: 10px;
+        left: 10px;
+    }
+    
+    .social-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
