@@ -8,7 +8,6 @@ import TourGuide from '../Components/Guide/TourGuide'
 import TestimonialOne from '../Components/Testimonials/TestimonialOne'
 import BlogOne from '../Components/Blog/BlogOne'
 import FooterOne from '../Components/Footer/FooterOne'
-import ScrollToTop from '../Components/ScrollToTop'
 import FloatingSocial from '../Components/FloatingSocial/FloatingSocial'
 
 function HomeOne() {

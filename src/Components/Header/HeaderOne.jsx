@@ -201,11 +201,8 @@ function HeaderOne() {
                                                 </ul>
                                             </li>
                                             <li className="menu-item-has-children">
-                                                <Link to="#">Blog</Link>
+                                                <Link to="/blog">Blog</Link>
                                                 <ul className="sub-menu">
-                                                    <li>
-                                                        <Link to="/blog">Blog</Link>
-                                                    </li>
                                                     <li>
                                                         <Link to="/blog/1">Blog Details</Link>
                                                     </li>

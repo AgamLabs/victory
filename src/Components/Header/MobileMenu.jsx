@@ -18,7 +18,7 @@ function MobileMenu({ isOpen, onClose }) {
         Object.keys(menuRefs.current).forEach((key) => {
             const submenu = menuRefs.current[key];
             if (submenu) {
-                submenu.style.height = activeMenu == key ? `${submenu.scrollHeight}px` : "0px";
+                submenu.style.height = activeMenu  === key ? `${submenu.scrollHeight}px` : "0px";
             }
         });
     }, [activeMenu]);
