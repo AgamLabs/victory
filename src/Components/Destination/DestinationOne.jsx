@@ -6,16 +6,16 @@ import "swiper/css/effect-coverflow";
 import { Link } from "react-router-dom";
 
 const destinations = [
-  { id: 1, name: "Maldives", listings: 15, image: "/assets/img/destination/destination_1_1.jpg" },
-  { id: 2, name: "Thailand", listings: 22, image: "/assets/img/destination/destination_1_2.jpg" },
-  { id: 3, name: "Belgium", listings: 25, image: "/assets/img/destination/destination_1_3.jpg" },
-  { id: 4, name: "Island", listings: 28, image: "/assets/img/destination/destination_1_4.jpg" },
-  { id: 5, name: "Maldives", listings: 30, image: "/assets/img/destination/destination_1_5.jpg" },
-  { id: 6, name: "Maldives", listings: 15, image: "/assets/img/destination/destination_1_1.jpg" },
-  { id: 7, name: "Thailand", listings: 22, image: "/assets/img/destination/destination_1_2.jpg" },
-  { id: 8, name: "Belgium", listings: 25, image: "/assets/img/destination/destination_1_3.jpg" },
-  { id: 9, name: "Island", listings: 28, image: "/assets/img/destination/destination_1_4.jpg" },
-  { id: 10, name: "Maldives", listings: 30, image: "/assets/img/destination/destination_1_5.jpg" },
+  { id: 1, name: "Bangkok", listings: 45, image: "/assets/img/destination/destination_1_1.jpg" },
+  { id: 2, name: "Chiang Mai", listings: 32, image: "/assets/img/destination/destination_1_2.jpg" },
+  { id: 3, name: "Phuket", listings: 38, image: "/assets/img/destination/destination_1_3.jpg" },
+  { id: 4, name: "Koh Samui", listings: 28, image: "/assets/img/destination/destination_1_4.jpg" },
+  { id: 5, name: "Krabi", listings: 25, image: "/assets/img/destination/destination_1_5.jpg" },
+  { id: 6, name: "Bangkok", listings: 45, image: "/assets/img/destination/destination_1_1.jpg" },
+  { id: 7, name: "Chiang Mai", listings: 32, image: "/assets/img/destination/destination_1_2.jpg" },
+  { id: 8, name: "Phuket", listings: 38, image: "/assets/img/destination/destination_1_3.jpg" },
+  { id: 9, name: "Koh Samui", listings: 28, image: "/assets/img/destination/destination_1_4.jpg" },
+  { id: 10, name: "Krabi", listings: 25, image: "/assets/img/destination/destination_1_5.jpg" },
 ];
 
 const sliderOptions = {
@@ -81,8 +81,8 @@ function DestinationOne() {
     <div className="position-relative overflow-hidden">
       <div className="container">
         <div className="title-area text-center">
-          <span className="sub-title">Top Destination</span>
-          <h2 className="sec-title">Popular Destination</h2>
+          <span className="sub-title">Thailand Destinations</span>
+          <h2 className="sec-title">Discover Thailand's Most Popular Destinations</h2>
         </div>
 
         <div className={`slider-drag-wrap ${cursorActive ? 'active' : ''}`}>

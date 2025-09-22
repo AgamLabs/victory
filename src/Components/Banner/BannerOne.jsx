@@ -82,14 +82,14 @@ function BannerOne() {
                                         data-ani="slideinup"
                                         data-ani-delay="0.2s"
                                     >
-                                        Get unforgetable pleasure with us
+                                        Your Partner for Incredible Thailand Experiences
                                     </span>
                                     <h1
                                         className="hero-title"
                                         data-ani="slideinup"
                                         data-ani-delay="0.4s"
                                     >
-                                        Natural Wonder of the world{" "}
+                                        Travel is Always Changing, We Keep You Moving Forward
                                     </h1>
                                     <div
                                         className="btn-group"
@@ -124,14 +124,14 @@ function BannerOne() {
                                         data-ani="slideinup"
                                         data-ani-delay="0.2s"
                                     >
-                                        Get unforgetable pleasure with us
+                                        Your Partner for Incredible Thailand Experiences
                                     </span>
                                     <h1
                                         className="hero-title"
                                         data-ani="slideinup"
                                         data-ani-delay="0.4s"
                                     >
-                                        Let's make your best trip with us{" "}
+                                        With Local Expertise, Every Journey is Smoother & Smarter
                                     </h1>
                                     <div
                                         className="btn-group"
@@ -166,14 +166,14 @@ function BannerOne() {
                                         data-ani="slideinup"
                                         data-ani-delay="0.2s"
                                     >
-                                        Get unforgetable pleasure with us
+                                        Your Partner for Incredible Thailand Experiences
                                     </span>
                                     <h1
                                         className="hero-title"
                                         data-ani="slideinup"
                                         data-ani-delay="0.4s"
                                     >
-                                        Explore beauty of the whole world{" "}
+                                        Discover Thailand's Hidden Gems & Cultural Treasures
                                     </h1>
                                     <div
                                         className="btn-group"

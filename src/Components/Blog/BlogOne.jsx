@@ -8,49 +8,49 @@ import "swiper/css/pagination";
 const blogPosts = [
   {
     id: 1,
-    date: "July 05 2024",
-    readTime: "6 min read",
-    title: "10 Reasons why you should visit New Jersey",
+    date: "December 15 2024",
+    readTime: "5 min read",
+    title: "Thailand Tourism Recovery: Phuket, Chiang Mai & Krabi Leading Growth",
     image: "/assets/img/blog/blog_1_1.jpg",
     detailsLink: "/blog/1",
   },
   {
     id: 2,
-    date: "July 06 2024",
-    readTime: "7 min read",
-    title: "The best time to visit Japan & enjoy the cherry blossoms",
+    date: "December 10 2024",
+    readTime: "6 min read",
+    title: "Wellness Retreats & Beach Destinations: Thailand's Post-Pandemic Appeal",
     image: "/assets/img/blog/blog_1_2.jpg",
     detailsLink: "/blog/1",
   },
   {
     id: 3,
-    date: "July 07 2024",
-    readTime: "8 min read",
-    title: "The 7 amazing destinations for adventure seekers",
+    date: "December 05 2024",
+    readTime: "7 min read",
+    title: "Bangkok's Hidden Gems: From Street Food to Cultural Treasures",
     image: "/assets/img/blog/blog_1_3.jpg",
     detailsLink: "/blog/1",
   },
   {
     id: 4,
-    date: "July 09 2024",
-    readTime: "9 min read",
-    title: "10 Reasons why you should visit New Jersey",
+    date: "November 28 2024",
+    readTime: "5 min read",
+    title: "Songkran & Loy Krathong: Experiencing Thailand's Vibrant Festivals",
     image: "/assets/img/blog/blog_1_1.jpg",
     detailsLink: "/blog/1",
   },
   {
     id: 5,
-    date: "July 10 2024",
-    readTime: "10 min read",
-    title: "The best time to visit Japan & enjoy the cherry blossoms",
+    date: "November 20 2024",
+    readTime: "6 min read",
+    title: "Chiang Mai's Eco-Tourism: Organic Farms & Wildlife Sanctuaries",
     image: "/assets/img/blog/blog_1_2.jpg",
     detailsLink: "/blog/1",
   },
   {
     id: 6,
-    date: "July 12 2024",
-    readTime: "11 min read",
-    title: "The 7 amazing destinations for adventure seekers",
+    date: "November 15 2024",
+    readTime: "8 min read",
+    title: "Southern Thailand Islands: Beyond Tourist Spots to Tranquil Retreats",
     image: "/assets/img/blog/blog_1_3.jpg",
     detailsLink: "/blog/1",
   },
@@ -64,8 +64,8 @@ function BlogOne() {
           <div className="row align-items-center justify-content-between">
             <div className="col-md-7">
               <div className="title-area mb-md-0">
-                <span className="sub-title">About Us Restaurant</span>
-                <h2 className="sec-title">News & Articles From Tourm</h2>
+                <span className="sub-title">Thailand Tourism Insights</span>
+                <h2 className="sec-title">News & Articles From Victory International</h2>
               </div>
             </div>
             <div className="col-md-auto">

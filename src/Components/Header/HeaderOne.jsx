@@ -117,7 +117,7 @@ function HeaderOne() {
                                 <div className="col-auto">
                                     <div className="header-logo" style={{position: "relative", left: "0px", top: "5px"}}>
                                         <Link to="/">
-                                            <img src="/assets/img/logo_1.png" alt="Victory"  style={{maxHeight: "80px", width: "240px"}} />
+                                            <img src="/assets/img/logo_1.png" alt="Victory International"  style={{maxHeight: "80px", width: "240px"}} />
                                         </Link>
                                     </div>
                                 </div>

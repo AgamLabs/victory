@@ -9,7 +9,7 @@ function BlogThree() {
                     <div className="col-lg">
                         <div className="title-area text-center text-lg-start">
                             <span className="sub-title">Blog and Article</span>
-                            <h2 className="sec-title">Blog &amp; Articles From Tourm</h2>
+                            <h2 className="sec-title">Blog &amp; Articles From Victory International</h2>
                         </div>
                     </div>
                     <div className="col-lg-auto d-none d-lg-block">

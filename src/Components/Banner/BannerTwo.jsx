@@ -76,7 +76,7 @@ function BannerTwo() {
                   Discover <span className="hero-text">The beauty of world</span>
                 </h1>
                 <p className="hero-desc" data-ani="slideinup" data-ani-delay="0.5s">
-                  Tourm an international travel management company with 25 years of experience, specializing in business and maritime travel.
+                  Victory International - a leading Thailand DMC with extensive experience, specializing in destination management and B2B travel services.
                 </p>
                 <div className="btn-group" data-ani="slideinup" data-ani-delay="0.6s">
                   <Link to="/destination" className="th-btn white-btn th-icon">Explore Tours</Link>
@@ -114,7 +114,7 @@ function BannerTwo() {
                   Enjoy <span className="hero-text">The Most Enjoyable Journey</span>
                 </h1>
                 <p className="hero-desc" data-ani="slideinup" data-ani-delay="0.5s">
-                  Tourm an international travel management company with 25 years of experience, specializing in business and maritime travel.
+                  Victory International - a leading Thailand DMC with extensive experience, specializing in destination management and B2B travel services.
                 </p>
                 <div className="btn-group" data-ani="slideinup" data-ani-delay="0.6s">
                   <Link to="/tour" className="th-btn white-btn th-icon">Explore Tours</Link>

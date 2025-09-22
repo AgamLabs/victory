@@ -19,7 +19,7 @@ function SideMenu({ isOpen, onClose }) {
                         <div className="th-widget-about">
                             <div className="about-logo">
                                 <Link to="/">
-                                    <img src="assets/img/logo2.svg" alt="Tourm" />
+                                    <img src="/assets/img/logo_1.png" alt="Victory International" style={{maxHeight: "60px", width: "auto"}} />
                                 </Link>
                             </div>
                             <p className="about-text">
@@ -113,13 +113,13 @@ function SideMenu({ isOpen, onClose }) {
                                 </div>
                                 <div className="details">
                                     <p>
-                                        <Link to="mailto:mailinfo00@tourm.com" className="info-box_link">
-                                            mailinfo00@tourm.com
+                                        <Link to="mailto:info@victoryinternational.com" className="info-box_link">
+                                            info@victoryinternational.com
                                         </Link>
                                     </p>
                                     <p>
-                                        <Link to="mailto:support24@tourm.com" className="info-box_link">
-                                            support24@tourm.com
+                                        <Link to="mailto:support@victoryinternational.com" className="info-box_link">
+                                            support@victoryinternational.com
                                         </Link>
                                     </p>
                                 </div>

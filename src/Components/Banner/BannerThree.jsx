@@ -89,7 +89,7 @@ function BannerThree() {
                     { img: "/assets/img/hero/hero_bg_3_1.jpg", title: "Discover The World with Our Guide" },
                     { img: "/assets/img/hero/hero_bg_3_2.jpg", title: "Discover The World Best Destination" },
                     { img: "/assets/img/hero/hero_bg_3_3.jpg", title: "Capture Wonder Of The World" },
-                    { img: "/assets/img/hero/hero_bg_3_4.jpg", title: "Explore the world with Tourm" },
+                    { img: "/assets/img/hero/hero_bg_3_4.jpg", title: "Explore the world with Victory International" },
                 ].map((slide, index) => (
                     <SwiperSlide key={index}>
                         <div className="hero-inner">
@@ -98,7 +98,7 @@ function BannerThree() {
                                 <div className="hero-style3">
                                     <h1 className="hero-title" data-ani="slideinleft" data-ani-delay="0.2s">{slide.title}</h1>
                                     <p className="hero-text" data-ani="slideinleft" data-ani-delay="0.4s">
-                                        Tourm is an international travel management company with 25 years of experience, specializing in business and maritime travel.
+                                        Victory International is a leading Thailand DMC with extensive experience, specializing in destination management and B2B travel services.
                                     </p>
                                     <div className="btn-group" data-ani="slideinup" data-ani-delay="0.6s">
                                         <Link to="/tour" className="th-btn style2 th-icon">
@@ -123,11 +123,11 @@ function BannerThree() {
                         <div className="container">
                             <div className="hero-style3">
                                 <h1 className="hero-title" data-ani="slideinleft" data-ani-delay="0.2s">
-                                    Travel experience with Tourm
+                                    Travel experience with Victory International
                                 </h1>
                                 <p className="hero-text" data-ani="slideinleft" data-ani-delay="0.4s">
-                                    Tourm is an international travel management company with 25 years of
-                                    experience, specializing in business and maritime travel.
+                                    Victory International is a leading Thailand DMC with extensive
+                                    experience, specializing in destination management and B2B travel services.
                                 </p>
                                 <div className="btn-group" data-ani="slideinup" data-ani-delay="0.6s">
                                     <Link to="/tour" className="th-btn style2 th-icon">Explore Tours</Link>

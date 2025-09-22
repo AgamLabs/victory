@@ -51,7 +51,7 @@ function FooterFour() {
                                 <div className="th-widget-about">
                                     <div className="about-logo">
                                         <Link to="/">
-                                            <img src="/assets/img/logo-white.svg" alt="Tourm" />
+                                            <img src="/assets/img/logo_1.png" alt="Victory International" style={{maxHeight: "60px", width: "auto"}} />
                                         </Link>
                                     </div>
                                     <p className="about-text">
@@ -130,18 +130,18 @@ function FooterFour() {
                                         <div className="details">
                                             <p>
                                                 <Link
-                                                    to="mailto:mailinfo00@tourm.com"
+                                                    to="mailto:info@victoryinternational.com"
                                                     className="info-box_link"
                                                 >
-                                                    mailinfo00@tourm.com
+                                                    info@victoryinternational.com
                                                 </Link>
                                             </p>
                                             <p>
                                                 <Link
-                                                    to="mailto:support24@tourm.com"
+                                                    to="mailto:support@victoryinternational.com"
                                                     className="info-box_link"
                                                 >
-                                                    support24@tourm.com
+                                                    support@victoryinternational.com
                                                 </Link>
                                             </p>
                                         </div>
@@ -256,7 +256,7 @@ function FooterFour() {
                     <div className="row justify-content-between align-items-center">
                         <div className="col-md-6">
                             <p className="copyright-text">
-                                Copyright 2025 <Link to="/">Tourm</Link>. All Rights
+                                Copyright 2025 <Link to="/">Victory International</Link>. All Rights
                                 Reserved.
                             </p>
                         </div>

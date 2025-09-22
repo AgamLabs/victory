@@ -36,7 +36,7 @@ const BlogTwo = () => {
                         <div className="col-md-7">
                             <div className="title-area mb-md-0">
                                 <span className="sub-title">Blog and Article</span>
-                                <h2 className="sec-title">News & Articles From Tourm</h2>
+                                <h2 className="sec-title">News & Articles From Victory International</h2>
                             </div>
                         </div>
                         <div className="col-md-auto">

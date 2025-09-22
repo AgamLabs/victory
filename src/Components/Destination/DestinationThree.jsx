@@ -38,7 +38,7 @@ function DestinationThree() {
                         </h2>
                         <p className="sec-text mb-30">
                             One of the most well-liked travel companies for people looking to
-                            experience adventure and see the world is Tourm.
+                            experience adventure and see the world is Victory International.
                         </p>
                     </div>
                 </div>

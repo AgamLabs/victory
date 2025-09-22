@@ -48,10 +48,10 @@ function GetInTouch() {
                             <div className="about-contact-details">
                                 <h6 className="box-title">Email Address</h6>
                                 <p className="about-contact-details-text">
-                                    <Link to="mailto:mailinfo00@tourm.com">mailinfo00@tourm.com</Link>
+                                    <Link to="mailto:info@victoryinternational.com">info@victoryinternational.com</Link>
                                 </p>
                                 <p className="about-contact-details-text">
-                                    <Link to="mailto:support24@tourm.com">support24@tourm.com</Link>
+                                    <Link to="mailto:support@victoryinternational.com">support@victoryinternational.com</Link>
                                 </p>
                             </div>
                         </div>

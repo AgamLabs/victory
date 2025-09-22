@@ -21,24 +21,16 @@ function AboutFour() {
                <div className="col-xl-5">
                   <div className="ps-xl-4">
                      <div className="title-area mb-20">
-                        <span className="sub-title style1 ">Welcome To Tourm</span>
+                        <span className="sub-title style1 ">Welcome To Victory DMC</span>
                         <h2 className="sec-title mb-20 pe-xl-5 me-xl-5 heading">
-                           We are world reputeted travel agency
+                           Thailand's Premier Destination Management Company
                         </h2>
                      </div>
                      <p className="pe-xl-5">
-                        There are many variations of passages of available but the majority
-                        have suffered alteration in some form, by injected hum randomised
-                        words.
+                        What sets us apart is our focus on designing travel experiences that truly stand out. Whether you want to explore Thailand's rich culture, embark on thrilling adventures, or something in between, we tailor every itinerary to bring authenticity, excitement, and flawless execution to your trip.
                      </p>
                      <p className="mb-30 pe-xl-5">
-                        {" "}
-                        Leiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt.
+                        We understand that no two clients are the same. We avoid one-size-fits-all trips — because every traveller is different. We take the time to understand your needs and craft itineraries that truly matter. Choose Victory DMC — let's turn your travel plans into amazing experiences you'll never forget.
                      </p>
                      <div className="about-item-wrap">
                         <div className="about-item style2">
@@ -46,10 +38,9 @@ function AboutFour() {
                               <img src="/assets/img/icon/about_1_1.svg" alt="" />
                            </div>
                            <div className="about-item_centent">
-                              <h5 className="box-title">Exclusive Trip</h5>
+                              <h5 className="box-title">Group Tours & Activities</h5>
                               <p className="about-item_text">
-                                 There are many variations of passages of available but the
-                                 majority.
+                                 From corporate incentive programs to personalised leisure journeys or niche group tours, we handle every detail.
                               </p>
                            </div>
                         </div>
@@ -58,10 +49,9 @@ function AboutFour() {
                               <img src="/assets/img/icon/about_1_2.svg" alt="" />
                            </div>
                            <div className="about-item_centent">
-                              <h5 className="box-title">Safety First Always</h5>
+                              <h5 className="box-title">Hassle-Free Corporate Trips</h5>
                               <p className="about-item_text">
-                                 There are many variations of passages of available but the
-                                 majority.
+                                 We provide international travel agencies and corporations with innovative and reliable travel solutions in Thailand.
                               </p>
                            </div>
                         </div>
@@ -70,10 +60,9 @@ function AboutFour() {
                               <img src="/assets/img/icon/about_1_3.svg" alt="" />
                            </div>
                            <div className="about-item_centent">
-                              <h5 className="box-title">Professional Guide</h5>
+                              <h5 className="box-title">Local Knowledge</h5>
                               <p className="about-item_text">
-                                 There are many variations of passages of available but the
-                                 majority.
+                                 We leverage our extensive local knowledge and connections to create memorable experiences you'll remember for years to come.
                               </p>
                            </div>
                         </div>

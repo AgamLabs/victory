@@ -34,7 +34,7 @@ function MobileMenu({ isOpen, onClose }) {
 
                 <div className="mobile-logo">
                     <Link to="/">
-                        <img src="/assets/img/logo.png" alt="Victory" style={{maxHeight: "40px", width: "auto"}} />
+                        <img src="/assets/img/logo_1.png" alt="Victory International" style={{maxHeight: "40px", width: "auto"}} />
                     </Link>
                 </div>
 

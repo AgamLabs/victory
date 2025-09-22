@@ -25,14 +25,12 @@ function AboutOne() {
                     <div className="col-xl-6">
                         <div className="ps-xl-4 ms-xl-2">
                             <div className="title-area mb-20 pe-xl-5 me-xl-5">
-                                <span className="sub-title style1 ">Let’s Go Together</span>
+                                <span className="sub-title style1 ">Welcome to Victory DMC</span>
                                 <h2 className="sec-title mb-20 pe-xl-5 me-xl-5 heading">
-                                    Plan Your Trip With us
+                                    Your Partner for Incredible Thailand Experiences
                                 </h2>
                                 <p className="sec-text mb-30">
-                                    There are many variations of passages of available but the
-                                    majority have suffered alteration in some form, by injected hum
-                                    randomised words which don't look even slightly.
+                                    We're proud to call Thailand home, and our passion is creating group tours, fun activities, and hassle-free corporate trips that you'll remember for years to come. As one of the country's specialised tour operators, we leverage our extensive local knowledge and connections to provide international travel agencies and corporations with innovative and reliable travel solutions in Thailand.
                                 </p>
                             </div>
                             <div className="about-item-wrap">
@@ -41,10 +39,9 @@ function AboutOne() {
                                         <img src="/assets/img/icon/map3.svg" alt="" />
                                     </div>
                                     <div className="about-item_centent">
-                                        <h5 className="box-title">Exclusive Trip</h5>
+                                        <h5 className="box-title">Tailored Experiences</h5>
                                         <p className="about-item_text">
-                                            There are many variations of passages of available but the
-                                            majority.
+                                            We design travel experiences that truly stand out, tailoring every itinerary to bring authenticity, excitement, and flawless execution to your trip.
                                         </p>
                                     </div>
                                 </div>
@@ -53,10 +50,9 @@ function AboutOne() {
                                         <img src="/assets/img/icon/guide.svg" alt="" />
                                     </div>
                                     <div className="about-item_centent">
-                                        <h5 className="box-title">Professional Guide</h5>
+                                        <h5 className="box-title">Local Expertise</h5>
                                         <p className="about-item_text">
-                                            There are many variations of passages of available but the
-                                            majority.
+                                            With our team's experience and on-the-ground knowledge, you can relax knowing your plans are in good hands while you focus on what's important.
                                         </p>
                                     </div>
                                 </div>
