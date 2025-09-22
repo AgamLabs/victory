@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css'; // Core Swiper styles
-import { Pagination, EffectFade, Navigation } from 'swiper/modules';
+import { Pagination, EffectFade, Navigation, Autoplay } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -43,10 +43,14 @@ function BannerOne() {
         <div className="th-hero-wrapper hero-1" id="hero">
 
             <Swiper
-                modules={[Navigation, Pagination, EffectFade]} // Initialize necessary modules
+                modules={[Navigation, Pagination, EffectFade, Autoplay]} // Initialize necessary modules
                 effect="fade" // Use fade effect
                 loop={true} // Enable loop
                 speed={1000}
+                autoplay={{
+                    delay: 5000, // 5 seconds delay
+                    disableOnInteraction: false, // Continue autoplay after user interaction
+                }}
                 pagination={{
                     el: ".swiper-pagination", // Custom pagination container
                     clickable: true, // Enable clickable pagination

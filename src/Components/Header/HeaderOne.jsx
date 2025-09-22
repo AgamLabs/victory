@@ -115,7 +115,7 @@ function HeaderOne() {
                         <div className="container th-container">
                             <div className="row align-items-center justify-content-between">
                                 <div className="col-auto">
-                                    <div className="header-logo" style={{position: "relative", left: "-60px"}}>
+                                    <div className="header-logo" style={{position: "relative", left: "0px", top: "5px"}}>
                                         <Link to="/">
                                             <img src="/assets/img/logo_1.png" alt="Victory"  style={{maxHeight: "80px", width: "240px"}} />
                                         </Link>
@@ -223,13 +223,6 @@ function HeaderOne() {
                                     >
                                         <i className="far fa-bars" />
                                     </button>
-                                </div>
-                                <div className="col-auto d-none d-xl-block">
-                                    <div className="header-button">
-                                        <Link to="/contact" className="th-btn style3 th-icon">
-                                            Request Quote
-                                        </Link>
-                                    </div>
                                 </div>
                             </div>
                         </div>
