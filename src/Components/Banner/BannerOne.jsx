@@ -71,12 +71,14 @@ function BannerOne() {
                                     backgroundImage: "url(/assets/img/hero/hero_bg1.avif)",
                                     backgroundRepeat: "no-repeat",
                                     backgroundSize: "cover",
+                                    backgroundPosition: "center",
+                                    height: '80vh',
+                                    minHeight: '600px',
+                                    maxHeight: '1000px',
                                 }}
-                            >
-
-                            </div>
+                            />
                             <div className="container">
-                                <div className="hero-style1">
+                                <div className="hero-style1" style={{ transform: 'translateY(-14%)' }}>
                                     <span
                                         className="sub-title style1"
                                         data-ani="slideinup"
@@ -112,13 +114,17 @@ function BannerOne() {
                             <div
                                 className="th-hero-bg"
                                 style={{
-                                    backgroundImage: "url(/assets/img/hero/hero_bg3.avif)", 
+                                    backgroundImage: "url(/assets/img/hero/hero_bg3.avif)",
                                     backgroundRepeat: "no-repeat",
                                     backgroundSize: "cover",
+                                    backgroundPosition: "center",
+                                    height: '75vh',
+                                    minHeight: '560px',
+                                    maxHeight: '960px',
                                 }}
-                            ></div>
+                            />
                             <div className="container">
-                                <div className="hero-style1">
+                                <div className="hero-style1" style={{ transform: 'translateY(-14%)' }}>
                                     <span
                                         className="sub-title style1"
                                         data-ani="slideinup"
@@ -131,7 +137,7 @@ function BannerOne() {
                                         data-ani="slideinup"
                                         data-ani-delay="0.4s"
                                     >
-                                        With Local Expertise, Every Journey is Smoother & Smarter
+                                        With Local Expertise, Every Journey is Smoother
                                     </h1>
                                     <div
                                         className="btn-group"
@@ -157,10 +163,14 @@ function BannerOne() {
                                     backgroundImage: "url(/assets/img/hero/hero_bg3.avif)",
                                     backgroundRepeat: "no-repeat",
                                     backgroundSize: "cover",
+                                    backgroundPosition: "center",
+                                    height: '75vh',
+                                    minHeight: '560px',
+                                    maxHeight: '960px',
                                 }}
-                            ></div>
+                            />
                             <div className="container">
-                                <div className="hero-style1">
+                                <div className="hero-style1" style={{ transform: 'translateY(-14%)' }}>
                                     <span
                                         className="sub-title style1"
                                         data-ani="slideinup"
@@ -192,7 +202,7 @@ function BannerOne() {
                         </div>
                     </SwiperSlide>
                 </div>
-                <div className="th-swiper-custom">
+                <div className="th-swiper-custom" style={{ transform: 'translateY(-12%)' }}>
                     <button
                         className="slider-arrow slider-prev"
                         onClick={() => handleSliderNavigation("prev")}
