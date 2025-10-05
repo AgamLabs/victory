@@ -8180,6 +8180,51 @@ ol.wp-block-rss {
   min-width: 100px;
 }
 
+/* Standardized responsive logo sizing */
+.th-header .header-logo {
+  display: flex;
+  align-items: center;
+  line-height: 0; /* remove inline gap around images */
+}
+
+.header-layout1 {
+  --header-logo-height: 64px;
+}
+
+@media (max-width: 1399px) {
+  .header-layout1 { --header-logo-height: 56px; }
+}
+@media (max-width: 1199px) {
+  .header-layout1 { --header-logo-height: 52px; }
+}
+@media (max-width: 991px) {
+  .header-layout1 { --header-logo-height: 48px; }
+}
+@media (max-width: 575px) {
+  .header-layout1 { --header-logo-height: 40px; }
+}
+
+.header-layout1 .header-logo img {
+  height: var(--header-logo-height);
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.th-menu-wrapper .mobile-logo img {
+  height: 40px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.th-widget-about .about-logo img {
+  height: 52px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .header-layout1 .logo-bg {
   position: absolute;
   top: 0;
