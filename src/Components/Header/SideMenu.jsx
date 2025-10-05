@@ -19,7 +19,7 @@ function SideMenu({ isOpen, onClose }) {
                         <div className="th-widget-about">
                             <div className="about-logo">
                                 <Link to="/">
-                                    <img src="/assets/img/logo_1.png" alt="Victory International" style={{maxHeight: "60px", width: "auto"}} />
+                                    <img src="/assets/img/logo_1.png" alt="Victory International" />
                                 </Link>
                             </div>
                             <p className="about-text">
