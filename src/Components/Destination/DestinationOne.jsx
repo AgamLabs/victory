@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow } from "swiper/modules";
+import { EffectCoverflow, Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
+import "swiper/css/navigation";
 import { Link } from "react-router-dom";
 
 const destinations = [
@@ -19,27 +20,35 @@ const destinations = [
 ];
 
 const sliderOptions = {
-    modules: [EffectCoverflow],
-    effect: "coverflow",
-    centeredSlides: true,
-    slidesPerView: "5",
-    initialSlide: 0,
-    grabCursor: true,
-    loop: true, // Change from "true" to true
-    speed: 1500,
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 95,
-      depth: 212,
-      modifier: 1,
-    },
-    breakpoints: {
-      0: { slidesPerView: 1 },
-      576: { slidesPerView: 2 },
-      992: { slidesPerView: 3 },
-      1200: { slidesPerView: 3 },
-    },
-  };
+  modules: [EffectCoverflow, Autoplay, Navigation],
+  effect: "coverflow",
+  centeredSlides: true,
+  slidesPerView: 5,
+  initialSlide: 0,
+  grabCursor: true,
+  loop: true,
+  speed: 1500,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".destination-next",
+    prevEl: ".destination-prev",
+  },
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 95,
+    depth: 212,
+    modifier: 1,
+  },
+  breakpoints: {
+    0: { slidesPerView: 1 },
+    576: { slidesPerView: 2 },
+    992: { slidesPerView: 3 },
+    1200: { slidesPerView: 3 },
+  },
+};
   
 
 function DestinationOne() {
@@ -52,15 +61,18 @@ function DestinationOne() {
 
     const handleMouseEnter = () => setCursorActive(true);
     const handleMouseLeave = () => setCursorActive(false);
-    
+
+    const handleLinkEnter = () => setCursorActive(false);
+    const handleLinkLeave = () => setCursorActive(true);
+
     if (sliderWrap) {
       sliderWrap.addEventListener("mouseenter", handleMouseEnter);
       sliderWrap.addEventListener("mouseleave", handleMouseLeave);
     }
-    
-    sliderLink.forEach(link => {
-      link.addEventListener("mouseenter", () => setCursorActive(false));
-      link.addEventListener("mouseleave", () => setCursorActive(true));
+
+    sliderLink.forEach((link) => {
+      link.addEventListener("mouseenter", handleLinkEnter);
+      link.addEventListener("mouseleave", handleLinkLeave);
     });
 
     // Clean up event listeners on component unmount
@@ -69,10 +81,10 @@ function DestinationOne() {
         sliderWrap.removeEventListener("mouseenter", handleMouseEnter);
         sliderWrap.removeEventListener("mouseleave", handleMouseLeave);
       }
-      
-      sliderLink.forEach(link => {
-        link.removeEventListener("mouseenter", () => setCursorActive(false));
-        link.removeEventListener("mouseleave", () => setCursorActive(true));
+
+      sliderLink.forEach((link) => {
+        link.removeEventListener("mouseenter", handleLinkEnter);
+        link.removeEventListener("mouseleave", handleLinkLeave);
       });
     };
   }, []);
@@ -109,6 +121,16 @@ function DestinationOne() {
                 </div>
               </SwiperSlide>
             ))}
+            <button
+              className="destination-prev swiper-button-prev"
+              aria-label="Previous"
+              style={{ opacity: 0, pointerEvents: 'none', width: 0, height: 0, border: 'none', background: 'transparent' }}
+            />
+            <button
+              className="destination-next swiper-button-next"
+              aria-label="Next"
+              style={{ opacity: 0, pointerEvents: 'none', width: 0, height: 0, border: 'none', background: 'transparent' }}
+            />
           </Swiper>
         </div>
       </div>
