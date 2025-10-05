@@ -19,49 +19,140 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: white;
+    color: #222;
     font-size: 28px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.06);
     transition: all 0.3s ease;
     position: relative;
+}
+
+/* Ensure icon anchors do not show any underline or baseline artifacts */
+.social-btn i,
+.social-btn img {
+    display: block;
+    line-height: 1;
 }
 
 .social-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
     text-decoration: none;
-    color: white;
 }
 
-.whatsapp-btn {
-    background: linear-gradient(135deg, #25D366, #128C7E);
+/* Remove focus outline or underline for accessibility focus state if needed */
+.social-btn:focus {
+    outline: none;
+    text-decoration: none;
 }
 
-.whatsapp-btn:hover {
-    background: linear-gradient(135deg, #128C7E, #25D366);
-    color: white;
+/* Strong override to remove any residual underline/baseline artifact or pseudo-elements
+   that might be added by icon fonts or other global rules. Keeps an accessible focus
+   indicator instead of default underline. */
+.social-btn,
+.social-btn * {
+    text-decoration: none !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
-.line-btn {
-    background: linear-gradient(135deg, #00C300, #00B900);
+.social-btn i,
+.social-btn img {
+    display: block;
+    line-height: 0; /* remove descender/ascender gaps that can create a thin line */
 }
 
-.line-btn:hover {
-    background: linear-gradient(135deg, #00B900, #00C300);
-    color: white;
+/* Ensure FontAwesome icons render correctly inside the button */
+.social-btn i {
+    /* Use the brands family for .fab icons; fall back to other FA families if needed */
+    font-family: "Font Awesome 6 Brands", "Font Awesome 6 Free", "Font Awesome 6 Pro", sans-serif !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    display: inline-block !important;
+    line-height: 1 !important;
+    text-rendering: optimizeLegibility;
+}
+
+.social-btn i::before {
+    /* Ensure the generated glyph is displayed */
+    display: inline-block !important;
+}
+
+/* Explicitly style the generated glyph so it can't be hidden by other rules */
+.social-btn i,
+.social-btn i::before {
+    font-family: "Font Awesome 6 Brands", "Font Awesome 6 Free", "Font Awesome 6 Pro", sans-serif !important;
+    font-size: 28px !important;
+    display: inline-block !important;
+}
+
+/* Scoped, high-specificity override to prevent any global underline/border rules
+   from adding lines under the icons. This keeps the glyphs visible but removes
+   stray decorative lines or pseudo-element decorations. */
+.floating-social .social-btn,
+.floating-social .social-btn * {
+    text-decoration: none !important;
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+/* Hide any pseudo-elements added to the anchor itself (these often create decorative lines)
+   but keep icon pseudo-elements (i::before) so font icons render correctly. */
+.floating-social .social-btn::before,
+.floating-social .social-btn::after {
+    display: none !important;
+    content: none !important;
+}
+
+.floating-social .social-btn i::before {
+    /* ensure the FontAwesome glyph remains visible */
+    display: inline-block !important;
+}
+
+/* Remove any pseudo-elements that could draw lines */
+/* Allow icon font pseudo-elements so icons render normally. */
+
+/* Replace default focus with a subtle visible ring for accessibility */
+.social-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.12);
+    border-radius: 50%;
+}
+
+/* Neutral white buttons; icons colored per brand for contrast */
+.whatsapp-btn,
+.line-btn,
+.messenger-btn {
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Brand icon colors */
+.whatsapp-btn i,
+.whatsapp-btn i::before {
+    color: #25D366 !important; /* WhatsApp green */
+}
+
+.line-btn i,
+.line-btn i::before {
+    color: #00C300 !important; /* LINE green */
+}
+
+.messenger-btn i,
+.messenger-btn i::before {
+    color: #0084FF !important; /* Messenger blue */
 }
 
 .line-btn i {
     font-size: 32px;
 }
 
-.messenger-btn {
-    background: linear-gradient(135deg, #0084FF, #0066CC);
-}
-
-.messenger-btn:hover {
-    background: linear-gradient(135deg, #0066CC, #0084FF);
-    color: white;
+/* Hover: subtle lift, keep white background */
+.social-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 /* Animation for entrance */
