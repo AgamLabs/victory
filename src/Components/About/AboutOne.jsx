@@ -14,12 +14,12 @@ function AboutOne() {
                             <div className="img1">
                                 <img src="/assets/img/normal/about_1_1.jpg" alt="About" />
                             </div>
-                            <div className="img2">
+                            {/* <div className="img2">
                                 <img src="/assets/img/normal/about_1_2.jpg" alt="About" />
                             </div>
                             <div className="img3">
                                 <img src="/assets/img/normal/about_1_3.jpg" alt="About" />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className="col-xl-6">
