@@ -40,7 +40,7 @@ function BannerOne() {
     };
 
     return (
-    <div className="th-hero-wrapper hero-1" id="hero" style={{ marginBottom: 0, height: '75vh', minHeight: '560px' }}>
+    <div className="th-hero-wrapper hero-1" id="hero" style={{ marginBottom: 0, height: '65vh', minHeight: '480px' }}>
 
             <Swiper
                 modules={[Navigation, Pagination, EffectFade, Autoplay]} // Initialize necessary modules
@@ -67,18 +67,18 @@ function BannerOne() {
                         <div className="hero-inner">
                             <div
                                 className="th-hero-bg"
-                                style={{
+                                    style={{
                                     backgroundImage: "url(/assets/img/hero/hero_bg1.avif)",
                                     backgroundRepeat: "no-repeat",
                                     backgroundSize: "cover",
                                     backgroundPosition: "center",
-                                    height: '75vh',
-                                    minHeight: '560px',
-                                    maxHeight: '900px',
+                                    height: '65vh',
+                                    minHeight: '480px',
+                                    maxHeight: '800px',
                                 }}
                             />
                             <div className="container">
-                                <div className="hero-style1" style={{ transform: 'translateY(-10%)', padding: '90px 0 110px 0' }}>
+                                <div className="hero-style1" style={{ transform: 'translateY(4%)', padding: '60px 0 80px 0' }}>
                                     <span
                                         className="sub-title style1"
                                         data-ani="slideinup"
@@ -93,18 +93,7 @@ function BannerOne() {
                                     >
                                         Travel is Always Changing, We Keep You Moving Forward
                                     </h1>
-                                    <div
-                                        className="btn-group"
-                                        data-ani="slideinup"
-                                        data-ani-delay="0.6s"
-                                    >
-                                        <Link to="/destination" className="th-btn th-icon">
-                                            Explore Destinations
-                                        </Link>
-                                        <Link to="/contact" className="th-btn style2 th-icon">
-                                            Request Quote
-                                        </Link>
-                                    </div>
+                                    {/* Call-to-action buttons removed per request */}
                                 </div>
                             </div>
                         </div>
@@ -113,18 +102,18 @@ function BannerOne() {
                         <div className="hero-inner">
                             <div
                                 className="th-hero-bg"
-                                style={{
+                                    style={{
                                     backgroundImage: "url(/assets/img/hero/hero_bg3.avif)",
                                     backgroundRepeat: "no-repeat",
                                     backgroundSize: "cover",
                                     backgroundPosition: "center",
-                                    height: '75vh',
-                                    minHeight: '560px',
-                                    maxHeight: '900px',
+                                    height: '65vh',
+                                    minHeight: '480px',
+                                    maxHeight: '800px',
                                 }}
                             />
                             <div className="container">
-                                <div className="hero-style1" style={{ transform: 'translateY(-10%)', padding: '90px 0 110px 0' }}>
+                                <div className="hero-style1" style={{ transform: 'translateY(4%)', padding: '60px 0 80px 0' }}>
                                     <span
                                         className="sub-title style1"
                                         data-ani="slideinup"
@@ -139,18 +128,7 @@ function BannerOne() {
                                     >
                                         With Local Expertise, Every Journey is Smoother
                                     </h1>
-                                    <div
-                                        className="btn-group"
-                                        data-ani="slideinup"
-                                        data-ani-delay="0.6s"
-                                    >
-                                        <Link to="/service" className="th-btn th-icon">
-                                            Our DMC Services
-                                        </Link>
-                                        <Link to="/contact" className="th-btn style2 th-icon">
-                                            Get Started
-                                        </Link>
-                                    </div>
+                                    {/* Call-to-action buttons removed per request */}
                                 </div>
                             </div>
                         </div>
@@ -159,18 +137,18 @@ function BannerOne() {
                         <div className="hero-inner">
                             <div
                                 className="th-hero-bg"
-                                style={{
+                                    style={{
                                     backgroundImage: "url(/assets/img/hero/hero_bg3.avif)",
                                     backgroundRepeat: "no-repeat",
                                     backgroundSize: "cover",
                                     backgroundPosition: "center",
-                                    height: '75vh',
-                                    minHeight: '560px',
-                                    maxHeight: '900px',
+                                    height: '65vh',
+                                    minHeight: '480px',
+                                    maxHeight: '800px',
                                 }}
                             />
                             <div className="container">
-                                <div className="hero-style1" style={{ transform: 'translateY(-10%)', padding: '90px 0 110px 0' }}>
+                                <div className="hero-style1" style={{ transform: 'translateY(4%)', padding: '60px 0 80px 0' }}>
                                     <span
                                         className="sub-title style1"
                                         data-ani="slideinup"
@@ -185,24 +163,13 @@ function BannerOne() {
                                     >
                                         Discover Thailand's Hidden Gems & Cultural Treasures
                                     </h1>
-                                    <div
-                                        className="btn-group"
-                                        data-ani="slideinup"
-                                        data-ani-delay="0.6s"
-                                    >
-                                        <Link to="/gallery" className="th-btn th-icon">
-                                            View Gallery
-                                        </Link>
-                                        <Link to="/contact" className="th-btn style2 th-icon">
-                                            Partner With Us
-                                        </Link>
-                                    </div>
+                                    {/* Call-to-action buttons removed per request */}
                                 </div>
                             </div>
                         </div>
                     </SwiperSlide>
                 </div>
-                <div className="th-swiper-custom" style={{ transform: 'translateY(-8%)' }}>
+                <div className="th-swiper-custom" style={{ transform: 'translateY(2%)' }}>
                     <button
                         className="slider-arrow slider-prev"
                         onClick={() => handleSliderNavigation("prev")}
