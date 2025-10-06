@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom'
 function AboutOne() {
     return (
         <div
-            className="about-area position-relative overflow-hidden space"
+            className="about-area position-relative overflow-hidden"
             id="about-sec"
+            style={{ paddingTop: '40px' }}
         >
             <div className="container shape-mockup-wrap">
                 <div className="row">

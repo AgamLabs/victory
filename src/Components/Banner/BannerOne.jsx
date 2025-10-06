@@ -40,7 +40,7 @@ function BannerOne() {
     };
 
     return (
-        <div className="th-hero-wrapper hero-1" id="hero">
+    <div className="th-hero-wrapper hero-1" id="hero" style={{ marginBottom: 0, height: '75vh', minHeight: '560px' }}>
 
             <Swiper
                 modules={[Navigation, Pagination, EffectFade, Autoplay]} // Initialize necessary modules
@@ -72,13 +72,13 @@ function BannerOne() {
                                     backgroundRepeat: "no-repeat",
                                     backgroundSize: "cover",
                                     backgroundPosition: "center",
-                                    height: '80vh',
-                                    minHeight: '600px',
-                                    maxHeight: '1000px',
+                                    height: '75vh',
+                                    minHeight: '560px',
+                                    maxHeight: '900px',
                                 }}
                             />
                             <div className="container">
-                                <div className="hero-style1" style={{ transform: 'translateY(-14%)' }}>
+                                <div className="hero-style1" style={{ transform: 'translateY(-10%)', padding: '90px 0 110px 0' }}>
                                     <span
                                         className="sub-title style1"
                                         data-ani="slideinup"
@@ -120,11 +120,11 @@ function BannerOne() {
                                     backgroundPosition: "center",
                                     height: '75vh',
                                     minHeight: '560px',
-                                    maxHeight: '960px',
+                                    maxHeight: '900px',
                                 }}
                             />
                             <div className="container">
-                                <div className="hero-style1" style={{ transform: 'translateY(-14%)' }}>
+                                <div className="hero-style1" style={{ transform: 'translateY(-10%)', padding: '90px 0 110px 0' }}>
                                     <span
                                         className="sub-title style1"
                                         data-ani="slideinup"
@@ -166,11 +166,11 @@ function BannerOne() {
                                     backgroundPosition: "center",
                                     height: '75vh',
                                     minHeight: '560px',
-                                    maxHeight: '960px',
+                                    maxHeight: '900px',
                                 }}
                             />
                             <div className="container">
-                                <div className="hero-style1" style={{ transform: 'translateY(-14%)' }}>
+                                <div className="hero-style1" style={{ transform: 'translateY(-10%)', padding: '90px 0 110px 0' }}>
                                     <span
                                         className="sub-title style1"
                                         data-ani="slideinup"
@@ -202,7 +202,7 @@ function BannerOne() {
                         </div>
                     </SwiperSlide>
                 </div>
-                <div className="th-swiper-custom" style={{ transform: 'translateY(-12%)' }}>
+                <div className="th-swiper-custom" style={{ transform: 'translateY(-8%)' }}>
                     <button
                         className="slider-arrow slider-prev"
                         onClick={() => handleSliderNavigation("prev")}
