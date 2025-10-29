@@ -11333,6 +11333,8 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child > .th-pos
 .hero-style1 .hero-title {
   color: var(--white-color);
   margin-bottom: 45px;
+  font-size: 64px;
+  line-height: 1.2;
 }
 
 .hero-style1 .hero-text {
