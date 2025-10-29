@@ -55,60 +55,13 @@ function HeaderOne() {
             }}
             onMouseEnter={() => setIsHeaderVisible(true)}></div>
             <header className="th-header header-layout1" style={{
-                marginTop: isHeaderVisible ? "0px" : "-60px",
+                marginTop: isHeaderVisible ? "0px" : "-150px",
                 transition: "margin-top 0.3s ease-in-out",
                 position: "relative",
                 zIndex: 10
             }}
             onMouseEnter={() => setIsHeaderVisible(true)}
             onMouseLeave={() => setIsHeaderVisible(false)}>
-                <div className="header-top">
-                    <div className="container th-container">
-                        <div className="row justify-content-center justify-content-xl-between align-items-center">
-                            <div className="col-auto d-none d-md-block">
-                                <div className="header-links">
-                                    <ul>
-                                        <li className="d-none d-xl-inline-block">
-                                            <i className="fa-sharp fa-regular  fa-location-dot" />
-                                            <span>45 New Eskaton Road, Austria</span>
-                                        </li>
-                                        <li className="d-none d-xl-inline-block">
-                                            <i className="fa-regular fa-clock" />
-                                            <span>Sun to Friday: 8.00 am - 7.00 pm</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="col-auto">
-                                <div className="header-right">
-                                    <div className="currency-menu">
-                                        <NiceSelect options={languageOptions} defaultValue="Language" />
-                                    </div>
-
-                                    <div className="header-links">
-                                        <ul>
-                                            <li className="d-none d-md-inline-block">
-                                                <Link to="/faq">FAQ</Link>
-                                            </li>
-                                            <li className="d-none d-md-inline-block">
-                                                <Link to="/contact">Support</Link>
-                                            </li>
-                                            <li>
-                                                <button
-                                                    type="button"
-                                                    onClick={() => setIsLoginFormOpen(true)}
-                                                >
-                                                    Sign In / Register
-                                                    <i className="fa-regular fa-user" />
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div className={`sticky-wrapper ${isSticky ? "sticky" : ""}`}>
                     {/* Main Menu Area */}
                     <div className="menu-area">
@@ -178,25 +131,6 @@ function HeaderOne() {
                                                     </li>
                                                     <li>
                                                         <Link to="/service/8">Travel Visa Service</Link>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <Link to="/gallery">Gallery</Link>
-                                            </li>
-                                            <li className="menu-item-has-children">
-                                                <Link to="#">Our Network</Link>
-                                                <ul className="sub-menu">
-                                                    <li>
-                                                        <Link to="/tour-guide">Local Representatives</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/tour-guide/1">
-                                                            Representative Details
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/faq">FAQ</Link>
                                                     </li>
                                                 </ul>
                                             </li>
