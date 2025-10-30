@@ -21,30 +21,6 @@ function FooterThree() {
         <footer className="footer-wrapper bg-theme footer-layout4 shape-mockup-wrap">
             <div className="widget-area">
                 <div className="container">
-                    <div className="newsletter-area">
-                        <div className="newsletter-top">
-                            <div className="row gy-4 justify-content-between align-items-center">
-                                <div className="col-lg-5">
-                                    <h2 className="newsletter-title text-capitalize mb-0 text-white">
-                                        get updated the latest newsletter
-                                    </h2>
-                                </div>
-                                <div className="col-lg-7">
-                                    <form className="newsletter-form style4">
-                                        <input
-                                            className="form-control "
-                                            type="email"
-                                            placeholder="Enter Email"
-                                            required=""
-                                        />
-                                        <button type="submit" className="th-btn style5">
-                                            Subscribe Now <img src="/assets/img/icon/plane.svg" alt="" />
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div className="row justify-content-between">
                         <div className="col-md-6 col-xl-3">
                             <div className="widget footer-widget">
@@ -61,9 +37,6 @@ function FooterThree() {
                                     <div className="th-social">
                                         <Link to="https://www.facebook.com/">
                                             <i className="fab fa-facebook-f" />
-                                        </Link>
-                                        <Link to="https://www.twitter.com/">
-                                            <i className="fab fa-twitter" />
                                         </Link>
                                         <Link to="https://www.linkedin.com/">
                                             <i className="fab fa-linkedin-in" />

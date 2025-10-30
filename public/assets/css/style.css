@@ -8182,26 +8182,25 @@ ol.wp-block-rss {
 
 /* Standardized responsive logo sizing */
 .th-header .header-logo {
-  display: flex;
   align-items: center;
   line-height: 0; /* remove inline gap around images */
 }
 
 .header-layout1 {
-  --header-logo-height: 64px;
+  --header-logo-height: 80px;
 }
 
 @media (max-width: 1399px) {
-  .header-layout1 { --header-logo-height: 56px; }
+  .header-layout1 { --header-logo-height: 70px; }
 }
 @media (max-width: 1199px) {
-  .header-layout1 { --header-logo-height: 52px; }
+  .header-layout1 { --header-logo-height: 64px; }
 }
 @media (max-width: 991px) {
-  .header-layout1 { --header-logo-height: 48px; }
+  .header-layout1 { --header-logo-height: 56px; }
 }
 @media (max-width: 575px) {
-  .header-layout1 { --header-logo-height: 40px; }
+  .header-layout1 { --header-logo-height: 48px; }
 }
 
 .header-layout1 .header-logo img {
@@ -8211,8 +8210,18 @@ ol.wp-block-rss {
   object-fit: contain;
 }
 
+/* Adjust logo position for full-width screens to prevent overflow */
+@media (min-width: 1400px) {
+  .header-layout1 .header-logo {
+    margin-left: -20px; /* move logo further left on wide screens */
+  }
+  .header-layout1 .logo-bg {
+    width: 26%; /* widen background shape to match logo shift */
+  }
+}
+
 .th-menu-wrapper .mobile-logo img {
-  height: 40px;
+  height: 50px;
   width: auto;
   max-width: 100%;
   object-fit: contain;

@@ -19,7 +19,7 @@ function About() {
                 title="About Victory International"
             />
             <AboutFour />
-            <OfferTwo />
+           
             <ElementSection />
             <TourGuideTwo />
             <TestimonialOne />

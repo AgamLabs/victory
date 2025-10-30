@@ -85,54 +85,8 @@ function HeaderOne() {
                                             <li>
                                                 <Link to="/about">About Us</Link>
                                             </li>
-                                            <li className="menu-item-has-children">
-                                                <Link to="/destination">Destinations</Link>
-                                                <ul className="sub-menu">
-                                                    <li>
-                                                        <Link to="/destination/1">
-                                                            Phuket
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/destination/2">
-                                                            Krabi
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/destination/3">
-                                                            Koh Samui
-                                                        </Link>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li className="menu-item-has-children">
-                                                <Link to="/service">DMC Services</Link>
-                                                <ul className="sub-menu">
-                                                    <li>
-                                                        <Link to="/service/1">Airport Transfer Service</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/service/2">Hotel Booking Service</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/service/3">Car Rental Service</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/service/4">Tour Booking Service</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/service/5">Event Management Service</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/service/6">Travel Consultancy Service</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/service/7">Travel Insurance Service</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/service/8">Travel Visa Service</Link>
-                                                    </li>
-                                                </ul>
+                                            <li>
+                                                <Link to="/destination/1">Destinations</Link>
                                             </li>
                                             <li className="menu-item-has-children">
                                                 <Link to="/blog">Blog</Link>

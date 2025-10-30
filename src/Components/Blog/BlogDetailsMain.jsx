@@ -152,94 +152,8 @@ function BlogDetailsMain() {
                                 </div>
                             </div>
                         </div>
-                        <div className="th-comments-wrap ">
-                            <h2 className="blog-inner-title h4"> Comments (03)</h2>
-                            <ul className="comment-list">
-                                <li className="th-comment-item">
-                                    <div className="th-post-comment">
-                                        <div className="comment-avater">
-                                            <img
-                                                src="/assets/img/blog/comment-author-1.jpg"
-                                                alt="Comment Author"
-                                            />
-                                        </div>
-                                        <div className="comment-content">
-                                            <h3 className="name">Adam Jhon</h3>
-                                            <span className="commented-on">20Jun, 2024 08:56pm</span>
-                                            <p className="text">
-                                                Credibly pontificate transparent quality vectors with
-                                                quality mindshare. Efficiently architect worldwide strategic
-                                                theme areas after user.
-                                            </p>
-                                            <div className="reply_and_edit">
-                                                <Link to="#" className="reply-btn">
-                                                    <i className="fas fa-reply" />
-                                                    Reply
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <ul className="children">
-                                        <li className="th-comment-item">
-                                            <div className="th-post-comment">
-                                                <div className="comment-avater">
-                                                    <img
-                                                        src="/assets/img/blog/comment-author-2.jpg"
-                                                        alt="Comment Author"
-                                                    />
-                                                </div>
-                                                <div className="comment-content">
-                                                    <div className="">
-                                                        <h3 className="name">Jhon Abraham</h3>
-                                                        <span className="commented-on">
-                                                            25Jun, 2024 08:56pm
-                                                        </span>
-                                                    </div>
-                                                    <p className="text">
-                                                        It is different from airport transfer or port transfer,
-                                                        which are services that pick you up
-                                                    </p>
-                                                    <div className="reply_and_edit">
-                                                        <Link to="#" className="reply-btn">
-                                                            <i className="fas fa-reply" />
-                                                            Reply
-                                                        </Link>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li className="th-comment-item">
-                                    <div className="th-post-comment">
-                                        <div className="comment-avater">
-                                            <img
-                                                src="/assets/img/blog/comment-author-3.jpg"
-                                                alt="Comment Author"
-                                            />
-                                        </div>
-                                        <div className="comment-content">
-                                            <div className="">
-                                                <h3 className="name">Anadi Juila</h3>
-                                                <span className="commented-on">27Jun, 2024 08:56pm</span>
-                                            </div>
-                                            <p className="text">
-                                                Credibly pontificate transparent quality vectors with
-                                                quality mindshare. Efficiently architect worldwide strategic
-                                                theme areas after user.
-                                            </p>
-                                            <div className="reply_and_edit">
-                                                <Link to="#" className="reply-btn">
-                                                    <i className="fas fa-reply" />
-                                                    Reply
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>{" "}
-                        {/* Comment end */} {/* Comment Form */}
+                        {/* Comments removed as requested */}
+                        {/* Comment Form */}
                         <div className="th-comment-form ">
                             <div className="row">
                                 <h3 className="blog-inner-title h4 mb-2">Leave a Reply</h3>
@@ -446,30 +360,7 @@ function BlogDetailsMain() {
                                     <Link to="/blog">Travel</Link>
                                 </div>
                             </div>
-                            <div
-                                className="widget widget_offer"
-                                style={{ background: "url(/assets/img/bg/widget_bg_1.jpg)" }}
-                            >
-                                <div className="offer-banner">
-                                    <div className="offer">
-                                        <h6 className="box-title">
-                                            Need Help? We Are Here To Help You
-                                        </h6>
-                                        <div className="banner-logo">
-                                            <img src="/assets/img/logo_1.png" alt="Victory International" style={{maxHeight: "50px", width: "auto"}} />
-                                        </div>
-                                        <div className="offer">
-                                            <h6 className="offer-title">You Get Online support</h6>
-                                            <Link className="offter-num" to={+256214203215}>
-                                                +256 214 203 215
-                                            </Link>
-                                        </div>
-                                        <Link to="/contact" className="th-btn style2 th-icon">
-                                            Read More
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
+                            {/* Removed Need Help sidebar banner as requested */}
                         </aside>
                     </div>
                 </div>

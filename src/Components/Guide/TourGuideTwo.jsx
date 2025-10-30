@@ -11,8 +11,8 @@ function TourGuideTwo() {
     style={{ backgroundImage: "url(/assets/img/bg/team_bg_2.jpg)", backgroundRepeat:"no-repeat", zIndex:"1", paddingBottom: "0" }}>
       <div className="container z-index-common">
         <div className="title-area text-center">
-          <span className="sub-title">Meet with Guide</span>
-          <h2 className="sec-title">Meet with Tour Guide</h2>
+          <span className="sub-title">Our DMC Network</span>
+          <h2 className="sec-title">Trusted Destination Management Partners</h2>
         </div>
         <div className="slider-area">
           <Swiper
@@ -56,9 +56,9 @@ function TourGuideTwo() {
                 <div className="team-content">
                   <div className="media-body">
                     <h3 className="box-title">
-                      <Link to="/tour-guide/1">Michel Smith</Link>
+                      <Link to="#">East Africa DMC</Link>
                     </h3>
-                    <span className="team-desig">Tourist Guide</span>
+                    <span className="team-desig">Destination Management Company</span>
                     <div className="th-social">
                       <Link target="_blank" to="https://facebook.com/">
                         <i className="fab fa-facebook-f" />
@@ -93,9 +93,9 @@ function TourGuideTwo() {
                 <div className="team-content">
                   <div className="media-body">
                     <h3 className="box-title">
-                      <Link to="/tour-guide/2">Michel Smith</Link>
+                      <Link to="#">Europe DMC</Link>
                     </h3>
-                    <span className="team-desig">Tourist Guide</span>
+                    <span className="team-desig">Destination Management Company</span>
                     <div className="th-social">
                       <Link target="_blank" to="https://facebook.com/">
                         <i className="fab fa-facebook-f" />
@@ -130,9 +130,9 @@ function TourGuideTwo() {
                 <div className="team-content">
                   <div className="media-body">
                     <h3 className="box-title">
-                      <Link to="/tour-guide/3">Michel Smith</Link>
+                      <Link to="#">Middle East DMC</Link>
                     </h3>
-                    <span className="team-desig">Tourist Guide</span>
+                    <span className="team-desig">Destination Management Company</span>
                     <div className="th-social">
                       <Link target="_blank" to="https://facebook.com/">
                         <i className="fab fa-facebook-f" />
@@ -167,9 +167,9 @@ function TourGuideTwo() {
                 <div className="team-content">
                   <div className="media-body">
                     <h3 className="box-title">
-                      <Link to="/tour-guide/1">Michel Smith</Link>
+                      <Link to="#">South Asia DMC</Link>
                     </h3>
-                    <span className="team-desig">Tourist Guide</span>
+                    <span className="team-desig">Destination Management Company</span>
                     <div className="th-social">
                       <Link target="_blank" to="https://facebook.com/">
                         <i className="fab fa-facebook-f" />
@@ -204,9 +204,9 @@ function TourGuideTwo() {
                 <div className="team-content">
                   <div className="media-body">
                     <h3 className="box-title">
-                      <Link to="/tour-guide/2">Michel Smith</Link>
+                      <Link to="#">Americas DMC</Link>
                     </h3>
-                    <span className="team-desig">Tourist Guide</span>
+                    <span className="team-desig">Destination Management Company</span>
                     <div className="th-social">
                       <Link target="_blank" to="https://facebook.com/">
                         <i className="fab fa-facebook-f" />
@@ -241,9 +241,9 @@ function TourGuideTwo() {
                 <div className="team-content">
                   <div className="media-body">
                     <h3 className="box-title">
-                      <Link to="/tour-guide/3">Michel Smith</Link>
+                      <Link to="#">Oceania DMC</Link>
                     </h3>
-                    <span className="team-desig">Tourist Guide</span>
+                    <span className="team-desig">Destination Management Company</span>
                     <div className="th-social">
                       <Link target="_blank" to="https://facebook.com/">
                         <i className="fab fa-facebook-f" />
