@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CMS from '../../cms/content';
 import Modal from './Modal';
 import { Link } from 'react-router-dom';
 
@@ -21,13 +22,12 @@ function GalleryTwo() {
         <div
             className="gallery-area2 bg-top-center space"
             style={{
-                backgroundImage: "url('/assets/img/bg/gallery_bg_1.jpg')",
+                backgroundImage: `url('${CMS.galleries.galleryTwo.bg}')`,
                 backgroundRepeat: "no-repeat",
             }}
             data-bg-src=""
         >
             <div className="container">
-                <div className="row justify-content-lg-between justify-content-center align-items-center">
                     <div className="col-lg-7">
                         <div className="title-area text-center text-lg-start mb-20 pe-xl-5 me-xl-5">
                             <span className="sub-title">Best Memorable Places</span>
@@ -56,17 +56,17 @@ function GalleryTwo() {
                         <div className="gallery-box">
                             <div className="gallery-img global-img">
                                 <Link
-                                    to="/assets/img/gallery/gallery_2_1.jpg"
+                                    to={CMS.galleries.galleryTwo.items[0]}
                                     className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_2_1.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryTwo.items[0], e)}
                                 >
                                     <div className="icon-btn">
                                         <i className="fal fa-magnifying-glass-plus" />
                                     </div>
                                     <img
-                                        src="/assets/img/gallery/gallery_2_1.jpg"
+                                        src={CMS.galleries.galleryTwo.items[0]}
                                         alt="gallery"
-                                        onClick={(e) => openModal('/assets/img/gallery/gallery_2_1.jpg', e)}
+                                        onClick={(e) => openModal(CMS.galleries.galleryTwo.items[0], e)}
                                     />
                                 </Link>
                             </div>
@@ -76,17 +76,17 @@ function GalleryTwo() {
                         <div className="gallery-box">
                             <div className="gallery-img global-img">
                                 <Link
-                                    to="/assets/img/gallery/gallery_2_2.jpg"
+                                    to={CMS.galleries.galleryTwo.items[1]}
                                     className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_2_2.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryTwo.items[1], e)}
                                 >
                                     <div className="icon-btn">
                                         <i className="fal fa-magnifying-glass-plus" />
                                     </div>
                                     <img
-                                        src="/assets/img/gallery/gallery_2_2.jpg"
+                                        src={CMS.galleries.galleryTwo.items[1]}
                                         alt="gallery"
-                                        onClick={(e) => openModal('/assets/img/gallery/gallery_2_2.jpg', e)}
+                                        onClick={(e) => openModal(CMS.galleries.galleryTwo.items[1], e)}
                                     />
                                 </Link>
                             </div>
@@ -94,55 +94,17 @@ function GalleryTwo() {
                         <div className="gallery-box">
                             <div className="gallery-img global-img">
                                 <Link
-                                    to="/assets/img/gallery/gallery_2_3.jpg"
+                                    to={CMS.galleries.galleryTwo.items[2]}
                                     className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_2_3.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryTwo.items[2], e)}
                                 >
                                     <div className="icon-btn">
                                         <i className="fal fa-magnifying-glass-plus" />
                                     </div>
                                     <img
-                                        src="/assets/img/gallery/gallery_2_3.jpg"
+                                        src={CMS.galleries.galleryTwo.items[2]}
                                         alt="gallery"
-                                        onClick={(e) => openModal('/assets/img/gallery/gallery_2_3.jpg', e)}
-                                    />
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-3 gallery-box_wrapp">
-                        <div className="gallery-box">
-                            <div className="gallery-img global-img">
-                                <Link
-                                    to="/assets/img/gallery/gallery_2_4.jpg"
-                                    className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_2_4.jpg', e)}
-                                >
-                                    <div className="icon-btn">
-                                        <i className="fal fa-magnifying-glass-plus" />
-                                    </div>
-                                    <img
-                                        src="/assets/img/gallery/gallery_2_4.jpg"
-                                        alt="gallery"
-                                        onClick={(e) => openModal('/assets/img/gallery/gallery_2_4.jpg', e)}
-                                    />
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="gallery-box">
-                            <div className="gallery-img global-img">
-                                <Link
-                                    to="/assets/img/gallery/gallery_2_5.jpg"
-                                    className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_2_5.jpg', e)}
-                                >
-                                    <div className="icon-btn">
-                                        <i className="fal fa-magnifying-glass-plus" />
-                                    </div>
-                                    <img
-                                        src="/assets/img/gallery/gallery_2_5.jpg"
-                                        alt="gallery"
-                                        onClick={(e) => openModal('/assets/img/gallery/gallery_2_5.jpg', e)}
+                                        onClick={(e) => openModal(CMS.galleries.galleryTwo.items[2], e)}
                                     />
                                 </Link>
                             </div>
@@ -152,17 +114,55 @@ function GalleryTwo() {
                         <div className="gallery-box">
                             <div className="gallery-img global-img">
                                 <Link
-                                    to="/assets/img/gallery/gallery_2_6.jpg"
+                                    to={CMS.galleries.galleryTwo.items[3]}
                                     className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_2_6.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryTwo.items[3], e)}
                                 >
                                     <div className="icon-btn">
                                         <i className="fal fa-magnifying-glass-plus" />
                                     </div>
                                     <img
-                                        src="/assets/img/gallery/gallery_2_6.jpg"
+                                        src={CMS.galleries.galleryTwo.items[3]}
                                         alt="gallery"
-                                        onClick={(e) => openModal('/assets/img/gallery/gallery_2_6.jpg', e)}
+                                        onClick={(e) => openModal(CMS.galleries.galleryTwo.items[3], e)}
+                                    />
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="gallery-box">
+                            <div className="gallery-img global-img">
+                                <Link
+                                    to={CMS.galleries.galleryTwo.items[4]}
+                                    className="popup-image"
+                                    onClick={(e) => openModal(CMS.galleries.galleryTwo.items[4], e)}
+                                >
+                                    <div className="icon-btn">
+                                        <i className="fal fa-magnifying-glass-plus" />
+                                    </div>
+                                    <img
+                                        src={CMS.galleries.galleryTwo.items[4]}
+                                        alt="gallery"
+                                        onClick={(e) => openModal(CMS.galleries.galleryTwo.items[4], e)}
+                                    />
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-3 gallery-box_wrapp">
+                        <div className="gallery-box">
+                            <div className="gallery-img global-img">
+                                <Link
+                                    to={CMS.galleries.galleryTwo.items[5]}
+                                    className="popup-image"
+                                    onClick={(e) => openModal(CMS.galleries.galleryTwo.items[5], e)}
+                                >
+                                    <div className="icon-btn">
+                                        <i className="fal fa-magnifying-glass-plus" />
+                                    </div>
+                                    <img
+                                        src={CMS.galleries.galleryTwo.items[5]}
+                                        alt="gallery"
+                                        onClick={(e) => openModal(CMS.galleries.galleryTwo.items[5], e)}
                                     />
                                 </Link>
                             </div>

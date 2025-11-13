@@ -17,6 +17,54 @@ const CMS = {
       primary: "/assets/img/logo_1.png",
       white: "/assets/img/logo-white.svg",
     },
+
+  galleries: {
+    galleryOne: [
+      "/assets/img/gallery/gallery_1_1.jpg",
+      "/assets/img/gallery/gallery_1_2.jpg",
+      "/assets/img/gallery/gallery_1_3.jpg",
+      "/assets/img/gallery/gallery_1_4.jpg",
+      "/assets/img/gallery/gallery_1_5.jpg",
+      "/assets/img/gallery/gallery_1_6.jpg",
+      "/assets/img/gallery/gallery_1_7.jpg",
+    ],
+    galleryTwo: {
+      bg: "/assets/img/bg/gallery_bg_1.jpg",
+      items: [
+        "/assets/img/gallery/gallery_2_1.jpg",
+        "/assets/img/gallery/gallery_2_2.jpg",
+        "/assets/img/gallery/gallery_2_3.jpg",
+        "/assets/img/gallery/gallery_2_4.jpg",
+        "/assets/img/gallery/gallery_2_5.jpg",
+        "/assets/img/gallery/gallery_2_6.jpg",
+      ],
+    },
+    galleryThree: [
+      "/assets/img/gallery/gallery_3_1.jpg",
+      "/assets/img/gallery/gallery_3_2.jpg",
+      "/assets/img/gallery/gallery_3_3.jpg",
+      "/assets/img/gallery/gallery_3_4.jpg",
+      "/assets/img/gallery/gallery_3_5.jpg",
+      "/assets/img/gallery/gallery_3_6.jpg",
+    ],
+    galleryEight: [
+      "/assets/img/gallery/gallery_8_1.jpg",
+      "/assets/img/gallery/gallery_8_2.jpg",
+      "/assets/img/gallery/gallery_8_3.jpg",
+      "/assets/img/gallery/gallery_8_4.jpg",
+      "/assets/img/gallery/gallery_8_5.jpg",
+      "/assets/img/gallery/gallery_8_6.jpg",
+      "/assets/img/gallery/gallery_8_7.jpg",
+      "/assets/img/gallery/gallery_8_8.jpg",
+    ],
+    galleryFourCarousel: [
+      "/assets/img/gallery/gallery_4_1.jpg",
+      "/assets/img/gallery/gallery_4_2.jpg",
+      "/assets/img/gallery/gallery_4_3.jpg",
+      "/assets/img/gallery/gallery_4_4.jpg",
+      "/assets/img/gallery/gallery_4_5.jpg",
+    ],
+  },
     contact: {
       phone: "+256 214 203 215",
       email: "info@victory.example",
@@ -36,6 +84,47 @@ const CMS = {
     heroText: {
       heading: "Thailand's Premier Destination Management Company",
       subheading: "Tailored experiences with local expertise",
+    },
+  },
+
+  banners: {
+    bannerOne: {
+      slides: [
+        {
+          img: "/assets/img/hero/hero_bg1.avif",
+          subtitle: "Your Partner for Incredible Thailand Experiences",
+          title: "Travel is Always Changing, We Keep You Moving Forward",
+        },
+        {
+          img: "/assets/img/hero/hero_bg3.avif",
+          subtitle: "Your Partner for Incredible Thailand Experiences",
+          title: "With Local Expertise, Every Journey is Smoother",
+        },
+        {
+          img: "/assets/img/hero/hero_bg3.avif",
+          subtitle: "Your Partner for Incredible Thailand Experiences",
+          title: "Discover Thailand's Hidden Gems & Cultural Treasures",
+        },
+      ],
+    },
+    bannerThree: {
+      slides: [
+        { img: "/assets/img/hero/hero_bg_3_1.jpg", title: "Discover The World with Our Guide" },
+        { img: "/assets/img/hero/hero_bg_3_2.jpg", title: "Discover The World Best Destination" },
+        { img: "/assets/img/hero/hero_bg_3_3.jpg", title: "Capture Wonder Of The World" },
+        { img: "/assets/img/hero/hero_bg_3_4.jpg", title: "Explore the world with Victory International" },
+      ],
+      thumbs: [
+        "/assets/img/hero/hero_bg_3_1.jpg",
+        "/assets/img/hero/hero_bg_3_2.jpg",
+        "/assets/img/hero/hero_bg_3_3.jpg",
+        "/assets/img/hero/hero_bg_3_4.jpg",
+        "/assets/img/hero/hero_bg_3_5.jpg",
+      ],
+      video: "/assets/img/hero/hero-video3.mp4",
+    },
+    bannerFour: {
+      bg: "/assets/img/bg/hero_bg_4_1.png",
     },
   },
 
@@ -102,6 +191,47 @@ const CMS = {
   destination: {
     headerImage: "/assets/img/destination/destinations_header.avif",
     showSidebars: false, // per PRD: hide sidebars and keep main content
+    backgrounds: {
+      linePattern2: "/assets/img/bg/line-pattern2.png",
+      linePattern3: "/assets/img/bg/line-pattern3.png",
+    },
+    shapes: {
+      s2_1: "/assets/img/shape/shape_2_1.png",
+      s2_2: "/assets/img/shape/shape_2_2.png",
+      s2_3: "/assets/img/shape/shape_2_3.png",
+      s2_4: "/assets/img/shape/shape_2_4.png",
+    },
+    lists: {
+      popularList: [
+        { id: 1, name: "Bangkok", listings: 45, image: "/assets/img/destination/destination_1_1.jpg" },
+        { id: 2, name: "Chiang Mai", listings: 32, image: "/assets/img/destination/destination_1_2.jpg" },
+        { id: 3, name: "Phuket", listings: 38, image: "/assets/img/destination/destination_1_3.jpg" },
+        { id: 4, name: "Koh Samui", listings: 28, image: "/assets/img/destination/destination_1_4.jpg" },
+        { id: 5, name: "Krabi", listings: 25, image: "/assets/img/destination/destination_1_5.jpg" },
+      ],
+      gridList: [
+        { id: 1, name: "Dubai, UAE", image: "/assets/img/destination/destination_3_1.jpg" },
+        { id: 2, name: "Japan", image: "/assets/img/destination/destination_3_2.jpg" },
+        { id: 3, name: "Switzerland", image: "/assets/img/destination/destination_3_3.jpg" },
+        { id: 4, name: "Brazil", image: "/assets/img/destination/destination_3_4.jpg" },
+      ],
+      featuredList: [
+        { name: "Thailand", image: "destination_2_1.jpg", listings: 28 },
+        { name: "Belgium", image: "destination_2_2.jpg", listings: 15 },
+        { name: "Island", image: "destination_2_3.jpg", listings: 22 },
+        { name: "Maldives", image: "destination_2_4.jpg", listings: 25 },
+      ],
+    },
+    details: {
+      innerImage: "/assets/img/destination/destination-inner-1.jpg",
+      gallery6: [
+        "/assets/img/gallery/gallery_6_1.jpg",
+        "/assets/img/gallery/gallery_6_2.jpg",
+        "/assets/img/gallery/gallery_6_3.jpg",
+        "/assets/img/gallery/gallery_6_4.jpg",
+      ],
+      widgetBg: "/assets/img/bg/widget_bg_1.jpg",
+    },
   },
 
   contact: {

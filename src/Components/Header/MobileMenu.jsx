@@ -72,18 +72,7 @@ function MobileMenu({ isOpen, onClose }) {
                             </ul>
                         </li>
 
-                        {/* Service */}
-                        <li className={`menu-item-has-children th-item-has-children ${activeMenu === 3 ? "th-active" : ""}`}>
-                            <Link to="#" onClick={() => toggleMenu(3)}>Service</Link>
-                            <ul
-                                ref={(el) => (menuRefs.current[3] = el)}
-                                className="th-submenu"
-                                style={{ height: "0px", overflow: "hidden", transition: "height 0.3s ease-in-out" }}
-                            >
-                                <li><Link to="/service">Services</Link></li>
-                                <li><Link to="/service-details">Service Details</Link></li>
-                            </ul>
-                        </li>
+                        {/* Service - removed per requirements */}
 
                         {/* Activities */}
                         <li className={`menu-item-has-children th-item-has-children ${activeMenu === 4 ? "th-active" : ""}`}>
@@ -108,10 +97,7 @@ function MobileMenu({ isOpen, onClose }) {
                                 style={{ height: "0px", overflow: "hidden", transition: "height 0.3s ease-in-out" }}
                             >
                                 <li><Link to="/gallery">Gallery</Link></li>
-                                <li><Link to="/tour">Our Tour</Link></li>
-                                <li><Link to="/tour-details">Tour Details</Link></li>
-                                <li><Link to="/resort">Resort Page</Link></li>
-                                <li><Link to="/resort/1">Resort Details</Link></li>
+                                {/* Tour/Resort pages removed */}
                                 <li><Link to="/tour-guide">Tour Guide</Link></li>
                                 <li><Link to="/tour-guide/1">Tour Guider Details</Link></li>
                                 <li><Link to="/faq">Faq Page</Link></li>

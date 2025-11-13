@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import CMS from '../../cms/content'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css'; // Core Swiper styles
 import { Pagination, EffectFade, Navigation, Autoplay } from 'swiper/modules';
@@ -63,111 +64,43 @@ function BannerOne() {
                 id="heroSlide1"
             >
                 <div className="swiper-wrapper">
-                    <SwiperSlide>
-                        <div className="hero-inner">
-                            <div
-                                className="th-hero-bg"
+                    {CMS.banners.bannerOne.slides.map((slide, idx) => (
+                        <SwiperSlide key={idx}>
+                            <div className="hero-inner">
+                                <div
+                                    className="th-hero-bg"
                                     style={{
-                                    backgroundImage: "url(/assets/img/hero/hero_bg1.avif)",
-                                    backgroundRepeat: "no-repeat",
-                                    backgroundSize: "cover",
-                                    backgroundPosition: "center",
-                                    height: '65vh',
-                                    minHeight: '480px',
-                                    maxHeight: '800px',
-                                }}
-                            />
-                            <div className="container">
-                                <div className="hero-style1" style={{ transform: 'translateY(4%)', padding: '60px 0 80px 0' }}>
-                                    <span
-                                        className="sub-title style1"
-                                        data-ani="slideinup"
-                                        data-ani-delay="0.2s"
-                                    >
-                                        Your Partner for Incredible Thailand Experiences
-                                    </span>
-                                    <h1
-                                        className="hero-title"
-                                        data-ani="slideinup"
-                                        data-ani-delay="0.4s"
-                                    >
-                                        Travel is Always Changing, We Keep You Moving Forward
-                                    </h1>
-                                    {/* Call-to-action buttons removed per request */}
+                                        backgroundImage: `url(${slide.img})`,
+                                        backgroundRepeat: "no-repeat",
+                                        backgroundSize: "cover",
+                                        backgroundPosition: "center",
+                                        height: '65vh',
+                                        minHeight: '480px',
+                                        maxHeight: '800px',
+                                    }}
+                                />
+                                <div className="container">
+                                    <div className="hero-style1" style={{ transform: 'translateY(4%)', padding: '60px 0 80px 0' }}>
+                                        <span
+                                            className="sub-title style1"
+                                            data-ani="slideinup"
+                                            data-ani-delay="0.2s"
+                                        >
+                                            {slide.subtitle}
+                                        </span>
+                                        <h1
+                                            className="hero-title"
+                                            data-ani="slideinup"
+                                            data-ani-delay="0.4s"
+                                        >
+                                            {slide.title}
+                                        </h1>
+                                        {/* Call-to-action buttons removed per request */}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="hero-inner">
-                            <div
-                                className="th-hero-bg"
-                                    style={{
-                                    backgroundImage: "url(/assets/img/hero/hero_bg3.avif)",
-                                    backgroundRepeat: "no-repeat",
-                                    backgroundSize: "cover",
-                                    backgroundPosition: "center",
-                                    height: '65vh',
-                                    minHeight: '480px',
-                                    maxHeight: '800px',
-                                }}
-                            />
-                            <div className="container">
-                                <div className="hero-style1" style={{ transform: 'translateY(4%)', padding: '60px 0 80px 0' }}>
-                                    <span
-                                        className="sub-title style1"
-                                        data-ani="slideinup"
-                                        data-ani-delay="0.2s"
-                                    >
-                                        Your Partner for Incredible Thailand Experiences
-                                    </span>
-                                    <h1
-                                        className="hero-title"
-                                        data-ani="slideinup"
-                                        data-ani-delay="0.4s"
-                                    >
-                                        With Local Expertise, Every Journey is Smoother
-                                    </h1>
-                                    {/* Call-to-action buttons removed per request */}
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="hero-inner">
-                            <div
-                                className="th-hero-bg"
-                                    style={{
-                                    backgroundImage: "url(/assets/img/hero/hero_bg3.avif)",
-                                    backgroundRepeat: "no-repeat",
-                                    backgroundSize: "cover",
-                                    backgroundPosition: "center",
-                                    height: '65vh',
-                                    minHeight: '480px',
-                                    maxHeight: '800px',
-                                }}
-                            />
-                            <div className="container">
-                                <div className="hero-style1" style={{ transform: 'translateY(4%)', padding: '60px 0 80px 0' }}>
-                                    <span
-                                        className="sub-title style1"
-                                        data-ani="slideinup"
-                                        data-ani-delay="0.2s"
-                                    >
-                                        Your Partner for Incredible Thailand Experiences
-                                    </span>
-                                    <h1
-                                        className="hero-title"
-                                        data-ani="slideinup"
-                                        data-ani-delay="0.4s"
-                                    >
-                                        Discover Thailand's Hidden Gems & Cultural Treasures
-                                    </h1>
-                                    {/* Call-to-action buttons removed per request */}
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
+                        </SwiperSlide>
+                    ))}
                 </div>
                 <div className="th-swiper-custom" style={{ transform: 'translateY(2%)' }}>
                     <button

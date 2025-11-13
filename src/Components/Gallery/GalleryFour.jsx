@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CMS from '../../cms/content';
 import Modal from './Modal';
 import { Link } from 'react-router-dom';
 
@@ -28,13 +29,13 @@ function GalleryFour() {
                     <div className="col-auto">
                         <div className="gallery-box style5">
                             <div className="gallery-img global-img">
-                                <img src="/assets/img/gallery/gallery_8_1.jpg" alt="gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_1.jpg', e)}
+                                <img src={CMS.galleries.galleryEight[0]} alt="gallery"
+                                    onClick={(e) => openModal(CMS.galleries.galleryEight[0], e)}
                                 />
                                 <Link
-                                    to="/assets/img/gallery/gallery_8_1.jpg"
+                                    to={CMS.galleries.galleryEight[0]}
                                     className="icon-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_1.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryEight[0], e)}
                                 >
                                     <i className="fal fa-magnifying-glass-plus" />
                                 </Link>
@@ -44,12 +45,12 @@ function GalleryFour() {
                     <div className="col-auto">
                         <div className="gallery-box style5">
                             <div className="gallery-img global-img">
-                                <img src="/assets/img/gallery/gallery_8_2.jpg" alt="gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_2.jpg', e)} />
+                                <img src={CMS.galleries.galleryEight[1]} alt="gallery"
+                                    onClick={(e) => openModal(CMS.galleries.galleryEight[1], e)} />
                                 <Link
-                                    to="/assets/img/gallery/gallery_8_2.jpg"
+                                    to={CMS.galleries.galleryEight[1]}
                                     className="icon-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_2.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryEight[1], e)}
                                 >
                                     <i className="fal fa-magnifying-glass-plus" />
                                 </Link>
@@ -59,12 +60,12 @@ function GalleryFour() {
                     <div className="col-auto">
                         <div className="gallery-box style5">
                             <div className="gallery-img global-img">
-                                <img src="/assets/img/gallery/gallery_8_3.jpg" alt="gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_3.jpg', e)} />
+                                <img src={CMS.galleries.galleryEight[2]} alt="gallery"
+                                    onClick={(e) => openModal(CMS.galleries.galleryEight[2], e)} />
                                 <Link
-                                    to="/assets/img/gallery/gallery_8_3.jpg"
+                                    to={CMS.galleries.galleryEight[2]}
                                     className="icon-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_3.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryEight[2], e)}
                                 >
                                     <i className="fal fa-magnifying-glass-plus" />
                                 </Link>
@@ -74,12 +75,12 @@ function GalleryFour() {
                     <div className="col-auto">
                         <div className="gallery-box style5">
                             <div className="gallery-img global-img">
-                                <img src="/assets/img/gallery/gallery_8_4.jpg" alt="gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_4.jpg', e)} />
+                                <img src={CMS.galleries.galleryEight[3]} alt="gallery"
+                                    onClick={(e) => openModal(CMS.galleries.galleryEight[3], e)} />
                                 <Link
-                                    to="/assets/img/gallery/gallery_8_4.jpg"
+                                    to={CMS.galleries.galleryEight[3]}
                                     className="icon-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_4.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryEight[3], e)}
                                 >
                                     <i className="fal fa-magnifying-glass-plus" />
                                 </Link>
@@ -89,12 +90,12 @@ function GalleryFour() {
                     <div className="col-auto">
                         <div className="gallery-box style5">
                             <div className="gallery-img global-img">
-                                <img src="/assets/img/gallery/gallery_8_5.jpg" alt="gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_5.jpg', e)} />
+                                <img src={CMS.galleries.galleryEight[4]} alt="gallery"
+                                    onClick={(e) => openModal(CMS.galleries.galleryEight[4], e)} />
                                 <Link
-                                    to="/assets/img/gallery/gallery_8_5.jpg"
+                                    to={CMS.galleries.galleryEight[4]}
                                     className="icon-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_5.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryEight[4], e)}
                                 >
                                     <i className="fal fa-magnifying-glass-plus" />
                                 </Link>
@@ -104,12 +105,12 @@ function GalleryFour() {
                     <div className="col-auto">
                         <div className="gallery-box style5">
                             <div className="gallery-img global-img">
-                                <img src="/assets/img/gallery/gallery_8_6.jpg" alt="gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_6.jpg', e)} />
+                                <img src={CMS.galleries.galleryEight[5]} alt="gallery"
+                                    onClick={(e) => openModal(CMS.galleries.galleryEight[5], e)} />
                                 <Link
-                                    to="/assets/img/gallery/gallery_8_6.jpg"
+                                    to={CMS.galleries.galleryEight[5]}
                                     className="icon-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_6.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryEight[5], e)}
                                 >
                                     <i className="fal fa-magnifying-glass-plus" />
                                 </Link>
@@ -119,12 +120,12 @@ function GalleryFour() {
                     <div className="col-auto">
                         <div className="gallery-box style5">
                             <div className="gallery-img global-img">
-                                <img src="/assets/img/gallery/gallery_8_7.jpg" alt="gallery"
+                                <img src={CMS.galleries.galleryEight[6]} alt="gallery"
                                     />
                                 <Link
-                                    to="/assets/img/gallery/gallery_8_7.jpg"
+                                    to={CMS.galleries.galleryEight[6]}
                                     className="icon-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_7.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryEight[6], e)}
                                 >
                                     <i className="fal fa-magnifying-glass-plus" />
                                 </Link>
@@ -134,12 +135,12 @@ function GalleryFour() {
                     <div className="col-auto">
                         <div className="gallery-box style5">
                             <div className="gallery-img global-img">
-                                <img src="/assets/img/gallery/gallery_8_8.jpg" alt="gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_8.jpg', e)} />
+                                <img src={CMS.galleries.galleryEight[7]} alt="gallery"
+                                    onClick={(e) => openModal(CMS.galleries.galleryEight[7], e)} />
                                 <Link
-                                    to="/assets/img/gallery/gallery_8_8.jpg"
+                                    to={CMS.galleries.galleryEight[7]}
                                     className="icon-btn popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_8_8.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryEight[7], e)}
                                 >
                                     <i className="fal fa-magnifying-glass-plus" />
                                 </Link>

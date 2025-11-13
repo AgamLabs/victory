@@ -1,4 +1,5 @@
 import React from "react";
+import CMS from '../../cms/content';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -7,22 +8,13 @@ import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 
 function DestinationThree() {
-    const destinations = [
-        { id: 1, name: "Dubai, UAE", image: "/assets/img/destination/destination_3_1.jpg" },
-        { id: 2, name: "Japan", image: "/assets/img/destination/destination_3_2.jpg" },
-        { id: 3, name: "Switzerland", image: "/assets/img/destination/destination_3_3.jpg" },
-        { id: 4, name: "Brazil", image: "/assets/img/destination/destination_3_4.jpg" },
-        { id: 5, name: "Dubai, UAE", image: "/assets/img/destination/destination_3_1.jpg" },
-        { id: 6, name: "Japan", image: "/assets/img/destination/destination_3_2.jpg" },
-        { id: 7, name: "Switzerland", image: "/assets/img/destination/destination_3_3.jpg" },
-        { id: 8, name: "Brazil", image: "/assets/img/destination/destination_3_4.jpg" },
-    ];
+    const destinations = CMS.destination.lists.gridList;
 
     return (
         <section
             className="position-relative overflow-hidden space"
             id="destination-sec"
-            style={{ backgroundImage: "url(/assets/img/bg/line-pattern3.png)" }}
+            style={{ backgroundImage: `url(${CMS.destination.backgrounds.linePattern3})` }}
         >
             <div className="container">
                 <div className="row justify-content-between">

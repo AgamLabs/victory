@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import CMS from '../../cms/content'
 import Modal from './Modal';
 import { Link } from 'react-router-dom';
 
@@ -29,14 +30,14 @@ function GalleryThree() {
                         <div className="gallery-box style2">
                             <div className="gallery-img global-img">
                                 <Link
-                                    to="/assets/img/gallery/gallery_3_1.jpg"
+                                    to={CMS.galleries.galleryThree[0]}
                                     className="popup-image"
                                 >
                                     <div className="icon-btn">
                                         <i className="fal fa-magnifying-glass-plus" />
                                     </div>
                                     <img
-                                        src="/assets/img/gallery/gallery_3_1.jpg"
+                                        src={CMS.galleries.galleryThree[0]}
                                         alt="gallery"
                                     />
                                 </Link>
@@ -47,17 +48,17 @@ function GalleryThree() {
                         <div className="gallery-box style2">
                             <div className="gallery-img global-img">
                                 <Link
-                                    to="/assets/img/gallery/gallery_3_2.jpg"
+                                    to={CMS.galleries.galleryThree[1]}
                                     className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_3_2.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryThree[1], e)}
                                 >
                                     <div className="icon-btn">
                                         <i className="fal fa-magnifying-glass-plus" />
                                     </div>
                                     <img
-                                        src="/assets/img/gallery/gallery_3_2.jpg"
+                                        src={CMS.galleries.galleryThree[1]}
                                         alt="gallery"
-                                        onClick={(e) => openModal('/assets/img/gallery/gallery_3_2.jpg', e)}
+                                        onClick={(e) => openModal(CMS.galleries.galleryThree[1], e)}
                                     />
                                 </Link>
                             </div>
@@ -65,17 +66,17 @@ function GalleryThree() {
                         <div className="gallery-box style2">
                             <div className="gallery-img global-img">
                                 <Link
-                                    to="/assets/img/gallery/gallery_3_4.jpg"
+                                    to={CMS.galleries.galleryThree[3]}
                                     className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_3_4.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryThree[3], e)}
                                 >
                                     <div className="icon-btn">
                                         <i className="fal fa-magnifying-glass-plus" />
                                     </div>
                                     <img
-                                        src="/assets/img/gallery/gallery_3_4.jpg"
+                                        src={CMS.galleries.galleryThree[3]}
                                         alt="gallery"
-                                        onClick={(e) => openModal('/assets/img/gallery/gallery_3_4.jpg', e)}
+                                        onClick={(e) => openModal(CMS.galleries.galleryThree[3], e)}
                                     />
                                 </Link>
                             </div>
@@ -85,17 +86,17 @@ function GalleryThree() {
                         <div className="gallery-box style2">
                             <div className="gallery-img global-img">
                                 <Link
-                                    to="/assets/img/gallery/gallery_3_3.jpg"
+                                    to={CMS.galleries.galleryThree[2]}
                                     className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_3_3.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryThree[2], e)}
                                 >
                                     <div className="icon-btn">
                                         <i className="fal fa-magnifying-glass-plus" />
                                     </div>
                                     <img
-                                        src="/assets/img/gallery/gallery_3_3.jpg"
+                                        src={CMS.galleries.galleryThree[2]}
                                         alt="gallery"
-                                        onClick={(e) => openModal('/assets/img/gallery/gallery_3_3.jpg', e)}
+                                        onClick={(e) => openModal(CMS.galleries.galleryThree[2], e)}
                                     />
                                 </Link>
                             </div>
@@ -104,17 +105,17 @@ function GalleryThree() {
                             <div className="gallery-box style2">
                                 <div className="gallery-img global-img">
                                     <Link
-                                        to="/assets/img/gallery/gallery_3_5.jpg"
+                                        to={CMS.galleries.galleryThree[4]}
                                         className="popup-image"
-                                        onClick={(e) => openModal('/assets/img/gallery/gallery_3_5.jpg', e)}
+                                        onClick={(e) => openModal(CMS.galleries.galleryThree[4], e)}
                                     >
                                         <div className="icon-btn">
                                             <i className="fal fa-magnifying-glass-plus" />
                                         </div>
                                         <img
-                                            src="/assets/img/gallery/gallery_3_5.jpg"
+                                            src={CMS.galleries.galleryThree[4]}
                                             alt="gallery"
-                                            onClick={(e) => openModal('/assets/img/gallery/gallery_3_5.jpg', e)}
+                                            onClick={(e) => openModal(CMS.galleries.galleryThree[4], e)}
                                         />
                                     </Link>
                                 </div>
@@ -122,17 +123,17 @@ function GalleryThree() {
                             <div className="gallery-box style2">
                                 <div className="gallery-img global-img">
                                     <Link
-                                        to="/assets/img/gallery/gallery_3_6.jpg"
+                                        to={CMS.galleries.galleryThree[5]}
                                         className="popup-image"
-                                        onClick={(e) => openModal('/assets/img/gallery/gallery_3_6.jpg', e)}
+                                        onClick={(e) => openModal(CMS.galleries.galleryThree[5], e)}
                                     >
                                         <div className="icon-btn">
                                             <i className="fal fa-magnifying-glass-plus" />
                                         </div>
                                         <img
-                                            src="/assets/img/gallery/gallery_3_6.jpg"
+                                            src={CMS.galleries.galleryThree[5]}
                                             alt="gallery"
-                                            onClick={(e) => openModal('/assets/img/gallery/gallery_3_6.jpg', e)}
+                                            onClick={(e) => openModal(CMS.galleries.galleryThree[5], e)}
                                         />
                                     </Link>
                                 </div>

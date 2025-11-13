@@ -5,15 +5,9 @@ import About from './About'
 import LoadTop from '../Components/LoadTop'
 import Destination from './Destination'
 import DestinationDetails from './DestinationDetails'
-import Service from './Service'
-import ServiceDetails from './ServiceDetails';
 import Activities from './Activities'
 import ActivitiesDetails from './ActivitiesDetails'
 import Gallery from './Gallery'
-import Tour from './Tour'
-import TourDetails from './TourDetails'
-import Resort from './Resort'
-import ResortDetails from './ResortDetails'
 import TourGuide from './TourGuide'
 import TourGuiderDetails from './TourGuiderDetails'
 import Faq from './Faq'
@@ -33,15 +27,10 @@ function RouterPage() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/destination" element={<Destination />}></Route>
           <Route path="/destination/:id" element={<DestinationDetails />} />
-          <Route path="/service" element={<Service />}></Route>
-          <Route path="/service/:id" element={<ServiceDetails />} />
           <Route path="/activities" element={<Activities />}></Route>
           <Route path="/activities-details" element={<ActivitiesDetails />}></Route>
           <Route path="/gallery" element={<Gallery />}></Route>
-          <Route path="/tour" element={<Tour />}></Route>
-          <Route path="/tour-details" element={<TourDetails />}></Route>
-          <Route path="/resort" element={<Resort />}></Route>
-          <Route path="/resort/:id" element={<ResortDetails />}></Route>
+          {/** Tours, Resorts, Services removed per requirements */}
           <Route path="/tour-guide" element={<TourGuide />}></Route>
           <Route path="/tour-guide/:id" element={<TourGuiderDetails />}></Route>
           <Route path="/faq" element={<Faq />}></Route>

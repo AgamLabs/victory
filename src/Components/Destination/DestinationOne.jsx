@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import CMS from '../../cms/content';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -6,18 +7,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import { Link } from "react-router-dom";
 
-const destinations = [
-  { id: 1, name: "Bangkok", listings: 45, image: "/assets/img/destination/destination_1_1.jpg" },
-  { id: 2, name: "Chiang Mai", listings: 32, image: "/assets/img/destination/destination_1_2.jpg" },
-  { id: 3, name: "Phuket", listings: 38, image: "/assets/img/destination/destination_1_3.jpg" },
-  { id: 4, name: "Koh Samui", listings: 28, image: "/assets/img/destination/destination_1_4.jpg" },
-  { id: 5, name: "Krabi", listings: 25, image: "/assets/img/destination/destination_1_5.jpg" },
-  { id: 6, name: "Bangkok", listings: 45, image: "/assets/img/destination/destination_1_1.jpg" },
-  { id: 7, name: "Chiang Mai", listings: 32, image: "/assets/img/destination/destination_1_2.jpg" },
-  { id: 8, name: "Phuket", listings: 38, image: "/assets/img/destination/destination_1_3.jpg" },
-  { id: 9, name: "Koh Samui", listings: 28, image: "/assets/img/destination/destination_1_4.jpg" },
-  { id: 10, name: "Krabi", listings: 25, image: "/assets/img/destination/destination_1_5.jpg" },
-];
+const destinations = CMS.destination.lists.popularList;
 
 const sliderOptions = {
   modules: [EffectCoverflow, Autoplay, Navigation],

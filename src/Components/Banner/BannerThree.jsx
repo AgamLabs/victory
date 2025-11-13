@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import CMS from '../../cms/content';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, Controller, EffectFade } from "swiper/modules";
 import "swiper/css";
@@ -85,12 +86,7 @@ function BannerThree() {
                 className="hero-slider-3"
             >
                 {/* Image Slides */}
-                {[
-                    { img: "/assets/img/hero/hero_bg_3_1.jpg", title: "Discover The World with Our Guide" },
-                    { img: "/assets/img/hero/hero_bg_3_2.jpg", title: "Discover The World Best Destination" },
-                    { img: "/assets/img/hero/hero_bg_3_3.jpg", title: "Capture Wonder Of The World" },
-                    { img: "/assets/img/hero/hero_bg_3_4.jpg", title: "Explore the world with Victory International" },
-                ].map((slide, index) => (
+                {CMS.banners.bannerThree.slides.map((slide, index) => (
                     <SwiperSlide key={index}>
                         <div className="hero-inner">
                             <div className="th-hero-bg" style={{ backgroundImage: `url(${slide.img})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }}></div>
@@ -116,7 +112,7 @@ function BannerThree() {
                     <div className="hero-inner">
                         {/* Video Background */}
                         <video autoPlay loop muted playsInline className="hero-video">
-                            <source src="/assets/img/hero/hero-video3.mp4" type="video/mp4" />
+                            <source src={CMS.banners.bannerThree.video} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
 
@@ -162,13 +158,7 @@ function BannerThree() {
                                 onSwiper={setThumbsSwiper}
                                 className="hero3Thumbs"
                             >
-                                {[
-                                    "/assets/img/hero/hero_bg_3_1.jpg",
-                                    "/assets/img/hero/hero_bg_3_2.jpg",
-                                    "/assets/img/hero/hero_bg_3_3.jpg",
-                                    "/assets/img/hero/hero_bg_3_4.jpg",
-                                    "/assets/img/hero/hero_bg_3_5.jpg",
-                                ].map((thumb, index) => (
+                                {CMS.banners.bannerThree.thumbs.map((thumb, index) => (
                                     <SwiperSlide key={index}>
                                         <div className="hero-inner">
                                             <div className="hero3-card">

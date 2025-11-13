@@ -133,7 +133,7 @@ function DestinationDetailsMain() {
                                 </p>
                                 <div className="service-inner-img mb-40">
                                     <img
-                                        src="/assets/img/destination/destination-inner-1.jpg"
+                                        src={CMS.destination.details.innerImage}
                                         alt=""
                                     />
                                 </div>
@@ -153,78 +153,26 @@ function DestinationDetailsMain() {
                             <div className="destination-gallery-wrapper">
                                 <h3 className="page-title mt-30 mb-30">From our gallery</h3>
                                 <div className="row gy-4 gallery-row filter-active">
-                                    <div className="col-xxl-auto filter-item">
-                                        <div className="gallery-box style3">
-                                            <div className="gallery-img global-img">
-                                                <img
-                                                    src="/assets/img/gallery/gallery_6_1.jpg"
-                                                    alt="gallery"
-                                                    onClick={(e) => openModal('/assets/img/gallery/gallery_6_1.jpg', e)}
-                                                />
-                                                <Link
-                                                    to="/assets/img/gallery/gallery_6_1.jpg"
-                                                    className="icon-btn popup-image"
-                                                    onClick={(e) => openModal('/assets/img/gallery/gallery_6_1.jpg', e)}
-                                                >
-                                                    <i className="fal fa-magnifying-glass-plus" />
-                                                </Link>
+                                    {CMS.destination.details.gallery6.map((img, idx) => (
+                                        <div className="col-xxl-auto filter-item" key={idx}>
+                                            <div className="gallery-box style3">
+                                                <div className="gallery-img global-img">
+                                                    <img
+                                                        src={img}
+                                                        alt="gallery"
+                                                        onClick={(e) => openModal(img, e)}
+                                                    />
+                                                    <Link
+                                                        to={img}
+                                                        className="icon-btn popup-image"
+                                                        onClick={(e) => openModal(img, e)}
+                                                    >
+                                                        <i className="fal fa-magnifying-glass-plus" />
+                                                    </Link>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="col-xxl-auto filter-item">
-                                        <div className="gallery-box style3">
-                                            <div className="gallery-img global-img">
-                                                <img
-                                                    src="/assets/img/gallery/gallery_6_2.jpg"
-                                                    alt="gallery"
-                                                    onClick={(e) => openModal('/assets/img/gallery/gallery_6_2.jpg', e)}
-                                                />
-                                                <Link
-                                                    to="/assets/img/gallery/gallery_6_2.jpg"
-                                                    className="icon-btn popup-image"
-                                                    onClick={(e) => openModal('/assets/img/gallery/gallery_6_2.jpg', e)}
-                                                >
-                                                    <i className="fal fa-magnifying-glass-plus" />
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-xxl-auto filter-item">
-                                        <div className="gallery-box style3">
-                                            <div className="gallery-img global-img">
-                                                <img
-                                                    src="/assets/img/gallery/gallery_6_3.jpg"
-                                                    alt="gallery"
-                                                    onClick={(e) => openModal('/assets/img/gallery/gallery_6_3.jpg', e)}
-                                                />
-                                                <Link
-                                                    to="/assets/img/gallery/gallery_6_3.jpg"
-                                                    className="icon-btn popup-image"
-                                                    onClick={(e) => openModal('/assets/img/gallery/gallery_6_3.jpg', e)}
-                                                >
-                                                    <i className="fal fa-magnifying-glass-plus" />
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-xxl-auto filter-item">
-                                        <div className="gallery-box style3">
-                                            <div className="gallery-img global-img">
-                                                <img
-                                                    src="/assets/img/gallery/gallery_6_4.jpg"
-                                                    alt="gallery"
-                                                    onClick={(e) => openModal('/assets/img/gallery/gallery_6_4.jpg', e)}
-                                                />
-                                                <Link
-                                                    to="/assets/img/gallery/gallery_6_4.jpg"
-                                                    className="icon-btn popup-image"
-                                                    onClick={(e) => openModal('/assets/img/gallery/gallery_6_4.jpg', e)}
-                                                >
-                                                    <i className="fal fa-magnifying-glass-plus" />
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    ))}
                                 </div>
                             </div>
                             <div className="th-comments-wrap style2 ">
@@ -522,42 +470,6 @@ function DestinationDetailsMain() {
                                                 </Link>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="widget widget_tag_cloud  ">
-                                <h3 className="widget_title">Popular Tags</h3>
-                                <div className="tagcloud">
-                                    <Link to="/blog">Tour</Link>
-                                    <Link to="/blog">Adventure</Link>
-                                    <Link to="/blog">Rent</Link>
-                                    <Link to="/blog">Innovate</Link>
-                                    <Link to="/blog">Hotel</Link>
-                                    <Link to="/blog">Modern</Link>
-                                    <Link to="/blog">Luxury</Link>
-                                    <Link to="/blog">Travel</Link>
-                                </div>
-                            </div>
-                            <div
-                                className="widget widget_offer" style={{ background: 'url(/assets/img/bg/widget_bg_1.jpg)', backgroundRepeat: "no-repeat", backgroundSize:"cover" }}
-                            >
-                                <div className="offer-banner">
-                                    <div className="offer">
-                                        <h6 className="box-title">
-                                            Need Help? We Are Here To Help You
-                                        </h6>
-                                        <div className="banner-logo">
-                                            <img src="/assets/img/logo_1.png" alt="Victory International" style={{maxHeight: "50px", width: "auto"}} />
-                                        </div>
-                                        <div className="offer">
-                                            <h6 className="offer-title">You Get Online support</h6>
-                                            <Link className="offter-num" to={+256214203215}>
-                                                +256 214 203 215
-                                            </Link>
-                                        </div>
-                                        <Link to="/contact" className="th-btn style2 th-icon">
-                                            Read More
-                                        </Link>
                                     </div>
                                 </div>
                             </div>

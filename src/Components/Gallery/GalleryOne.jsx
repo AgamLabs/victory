@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CMS from '../../cms/content';
 import Modal from './Modal';
 import { Link } from 'react-router-dom';
 
@@ -30,18 +31,18 @@ function GalleryOne() {
                         <div className="gallery-card">
                             <div className="box-img global-img">
                                 <Link
-                                    to="/assets/img/gallery/gallery_1_1.jpg"
+                                    to={CMS.galleries.galleryOne[0]}
                                     className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_1_1.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryOne[0], e)}
                                 >
                                     <div className="icon-btn">
                                         <i className="fal fa-magnifying-glass-plus" />
                                     </div>
                                 </Link>
                                 <img
-                                    src="/assets/img/gallery/gallery_1_1.jpg"
+                                    src={CMS.galleries.galleryOne[0]}
                                     alt="gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_1_1.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryOne[0], e)}
                                 />
                             </div>
                         </div>
@@ -50,56 +51,36 @@ function GalleryOne() {
                         <div className="gallery-card">
                             <div className="box-img global-img">
                                 <Link
-                                    to="/assets/img/gallery/gallery_1_2.jpg"
+                                    to={CMS.galleries.galleryOne[1]}
                                     className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_1_2.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryOne[1], e)}
                                 >
                                     <div className="icon-btn">
                                         <i className="fal fa-magnifying-glass-plus" />
                                     </div>
                                 </Link>
                                 <img
-                                    src="/assets/img/gallery/gallery_1_2.jpg"
+                                    src={CMS.galleries.galleryOne[1]}
                                     alt="gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_1_2.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryOne[1], e)}
                                 />
                             </div>
                         </div>
                         <div className="gallery-card">
                             <div className="box-img global-img">
                                 <Link
-                                    to="/assets/img/gallery/gallery_1_3.jpg"
+                                    to={CMS.galleries.galleryOne[2]}
                                     className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_1_3.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryOne[2], e)}
                                 >
                                     <div className="icon-btn">
                                         <i className="fal fa-magnifying-glass-plus" />
                                     </div>
                                 </Link>
                                 <img
-                                    src="/assets/img/gallery/gallery_1_3.jpg"
+                                    src={CMS.galleries.galleryOne[2]}
                                     alt="gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_1_3.jpg', e)}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6 col-lg-2">
-                        <div className="gallery-card">
-                            <div className="box-img global-img">
-                                <Link
-                                    to="/assets/img/gallery/gallery_1_4.jpg"
-                                    className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_1_4.jpg', e)}
-                                >
-                                    <div className="icon-btn">
-                                        <i className="fal fa-magnifying-glass-plus" />
-                                    </div>
-                                </Link>
-                                <img
-                                    src="/assets/img/gallery/gallery_1_4.jpg"
-                                    alt="gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_1_4.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryOne[2], e)}
                                 />
                             </div>
                         </div>
@@ -108,36 +89,18 @@ function GalleryOne() {
                         <div className="gallery-card">
                             <div className="box-img global-img">
                                 <Link
-                                    to="/assets/img/gallery/gallery_1_5.jpg"
+                                    to={CMS.galleries.galleryOne[3]}
                                     className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_1_5.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryOne[3], e)}
                                 >
                                     <div className="icon-btn">
                                         <i className="fal fa-magnifying-glass-plus" />
                                     </div>
                                 </Link>
                                 <img
-                                    src="/assets/img/gallery/gallery_1_5.jpg"
+                                    src={CMS.galleries.galleryOne[3]}
                                     alt="gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_1_5.jpg', e)}
-                                />
-                            </div>
-                        </div>
-                        <div className="gallery-card">
-                            <div className="box-img global-img">
-                                <Link
-                                    to="/assets/img/gallery/gallery_1_6.jpg"
-                                    className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_1_6.jpg', e)}
-                                >
-                                    <div className="icon-btn">
-                                        <i className="fal fa-magnifying-glass-plus" />
-                                    </div>
-                                </Link>
-                                <img
-                                    src="/assets/img/gallery/gallery_1_6.jpg"
-                                    alt="gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_1_6.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryOne[3], e)}
                                 />
                             </div>
                         </div>
@@ -146,18 +109,56 @@ function GalleryOne() {
                         <div className="gallery-card">
                             <div className="box-img global-img">
                                 <Link
-                                    to="/assets/img/gallery/gallery_1_7.jpg"
+                                    to={CMS.galleries.galleryOne[4]}
                                     className="popup-image"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_1_7.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryOne[4], e)}
                                 >
                                     <div className="icon-btn">
                                         <i className="fal fa-magnifying-glass-plus" />
                                     </div>
                                 </Link>
                                 <img
-                                    src="/assets/img/gallery/gallery_1_7.jpg"
+                                    src={CMS.galleries.galleryOne[4]}
                                     alt="gallery"
-                                    onClick={(e) => openModal('/assets/img/gallery/gallery_1_7.jpg', e)}
+                                    onClick={(e) => openModal(CMS.galleries.galleryOne[4], e)}
+                                />
+                            </div>
+                        </div>
+                        <div className="gallery-card">
+                            <div className="box-img global-img">
+                                <Link
+                                    to={CMS.galleries.galleryOne[5]}
+                                    className="popup-image"
+                                    onClick={(e) => openModal(CMS.galleries.galleryOne[5], e)}
+                                >
+                                    <div className="icon-btn">
+                                        <i className="fal fa-magnifying-glass-plus" />
+                                    </div>
+                                </Link>
+                                <img
+                                    src={CMS.galleries.galleryOne[5]}
+                                    alt="gallery"
+                                    onClick={(e) => openModal(CMS.galleries.galleryOne[5], e)}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-lg-2">
+                        <div className="gallery-card">
+                            <div className="box-img global-img">
+                                <Link
+                                    to={CMS.galleries.galleryOne[6]}
+                                    className="popup-image"
+                                    onClick={(e) => openModal(CMS.galleries.galleryOne[6], e)}
+                                >
+                                    <div className="icon-btn">
+                                        <i className="fal fa-magnifying-glass-plus" />
+                                    </div>
+                                </Link>
+                                <img
+                                    src={CMS.galleries.galleryOne[6]}
+                                    alt="gallery"
+                                    onClick={(e) => openModal(CMS.galleries.galleryOne[6], e)}
                                 />
                             </div>
                         </div>

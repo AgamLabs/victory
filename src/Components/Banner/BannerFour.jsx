@@ -1,4 +1,5 @@
 import React from 'react'
+import CMS from '../../cms/content'
 import { Link } from 'react-router-dom'
 
 function BannerFour() {
@@ -7,10 +8,9 @@ function BannerFour() {
         <div
             className="th-hero-wrapper bg-bottom-center hero-4"
             style={{
-                backgroundImage: "url(/assets/img/bg/hero_bg_4_1.png)",
+                backgroundImage: `url(${CMS.banners.bannerFour.bg})`,
                 backgroundRepeat: "no-repeat",
             }}
-            
         >
             <div className="container shape-mockup-wrap">
                 <div className="hero-style4 text-center">

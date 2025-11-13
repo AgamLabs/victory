@@ -1,13 +1,9 @@
 import React, { useState } from "react";
+import CMS from '../../cms/content';
 import { Link } from "react-router-dom";
 
 function DestinationTwo() {
-    const destinations = [
-        { name: "Thailand", image: "destination_2_1.jpg", listings: 28 },
-        { name: "Belgium", image: "destination_2_2.jpg", listings: 15 },
-        { name: "Island", image: "destination_2_3.jpg", listings: 22 },
-        { name: "Maldives", image: "destination_2_4.jpg", listings: 25 },
-    ];
+    const destinations = CMS.destination.lists.featuredList;
 
     const [activeIndex, setActiveIndex] = useState(3); // Default active index (Maldives)
 
@@ -15,7 +11,7 @@ function DestinationTwo() {
         <div
             className="bg-top-center position-relative space"
             id="destination-sec"
-            style={{ backgroundImage: "url('/assets/img/bg/line-pattern2.png')", backgroundRepeat: "no-repeat" }}
+            style={{ backgroundImage: `url('${CMS.destination.backgrounds.linePattern2}')`, backgroundRepeat: "no-repeat" }}
         >
             <div className="container shape-mockup-wrap">
                 <div className="title-area text-center">
@@ -58,25 +54,25 @@ function DestinationTwo() {
                     className="shape-mockup movingX d-none d-xl-block"
                     style={{ top: "8%", left: "-15%" }}
                 >
-                    <img src="/assets/img/shape/shape_2_1.png" alt="shape" />
+                    <img src={CMS.destination.shapes.s2_1} alt="shape" />
                 </div>
                 <div 
                     className="shape-mockup jump d-none d-xl-block"
                     style={{ top: "23%", right: "-14%" }}
                 >
-                    <img src="/assets/img/shape/shape_2_2.png" alt="shape" />
+                    <img src={CMS.destination.shapes.s2_2} alt="shape" />
                 </div>
                 <div 
                     className="shape-mockup spin d-none d-xl-block"
                     style={{ bottom: "21%", left: "-14%" }}
                 >
-                    <img src="/assets/img/shape/shape_2_3.png" alt="shape" />
+                    <img src={CMS.destination.shapes.s2_3} alt="shape" />
                 </div>
                 <div 
                     className="shape-mockup movingX d-none d-xl-block"
                     style={{ bottom: "12%", right: "-14%" }}
                 >
-                    <img src="/assets/img/shape/shape_2_4.png" alt="shape" />
+                    <img src={CMS.destination.shapes.s2_4} alt="shape" />
                 </div>
             </div>
         </div>
