@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import CMS from '../../cms/content'
 import { Link, useParams } from 'react-router-dom';
 import Posts from '../data/data-destination.json';
 import Modal from '../Gallery/Modal';
@@ -20,11 +21,13 @@ function DestinationDetailsMain() {
     };
 
     const closeModal = () => setIsModalOpen(false);
+    const showSidebars = CMS.destination?.showSidebars !== false; // default true if undefined
+    const mainColClasses = showSidebars ? 'col-xxl-8 col-lg-7' : 'col-12';
     return (
         <section className="space">
             <div className="container">
                 <div className="row">
-                    <div className="col-xxl-8 col-lg-7">
+                    <div className={mainColClasses}>
                         <div className="page-single">
                             <div className="service-img">
                                 <img src={`/assets/img/destination/${destinationPost.bannerImg}`} alt="" />
@@ -390,6 +393,7 @@ function DestinationDetailsMain() {
                             </div>
                         </div>
                     </div>
+                    {showSidebars && (
                     <div className="col-xxl-4 col-lg-5">
                         <aside className="sidebar-area style3">
                             <div className="widget widget_search  ">
@@ -559,6 +563,7 @@ function DestinationDetailsMain() {
                             </div>
                         </aside>
                     </div>
+                    )}
                 </div>
             </div>
             <Modal isOpen={isModalOpen} closeModal={closeModal} imageSrc={modalImage} />

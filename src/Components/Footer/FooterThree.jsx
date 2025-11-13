@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import CMS from '../../cms/content'
 import Modal from '../Gallery/Modal';
 
 function FooterThree() {
@@ -27,7 +28,7 @@ function FooterThree() {
                                 <div className="th-widget-about">
                                     <div className="about-logo">
                                         <Link to="/">
-                                            <img src="/assets/img/logo_1.png" alt="Victory International" style={{maxHeight: "60px", width: "auto"}} />
+                                            <img src={CMS.site.logo.primary} alt="Victory International" style={{maxHeight: "60px", width: "auto"}} />
                                         </Link>
                                     </div>
                                     <p className="about-text">
@@ -35,16 +36,21 @@ function FooterThree() {
                                         model. Appropriately create interactive infrastructures
                                     </p>
                                     <div className="th-social">
-                                        <Link to="https://www.facebook.com/">
+                                        <Link to={CMS.site.social.facebook}>
                                             <i className="fab fa-facebook-f" />
                                         </Link>
-                                        <Link to="https://www.linkedin.com/">
+                                        {CMS.footer.showTwitterIcon && (
+                                            <Link to={CMS.site.social.twitter}>
+                                                <i className="fab fa-twitter" />
+                                            </Link>
+                                        )}
+                                        <Link to={CMS.site.social.linkedin}>
                                             <i className="fab fa-linkedin-in" />
                                         </Link>
-                                        <Link to="https://www.youtube.com/">
+                                        <Link to={CMS.site.social.youtube}>
                                             <i className="fab fa-youtube" />
                                         </Link>
-                                        <Link to="https://www.whatsapp.com/">
+                                        <Link to={CMS.site.social.whatsapp}>
                                             <i className="fab fa-whatsapp" />
                                         </Link>
                                     </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import CMS from '../../cms/content';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from "swiper/modules";
 import 'swiper/css'; 
@@ -11,8 +12,8 @@ function TourGuideTwo() {
     style={{ backgroundImage: "url(/assets/img/bg/team_bg_2.jpg)", backgroundRepeat:"no-repeat", zIndex:"1", paddingBottom: "0" }}>
       <div className="container z-index-common">
         <div className="title-area text-center">
-          <span className="sub-title">Our DMC Network</span>
-          <h2 className="sec-title">Trusted Destination Management Partners</h2>
+          <span className="sub-title">{CMS.dmc.titleArea.subtitle}</span>
+          <h2 className="sec-title">{CMS.dmc.titleArea.title}</h2>
         </div>
         <div className="slider-area">
           <Swiper
@@ -56,7 +57,7 @@ function TourGuideTwo() {
                 <div className="team-content">
                   <div className="media-body">
                     <h3 className="box-title">
-                      <Link to="#">East Africa DMC</Link>
+                      <Link to={CMS.dmc.partners[0]?.url || '#'}>{CMS.dmc.partners[0]?.name}</Link>
                     </h3>
                     <span className="team-desig">Destination Management Company</span>
                     <div className="th-social">
@@ -93,7 +94,7 @@ function TourGuideTwo() {
                 <div className="team-content">
                   <div className="media-body">
                     <h3 className="box-title">
-                      <Link to="#">Europe DMC</Link>
+                      <Link to={CMS.dmc.partners[1]?.url || '#'}>{CMS.dmc.partners[1]?.name}</Link>
                     </h3>
                     <span className="team-desig">Destination Management Company</span>
                     <div className="th-social">
@@ -130,7 +131,7 @@ function TourGuideTwo() {
                 <div className="team-content">
                   <div className="media-body">
                     <h3 className="box-title">
-                      <Link to="#">Middle East DMC</Link>
+                      <Link to={CMS.dmc.partners[2]?.url || '#'}>{CMS.dmc.partners[2]?.name}</Link>
                     </h3>
                     <span className="team-desig">Destination Management Company</span>
                     <div className="th-social">
@@ -167,7 +168,7 @@ function TourGuideTwo() {
                 <div className="team-content">
                   <div className="media-body">
                     <h3 className="box-title">
-                      <Link to="#">South Asia DMC</Link>
+                      <Link to={CMS.dmc.partners[3]?.url || '#'}>{CMS.dmc.partners[3]?.name}</Link>
                     </h3>
                     <span className="team-desig">Destination Management Company</span>
                     <div className="th-social">
@@ -204,7 +205,7 @@ function TourGuideTwo() {
                 <div className="team-content">
                   <div className="media-body">
                     <h3 className="box-title">
-                      <Link to="#">Americas DMC</Link>
+                      <Link to={CMS.dmc.partners[4]?.url || '#'}>{CMS.dmc.partners[4]?.name}</Link>
                     </h3>
                     <span className="team-desig">Destination Management Company</span>
                     <div className="th-social">
@@ -241,7 +242,7 @@ function TourGuideTwo() {
                 <div className="team-content">
                   <div className="media-body">
                     <h3 className="box-title">
-                      <Link to="#">Oceania DMC</Link>
+                      <Link to={CMS.dmc.partners[5]?.url || '#'}>{CMS.dmc.partners[5]?.name}</Link>
                     </h3>
                     <span className="team-desig">Destination Management Company</span>
                     <div className="th-social">

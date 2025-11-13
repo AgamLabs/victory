@@ -1,4 +1,5 @@
 import React from 'react'
+import CMS from '../../cms/content'
 import { Link, useParams } from 'react-router-dom';
 import Posts from '../data/data-post.json';
 
@@ -92,7 +93,7 @@ function BlogDetailsMain() {
                                         <div className="blog-img">
                                             <img
                                                 className="w-100"
-                                                src="/assets/img/blog/blog_inner_1.jpg"
+                                                src={CMS.blog.details.heroImage}
                                                 alt="Blog Image"
                                             />
                                         </div>
