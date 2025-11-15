@@ -12,6 +12,8 @@ function GalleryFive() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalImage, setModalImage] = useState("");
 
+    const galleryImages = CMS.site?.galleries?.galleryFourCarousel || [];
+
     const openModal = (imageSrc, event) => {
         event.preventDefault();
         setModalImage(imageSrc);
@@ -40,7 +42,7 @@ function GalleryFive() {
                         autoplay={{ delay: 3000, disableOnInteraction: false }}
                         className="th-slider has-shadow"
                     >
-                        {CMS.galleries.galleryFourCarousel.map((img, idx) => (
+                        {galleryImages.map((img, idx) => (
                             <SwiperSlide key={idx}>
                                 <div className="gallery-thumb style2 global-img">
                                     <img

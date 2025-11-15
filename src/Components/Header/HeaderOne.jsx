@@ -1,16 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import NiceSelect from './NiceSelect';
 import MobileMenu from './MobileMenu';
 import LoginForm from './LoginForm';
 
 function HeaderOne() {
-    const languageOptions = [
-        { value: "language", label: "Language" },
-        { value: "CNY", label: "CNY" },
-        { value: "EUR", label: "EUR" },
-        { value: "AUD", label: "AUD" },
-    ];
     const [isSticky, setIsSticky] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isLoginFormOpen, setIsLoginFormOpen] = useState(false);

@@ -7,7 +7,6 @@ import { Pagination, EffectFade, Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
-import { Link } from 'react-router-dom';
 function BannerOne() {
     const swiperRef = useRef(null);
 

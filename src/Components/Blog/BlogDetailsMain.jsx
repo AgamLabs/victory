@@ -17,7 +17,7 @@ function BlogDetailsMain() {
                     <div className="col-xxl-8 col-lg-7">
                         <div className="th-blog blog-single">
                             <div className="blog-img">
-                                <img src={`/assets/img/blog/${blogPost.bannerImg}`} alt="Blog Image" />
+                                <img src={`/assets/img/blog/${blogPost.bannerImg}`} alt={blogPost.title} />
                             </div>
                             <div className="blog-content">
                                 <div className="blog-meta">
@@ -94,7 +94,7 @@ function BlogDetailsMain() {
                                             <img
                                                 className="w-100"
                                                 src={CMS.blog.details.heroImage}
-                                                alt="Blog Image"
+                                                alt="Blog hero"
                                             />
                                         </div>
                                     </div>
@@ -282,7 +282,7 @@ function BlogDetailsMain() {
                                             <Link to="#">
                                                 <img
                                                     src="/assets/img/blog/recent-post-1-1.jpg"
-                                                    alt="Blog Image"
+                                                    alt="Exploring the green spaces of the island Maldives"
                                                 />
                                             </Link>
                                         </div>
@@ -305,7 +305,7 @@ function BlogDetailsMain() {
                                             <Link to="#">
                                                 <img
                                                     src="/assets/img/blog/recent-post-1-2.jpg"
-                                                    alt="Blog Image"
+                                                    alt="Harmony with nature of Belgium tour and travel"
                                                 />
                                             </Link>
                                         </div>
@@ -328,7 +328,7 @@ function BlogDetailsMain() {
                                             <Link to="#">
                                                 <img
                                                     src="/assets/img/blog/recent-post-1-3.jpg"
-                                                    alt="Blog Image"
+                                                    alt="Exploring the green spaces of Realar Residence"
                                                 />
                                             </Link>
                                         </div>
