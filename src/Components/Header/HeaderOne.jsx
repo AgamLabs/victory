@@ -85,7 +85,9 @@ function HeaderOne() {
                                                 <Link to="/blog">Blog</Link>
                                                 <ul className="sub-menu">
                                                     <li>
-                                                        <Link to="/blog/1">Blog Details</Link>
+                                                        <Link to="/blog/1">Find Pattaya</Link>
+                                                        <Link to="/blog/2">What NOT to Do in Bangkok</Link>
+                                                        <Link to="/blog/3">Bangkok's Hidden Gems</Link>
                                                     </li>
                                                 </ul>
                                             </li>
