@@ -17,7 +17,7 @@ function HomeOne() {
             <DestinationOne />
             {/* <GalleryOne /> */}
             {/* <TourGuide /> */}
-            <TestimonialOne />
+            {/* <TestimonialOne /> */}
             <BlogOne />
             <FooterOne />
             {/* <ScrollToTop /> */}
