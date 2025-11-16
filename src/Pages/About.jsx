@@ -21,7 +21,7 @@ function About() {
            
             <ElementSection />
             <TourGuideTwo />
-            <TestimonialOne />
+            {/* <TestimonialOne /> */}
             <BrandOne/>
             <GalleryFive />
             <FooterFour />
