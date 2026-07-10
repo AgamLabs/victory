@@ -220,6 +220,19 @@ export const destinationRegions = [
   { key: "gulf", label: "Gulf islands" },
 ];
 
-export const getDestination = (slug) => destinations.find((destination) => destination.slug === slug);
+const legacyDestinationSlugs = {
+  "1": "bangkok",
+  "2": "chiang-mai-north",
+  "3": "ayutthaya",
+  "4": "pattaya-east",
+  "5": "krabi-railay",
+  "6": "phuket-phi-phi",
+  "7": "samui-gulf-islands",
+};
+
+export const getDestination = (slug) => {
+  const normalizedSlug = legacyDestinationSlugs[slug] || slug;
+  return destinations.find((destination) => destination.slug === normalizedSlug);
+};
 
 export default destinations;
