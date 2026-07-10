@@ -10,7 +10,7 @@ function Error() {
     <>
       <HeaderOne />
       <Breadcrumb
-        title="Error Page"
+        title="Page Not Found"
       />
       <section className="space bg-smoke">
         <div className="container">
@@ -22,13 +22,13 @@ function Error() {
             </div>
             <div className="col-lg-6">
               <div className="error-content">
-                <h2 className="error-title">Oops! Page Not Found</h2>
+                <h2 className="error-title">This page isn't available</h2>
                 <h4 className="error-subtitle">
-                  This page seems to have slipped through a time portal
+                  Let's get your Thailand plans back on course.
                 </h4>
                 <p className="error-text">
-                  We appologize for any distruction to the space-time continuum. Feel
-                  free to journey back to our homepage
+                  The link may be outdated or the page may have moved. Return home,
+                  explore our destinations, or contact our Bangkok team for help.
                 </p>
                 <Link to="/" className="th-btn style3">
                   <img src="/assets/img/icon/right-arrow2.svg" alt="" />

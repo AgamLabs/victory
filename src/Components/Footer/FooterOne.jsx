@@ -54,13 +54,13 @@ function FooterOne() {
                                             <Link to="/about">About us</Link>
                                         </li>
                                         <li>
-                                            <Link to="/service">Our Service</Link>
+                                            <Link to="/destination">Destinations</Link>
                                         </li>
                                         <li>
-                                            <Link to="/contact">Terms of Service</Link>
+                                            <Link to="/blog">Travel Insights</Link>
                                         </li>
                                         <li>
-                                            <Link to="/contact">Tour Booking Now</Link>
+                                            <Link to="/contact">Plan Your Trip</Link>
                                         </li>
                                     </ul>
                                 </div>

@@ -1,129 +1,54 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
+
+const menuItems = [
+    { label: 'Home', to: '/', end: true },
+    { label: 'About', to: '/about' },
+    { label: 'Destinations', to: '/destination' },
+    { label: 'Insights', to: '/blog' },
+    { label: 'Contact', to: '/contact' },
+];
 
 function MobileMenu({ isOpen, onClose }) {
-    const [activeMenu, setActiveMenu] = useState(null);
-    const menuRefs = useRef({});
-
-    // Toggle dropdown menu
-    const toggleMenu = (index) => {
-        if (index !== 6) {
-            setActiveMenu(activeMenu === index ? null : index);
-        }
-    };
-
-
-    // Apply height animation when activeMenu changes
-    useEffect(() => {
-        Object.keys(menuRefs.current).forEach((key) => {
-            const submenu = menuRefs.current[key];
-            if (submenu) {
-                submenu.style.height = activeMenu  === key ? `${submenu.scrollHeight}px` : "0px";
-            }
-        });
-    }, [activeMenu]);
-
     return (
-        <div className={`th-menu-wrapper onepage-nav ${isOpen ? "th-body-visible" : ""}`}
-            style={{ visibility: isOpen ? "visible" : "hidden" }}>
-
-            <div className="th-menu-area text-center">
-                <button className="th-menu-toggle" onClick={onClose} aria-label="Close">
-                    <i className="fal fa-times" />
+        <div
+            className={`th-menu-wrapper onepage-nav ${isOpen ? 'th-body-visible' : ''}`}
+            style={{ visibility: isOpen ? 'visible' : 'hidden' }}
+            aria-hidden={!isOpen}
+        >
+            <div className="th-menu-area">
+                <button className="th-menu-toggle" onClick={onClose} aria-label="Close navigation">
+                    <i className="fal fa-times" aria-hidden="true" />
                 </button>
 
                 <div className="mobile-logo">
-                    <Link to="/">
+                    <Link to="/" onClick={onClose} aria-label="Victory International home">
                         <img src="/assets/img/logo_1.png" alt="Victory International" />
                     </Link>
                 </div>
 
-                <div className="th-mobile-menu">
+                <nav className="th-mobile-menu" aria-label="Mobile navigation">
                     <ul>
-                        {/* Home */}
-                        <li className={`menu-item-has-children mega-menu-wrap th-item-has-children ${activeMenu === 1 ? "th-active" : ""}`}>
-                            <Link to="#" onClick={() => toggleMenu(1)}>Home
+                        {menuItems.map((item) => (
+                            <li key={item.to}>
+                                <NavLink
+                                    to={item.to}
+                                    end={item.end}
+                                    onClick={onClose}
+                                    className={({ isActive }) => isActive ? 'active' : ''}
+                                >
+                                    {item.label}
+                                </NavLink>
+                            </li>
+                        ))}
+                        <li className="mobile-menu-cta">
+                            <Link to="/contact" onClick={onClose}>
+                                Plan your trip
+                                <i className="fa-regular fa-arrow-right" aria-hidden="true" />
                             </Link>
-                            <ul
-                                ref={(el) => (menuRefs.current[1] = el)}
-                                className="th-submenu"
-                                style={{ height: "0px", overflow: "hidden", transition: "height 0.3s ease-in-out" }}
-                            >
-                                <li><Link to="/">Home Travel</Link></li>
-                                <li><Link to="/home-tour">Home Tour</Link></li>
-                                <li><Link to="/home-agency">Home Agency</Link></li>
-                                <li><Link to="/home-yacht">Home Yacht</Link></li>
-                            </ul>
                         </li>
-
-                        {/* About Us */}
-                        <li><Link to="/about">About Us</Link></li>
-
-                        {/* Destination */}
-                        <li className={`menu-item-has-children th-item-has-children ${activeMenu === 2 ? "th-active" : ""}`}>
-                            <Link to="#" onClick={() => toggleMenu(2)}>Destination</Link>
-                            <ul
-                                ref={(el) => (menuRefs.current[2] = el)}
-                                className="th-submenu"
-                                style={{ height: "0px", overflow: "hidden", transition: "height 0.3s ease-in-out" }}
-                            >
-                                <li><Link to="/destination">Destination</Link></li>
-                                <li><Link to="/destination/1">Destination Details</Link></li>
-                            </ul>
-                        </li>
-
-                        {/* Service - removed per requirements */}
-
-                        {/* Activities */}
-                        <li className={`menu-item-has-children th-item-has-children ${activeMenu === 4 ? "th-active" : ""}`}>
-                            <Link to="#" onClick={() => toggleMenu(4)}>Activities</Link>
-                            <ul
-                                ref={(el) => (menuRefs.current[4] = el)}
-                                className="th-submenu"
-                                style={{ height: "0px", overflow: "hidden", transition: "height 0.3s ease-in-out" }}
-                            >
-                                <li><Link to="/activities">Activities</Link></li>
-                                <li><Link to="/activities-details">Activities Details</Link></li>
-                            </ul>
-                        </li>
-
-                        {/* Pages */}
-
-                        <li className={`menu-item-has-children th-item-has-children ${activeMenu === 5 ? "th-active" : ""}`}>
-                            <Link to="#" onClick={() => toggleMenu(5)}>Pages</Link>
-                            <ul
-                                ref={(el) => (menuRefs.current[5] = el)}
-                                className="th-submenu"
-                                style={{ height: "0px", overflow: "hidden", transition: "height 0.3s ease-in-out" }}
-                            >
-                                <li><Link to="/gallery">Gallery</Link></li>
-                                {/* Tour/Resort pages removed */}
-                                <li><Link to="/tour-guide">Tour Guide</Link></li>
-                                <li><Link to="/tour-guide/1">Tour Guider Details</Link></li>
-                                <li><Link to="/faq">Faq Page</Link></li>
-                                <li><Link to="/price">Price Page</Link></li>
-                                <li><Link to="/error">Error Page</Link></li>
-                            </ul>
-                        </li>
-
-
-                        {/* Blog */}
-                        <li className={`menu-item-has-children th-item-has-children ${activeMenu === 7 ? "th-active" : ""}`}>
-                            <Link to="#" onClick={() => toggleMenu(7)}>Blog</Link>
-                            <ul
-                                ref={(el) => (menuRefs.current[7] = el)}
-                                className="th-submenu"
-                                style={{ height: "0px", overflow: "hidden", transition: "height 0.3s ease-in-out" }}
-                            >
-                                <li><Link to="/blog">Blog</Link></li>
-                                <li><Link to="/blog/1">Blog Details</Link></li>
-                            </ul>
-                        </li>
-
-                        {/* Contact */}
-                        <li><Link to="/contact">Contact Us</Link></li>
                     </ul>
-                </div>
+                </nav>
             </div>
         </div>
     );

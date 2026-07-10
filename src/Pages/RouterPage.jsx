@@ -8,6 +8,7 @@ import DestinationDetails from './DestinationDetails'
 import Blog from './Blog'
 import BlogDetails from './BlogDetails'
 import Contact from './Contact'
+import Error from './Error'
 
 function RouterPage() {
   return (
@@ -22,6 +23,7 @@ function RouterPage() {
           <Route path="/blog" element={<Blog />}></Route>
           <Route path="/blog/:id" element={<BlogDetails />}></Route>
           <Route path="/contact" element={<Contact />}></Route> 
+          <Route path="*" element={<Error />}></Route>
         </Routes>
       </Router>
     </div>
