@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import MobileMenu from './MobileMenu';
-import LoginForm from './LoginForm';
 
 function HeaderOne() {
     const [isSticky, setIsSticky] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [isLoginFormOpen, setIsLoginFormOpen] = useState(false);
-    const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -24,39 +21,10 @@ function HeaderOne() {
         };
     }, []);
 
-    // Auto-hide header after 3 seconds on initial load
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsHeaderVisible(false);
-        }, 3000);
-
-        return () => clearTimeout(timer);
-    }, []);
-
     return (
         <>
-            {/*============================== Header Area ==============================*/}
-            {/* Hover trigger area at top */}
-            <div style={{
-                position: "fixed",
-                top: 0,
-                left: 0,
-                right: 0,
-                height: "10px",
-                zIndex: 20,
-                backgroundColor: "transparent"
-            }}
-            onMouseEnter={() => setIsHeaderVisible(true)}></div>
-            <header className="th-header header-layout1" style={{
-                marginTop: isHeaderVisible ? "0px" : "-150px",
-                transition: "margin-top 0.3s ease-in-out",
-                position: "relative",
-                zIndex: 10
-            }}
-            onMouseEnter={() => setIsHeaderVisible(true)}
-            onMouseLeave={() => setIsHeaderVisible(false)}>
+            <header className="th-header header-layout1">
                 <div className={`sticky-wrapper ${isSticky ? "sticky" : ""}`}>
-                    {/* Main Menu Area */}
                     <div className="menu-area">
                         <div className="container th-container">
                             <div className="row align-items-center justify-content-between">
@@ -68,31 +36,24 @@ function HeaderOne() {
                                     </div>
                                 </div>
                                 <div className="col-auto me-xl-auto">
-                                    <nav className="main-menu d-none d-xl-inline-block">
+                                    <nav className="main-menu d-none d-xl-inline-block" aria-label="Primary navigation">
                                         <ul>
                                             <li>
-                                                <Link className="active" to="/">
+                                                <NavLink className={({ isActive }) => isActive ? 'active' : ''} end to="/">
                                                     Home
-                                                </Link>
+                                                </NavLink>
                                             </li>
                                             <li>
-                                                <Link to="/about">About Us</Link>
+                                                <NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/about">About</NavLink>
                                             </li>
                                             <li>
-                                                <Link to="/destination/1">Destinations</Link>
-                                            </li>
-                                            <li className="menu-item-has-children">
-                                                <Link to="/blog">Blog</Link>
-                                                <ul className="sub-menu">
-                                                    <li>
-                                                        <Link to="/blog/1">Find Pattaya</Link>
-                                                        <Link to="/blog/2">What NOT to Do in Bangkok</Link>
-                                                        <Link to="/blog/3">Bangkok's Hidden Gems</Link>
-                                                    </li>
-                                                </ul>
+                                                <NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/destination">Destinations</NavLink>
                                             </li>
                                             <li>
-                                                <Link to="/contact">Contact us</Link>
+                                                <NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/blog">Insights</NavLink>
+                                            </li>
+                                            <li>
+                                                <NavLink className={({ isActive }) => isActive ? 'active' : ''} to="/contact">Contact</NavLink>
                                             </li>
                                         </ul>
                                     </nav>
@@ -100,9 +61,16 @@ function HeaderOne() {
                                         type="button"
                                         className="th-menu-toggle d-block d-xl-none"
                                         onClick={() => setIsMobileMenuOpen(true)}
+                                        aria-label="Open navigation"
                                     >
                                         <i className="far fa-bars" />
                                     </button>
+                                </div>
+                                <div className="col-auto d-none d-xl-block">
+                                    <Link className="th-btn header-plan-cta" to="/contact">
+                                        Plan your trip
+                                        <i className="fa-regular fa-arrow-right" aria-hidden="true" />
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +83,6 @@ function HeaderOne() {
                 </div>
             </header>
             <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
-            <LoginForm isOpen={isLoginFormOpen} onClose={() => setIsLoginFormOpen(false)} />
         </>
 
     )
