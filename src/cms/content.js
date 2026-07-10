@@ -89,6 +89,22 @@ const CMS = {
 
   banners: {
     bannerOne: {
+      featured: {
+        image: "/assets/img/hero/hero_bg3.avif",
+        imageAlt: "Thai temple reflected in a calm lake",
+        eyebrow: "Bangkok-based destination management",
+        title: "Thailand, planned with local confidence",
+        summary:
+          "Tailor-made journeys, reliable ground handling, and thoughtful local coordination for travel partners, groups, and special events.",
+        primaryAction: {
+          label: "Start a proposal",
+          href: "/contact",
+        },
+        secondaryAction: {
+          label: "Explore Thailand",
+          href: "/destination",
+        },
+      },
       slides: [
         {
           img: "/assets/img/hero/hero_bg1.avif",

@@ -71,6 +71,117 @@
   color: #fff;
 }
 
+.victory-hero {
+  position: relative;
+  display: flex;
+  height: calc(100vh - 140px);
+  min-height: 560px;
+  max-height: 680px;
+  align-items: center;
+  overflow: hidden;
+  background-color: #113d48;
+  color: #fff;
+}
+
+.victory-hero__media,
+.victory-hero__overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.victory-hero__media {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.victory-hero__overlay {
+  background-color: rgba(5, 24, 29, 0.58);
+}
+
+.victory-hero__container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.victory-hero__content {
+  max-width: 780px;
+  padding: 96px 0;
+}
+
+.victory-hero__eyebrow {
+  margin: 0 0 16px;
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.victory-hero h1 {
+  max-width: 760px;
+  margin: 0 0 24px;
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.victory-hero__summary {
+  max-width: 660px;
+  margin: 0 0 32px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.victory-hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.victory-hero__primary {
+  min-height: 52px;
+  padding: 15px 24px;
+  border-radius: 4px;
+  background-color: #1ca8cb;
+  color: #fff;
+}
+
+.victory-hero__primary:hover {
+  background-color: #fff;
+  color: #113d48;
+}
+
+.victory-hero__secondary {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.72);
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.victory-hero__secondary:hover,
+.victory-hero__secondary:focus-visible {
+  border-color: #1ca8cb;
+  color: #fff;
+}
+
+.victory-hero a:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
