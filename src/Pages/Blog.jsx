@@ -10,7 +10,7 @@ function Blog() {
         <>
             <HeaderOne />
             <Breadcrumb
-                title="Blog Lists View"
+                title="Thailand Travel Insights"
             />
             <BlogInner />
             <FooterFour />
