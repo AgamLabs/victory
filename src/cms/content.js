@@ -157,36 +157,87 @@ const CMS = {
 
   about: {
     breadcrumbTitle: "About Victory International",
-    heading: "Thailand's Premier Destination Management Company",
+    eyebrow: "Bangkok-based Thailand DMC",
+    heading: "A local team for Thailand on the ground",
     intro1:
-      "What sets us apart is our focus on designing travel experiences that truly stand out. Whether you want to explore Thailand's rich culture, embark on thrilling adventures, or something in between, we tailor every itinerary to bring authenticity, excitement, and flawless execution to your trip.",
+      "Victory International Group Co., Ltd. coordinates tailor-made journeys and operational services across Thailand for travel partners, groups, corporate planners, and private clients.",
     intro2:
-      "We understand that no two clients are the same. We avoid one-size-fits-all trips — because every traveller is different. We take the time to understand your needs and craft itineraries that truly matter. Choose Victory DMC — let's turn your travel plans into amazing experiences you'll never forget.",
-    bullets: [
+      "We bring route knowledge, local supplier coordination, and one accountable point of contact together, so every program is practical to operate and considered for the people travelling.",
+    principles: [
       {
-        title: "Group Tours & Activities",
-        text: "From corporate incentive programs to personalised leisure journeys or niche group tours, we handle every detail.",
-        icon: "/assets/img/icon/about_1_1.svg",
+        title: "Built around the brief",
+        text: "Objectives, traveller profile, pace, and priorities shape the route from the start.",
       },
       {
-        title: "Hassle-Free Corporate Trips",
-        text: "We provide international travel agencies and corporations with innovative and reliable travel solutions in Thailand.",
-        icon: "/assets/img/icon/about_1_2.svg",
+        title: "Coordinated locally",
+        text: "Transport, stays, guides, venues, and experiences are brought into one operating plan.",
       },
       {
-        title: "Local Knowledge",
-        text: "We leverage our extensive local knowledge and connections to create memorable experiences you'll remember for years to come.",
-        icon: "/assets/img/icon/about_1_3.svg",
+        title: "Clear through delivery",
+        text: "One Bangkok-based team keeps the details connected from proposal to arrival.",
       },
     ],
     cta: {
-      text: "Contact With Us",
+      text: "Start a conversation",
       href: "/contact",
+    },
+    capabilities: {
+      eyebrow: "What we coordinate",
+      heading: "One Thailand partner across the moving parts",
+      intro:
+        "Engage Victory for a focused service or a complete program. We shape the scope around what your team already has and where local coordination adds value.",
+      items: [
+        {
+          title: "Transport and ground handling",
+          text: "Airport movements, private vehicles, group logistics, and day-to-day operational coordination.",
+        },
+        {
+          title: "Hotels and accommodation",
+          text: "Property selection and reservations matched to location, group profile, and program flow.",
+        },
+        {
+          title: "Tailor-made tours and guides",
+          text: "Routes, local experiences, and guiding arranged around the interests and pace of each group.",
+        },
+        {
+          title: "MICE, events, and incentives",
+          text: "Venue, movement, activity, and guest coordination for meetings, events, and reward travel.",
+        },
+        {
+          title: "Destination weddings",
+          text: "Local planning support for guest logistics, stays, venues, and surrounding experiences.",
+        },
+        {
+          title: "Special projects and line production",
+          text: "Location-aware coordination for non-standard briefs that need practical support in Thailand.",
+        },
+      ],
+    },
+    process: {
+      eyebrow: "How we work",
+      heading: "A practical path from first brief to arrival",
+      intro:
+        "Good programs are built by resolving the important questions early, then carrying the decisions through one connected plan.",
+      steps: [
+        {
+          title: "Align the brief",
+          text: "We clarify objectives, dates, group profile, budget context, and the non-negotiables.",
+        },
+        {
+          title: "Shape the program",
+          text: "We develop the route, service mix, supplier options, and operating logic for review.",
+        },
+        {
+          title: "Coordinate delivery",
+          text: "Confirmed details are brought together for clear communication and on-ground execution.",
+        },
+      ],
     },
     images: {
       main1: "/assets/img/normal/about1.avif",
       main2: "/assets/img/normal/about2.avif",
       main3: "/assets/img/normal/about3.png",
+      process: "/assets/img/gallery/gallery_4_3.jpg",
       shapes: {
         s1: "/assets/img/shape/shape_2_1.png",
         s2: "/assets/img/shape/shape_2_2.png",

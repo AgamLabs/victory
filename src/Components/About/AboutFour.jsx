@@ -1,97 +1,123 @@
-import { Link } from 'react-router-dom'
-import CMS from '../../cms/content'
+import { Link } from 'react-router-dom';
+import CMS from '../../cms/content';
 
 function AboutFour() {
+   const { about } = CMS;
+
    return (
-         <div className="about-area position-relative overflow-hidden overflow-hidden space" id="about-sec">
-         <div className="container shape-mockup-wrap">
-            <div className="row">
-               <div className="col-xl-7">
-                  <div className="img-box3">
-                     <div className="img1">
-                        <img src={CMS.about.images.main1} alt="About" />
-                     </div>
-                     <div className="img2">
-                        <img src={CMS.about.images.main2} alt="About" />
-                     </div>
-                     <div className="img3 movingX">
-                        <img src={CMS.about.images.main3} alt="About" />
-                     </div>
-                  </div>
+      <main className="victory-about">
+         <section className="victory-about-story" aria-labelledby="victory-about-title">
+            <div className="container victory-about-story__layout">
+               <div className="victory-about-story__media" aria-label="Thailand destinations coordinated by Victory International">
+                  <img
+                     className="victory-about-story__image victory-about-story__image--primary"
+                     src={about.images.main1}
+                     alt="Long-tail boat beside Thailand's limestone cliffs"
+                  />
+                  <img
+                     className="victory-about-story__image"
+                     src={about.images.main2}
+                     alt="Illuminated Thai temple in Bangkok"
+                     loading="lazy"
+                  />
+                  <img
+                     className="victory-about-story__image"
+                     src={about.images.main3}
+                     alt="Quiet tropical bay framed by limestone cliffs"
+                     loading="lazy"
+                  />
                </div>
-               <div className="col-xl-5">
-                  <div className="ps-xl-4">
-                     <div className="title-area mb-20">
-                        <h2 className="sec-title mb-20 pe-xl-5 me-xl-5 heading">
-                           {CMS.about.heading}
-                        </h2>
-                     </div>
-                     <p className="pe-xl-5">{CMS.about.intro1}</p>
-                     <p className="mb-30 pe-xl-5">{CMS.about.intro2}</p>
-                     <div className="about-item-wrap">
-                        <div className="about-item style2">
-                           <div className="about-item_img">
-                              <img src={CMS.about.bullets[0].icon} alt="" />
+
+               <div className="victory-about-story__content">
+                  <p className="victory-section-eyebrow">{about.eyebrow}</p>
+                  <h2 id="victory-about-title">{about.heading}</h2>
+                  <p>{about.intro1}</p>
+                  <p>{about.intro2}</p>
+
+                  <ol className="victory-about-principles">
+                     {about.principles.map((principle, index) => (
+                        <li key={principle.title}>
+                           <span>{String(index + 1).padStart(2, '0')}</span>
+                           <div>
+                              <h3>{principle.title}</h3>
+                              <p>{principle.text}</p>
                            </div>
-                           <div className="about-item_centent">
-                              <h5 className="box-title">{CMS.about.bullets[0].title}</h5>
-                              <p className="about-item_text">{CMS.about.bullets[0].text}</p>
-                           </div>
-                        </div>
-                        <div className="about-item style2">
-                           <div className="about-item_img">
-                              <img src={CMS.about.bullets[1].icon} alt="" />
-                           </div>
-                           <div className="about-item_centent">
-                              <h5 className="box-title">{CMS.about.bullets[1].title}</h5>
-                              <p className="about-item_text">{CMS.about.bullets[1].text}</p>
-                           </div>
-                        </div>
-                        <div className="about-item style2">
-                           <div className="about-item_img">
-                              <img src={CMS.about.bullets[2].icon} alt="" />
-                           </div>
-                           <div className="about-item_centent">
-                              <h5 className="box-title">{CMS.about.bullets[2].title}</h5>
-                              <p className="about-item_text">{CMS.about.bullets[2].text}</p>
-                           </div>
-                        </div>
-                     </div>
-                     <div className="mt-35">
-                        <Link to={CMS.about.cta.href} className="th-btn style3 th-icon">
-                           {CMS.about.cta.text}
-                        </Link>
-                     </div>
-                  </div>
+                        </li>
+                     ))}
+                  </ol>
+
+                  <Link to={about.cta.href} className="th-btn victory-about-story__cta">
+                     {about.cta.text}
+                     <i className="fa-regular fa-arrow-right" aria-hidden="true" />
+                  </Link>
                </div>
             </div>
-            <div
-               className="shape-mockup movingX d-none d-xxl-block"
-               style={{ top: '0%', left: '-18%' }}
-            >
-               <img src="/assets/img/shape/shape_2_1.png" alt="shape" />
+         </section>
+
+         <section className="victory-about-capabilities" aria-labelledby="victory-capabilities-title">
+            <div className="container">
+               <div className="victory-about-capabilities__heading">
+                  <div>
+                     <p className="victory-section-eyebrow">{about.capabilities.eyebrow}</p>
+                     <h2 id="victory-capabilities-title">{about.capabilities.heading}</h2>
+                  </div>
+                  <p>{about.capabilities.intro}</p>
+               </div>
+
+               <ol className="victory-about-capabilities__list">
+                  {about.capabilities.items.map((capability, index) => (
+                     <li key={capability.title}>
+                        <span>{String(index + 1).padStart(2, '0')}</span>
+                        <div>
+                           <h3>{capability.title}</h3>
+                           <p>{capability.text}</p>
+                        </div>
+                     </li>
+                  ))}
+               </ol>
             </div>
-            <div
-               className="shape-mockup jump d-none d-xxl-block"
-               style={{ top: '28%', right: '-15%' }}
-            >
-               <img src="/assets/img/shape/shape_2_2.png" alt="shape" />
+         </section>
+
+         <section className="victory-about-process" aria-labelledby="victory-process-title">
+            <div className="container victory-about-process__layout">
+               <div className="victory-about-process__content">
+                  <p className="victory-section-eyebrow">{about.process.eyebrow}</p>
+                  <h2 id="victory-process-title">{about.process.heading}</h2>
+                  <p className="victory-about-process__intro">{about.process.intro}</p>
+
+                  <ol className="victory-about-process__steps">
+                     {about.process.steps.map((step, index) => (
+                        <li key={step.title}>
+                           <span>{String(index + 1).padStart(2, '0')}</span>
+                           <div>
+                              <h3>{step.title}</h3>
+                              <p>{step.text}</p>
+                           </div>
+                        </li>
+                     ))}
+                  </ol>
+
+                  <Link to="/contact" className="victory-text-link">
+                     Share your brief
+                     <i className="fa-regular fa-arrow-right" aria-hidden="true" />
+                  </Link>
+               </div>
+
+               <div className="victory-about-process__media">
+                  <img
+                     src={about.images.process}
+                     alt="Bangkok's Chao Phraya River and city skyline"
+                     loading="lazy"
+                  />
+                  <div className="victory-about-process__caption">
+                     <span>Based in Bangkok</span>
+                     <strong>Connected planning across Thailand</strong>
+                  </div>
+               </div>
             </div>
-            <div
-               className="shape-mockup spin d-none d-xxl-block"
-               style={{ top: '18%', left: '-112%' }}
-            >
-               <img src="/assets/img/shape/shape_2_3.png" alt="shape" />
-            </div>
-            <div
-               className="shape-mockup movixgX d-none d-xxl-block"
-               style={{ bottom: '18%', right: '-12%' }}
-            >
-               <img src="/assets/img/shape/shape_2_4.png" alt="shape" />
-            </div>
-         </div>
-      </div>
-   )
+         </section>
+      </main>
+   );
 }
 
-export default AboutFour
+export default AboutFour;
