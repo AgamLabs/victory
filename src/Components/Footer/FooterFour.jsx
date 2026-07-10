@@ -1,263 +1,115 @@
-import React, {useState} from 'react'
-import CMS from '../../cms/content'
+import React from 'react';
 import { Link } from 'react-router-dom';
-import Modal from '../Gallery/Modal';
+import CMS from '../../cms/content';
 
 function FooterFour() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [modalImage, setModalImage] = useState('');
-    
-        // Function to open the modal with the selected image
-        const openModal = (imageSrc, event) => {
-            event.preventDefault(); // Prevent default link behavior
-            setModalImage(imageSrc);
-            setIsModalOpen(true);
-        };
-    
-        // Function to close the modal
-        const closeModal = () => {
-            setIsModalOpen(false);
-        };
+    const { contact, logo } = CMS.site;
+
     return (
-        <footer className="footer-wrapper bg-title footer-layout2 shape-mockup-wrap">
+        <footer className="footer-wrapper bg-title footer-layout2 victory-footer">
             <div className="widget-area">
                 <div className="container">
-                    <div className="row justify-content-between">
+                    <div className="row gy-5 justify-content-between">
                         <div className="col-md-6 col-xl-3">
                             <div className="widget footer-widget">
                                 <div className="th-widget-about">
                                     <div className="about-logo">
-                                        <Link to="/">
-                                            <img src={CMS.site.logo.primary} alt="Victory International" style={{maxHeight: "60px", width: "auto"}} />
+                                        <Link to="/" aria-label="Victory International home">
+                                            <img src={logo.primary} alt="Victory International Group Co., Ltd." />
                                         </Link>
                                     </div>
                                     <p className="about-text">
-                                        Rapidiously myocardinate cross-platform intellectual capital
-                                        model. Appropriately create interactive infrastructures
+                                        Bangkok-based destination management for tailor-made tours,
+                                        ground handling, groups, events, and incentive travel across Thailand.
                                     </p>
-                                    <div className="th-social">
-                                        <Link to={CMS.site.social.facebook}>
-                                            <i className="fab fa-facebook-f" />
-                                        </Link>
-                                        {CMS.footer.showTwitterIcon && (
-                                            <Link to={CMS.site.social.twitter}>
-                                                <i className="fab fa-twitter" />
-                                            </Link>
-                                        )}
-                                        <Link to={CMS.site.social.linkedin}>
-                                            <i className="fab fa-linkedin-in" />
-                                        </Link>
-                                        <Link to={CMS.site.social.whatsapp}>
-                                            <i className="fab fa-whatsapp" />
-                                        </Link>
-                                        <Link to={CMS.site.social.instagram}>
-                                            <i className="fab fa-instagram" />
-                                        </Link>
+                                    <div className="th-social" aria-label="Direct contact links">
+                                        <a
+                                            href={contact.whatsappHref}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            aria-label="Message Victory International on WhatsApp"
+                                        >
+                                            <i className="fab fa-whatsapp" aria-hidden="true" />
+                                        </a>
+                                        <a href={contact.emailHref} aria-label="Email Victory International">
+                                            <i className="fa-regular fa-envelope" aria-hidden="true" />
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-6 col-xl-auto">
+
+                        <div className="col-sm-6 col-md-6 col-xl-2">
                             <div className="widget widget_nav_menu footer-widget">
-                                <h3 className="widget_title">Quick Links</h3>
-                                <div className="menu-all-pages-container">
-                                    <ul className="menu">
-                                        <li>
-                                            <Link to="/">Home</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/about">About us</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/destination">Destinations</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/blog">Travel Insights</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/contact">Plan Your Trip</Link>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <h3 className="widget_title">Explore</h3>
+                                <ul className="menu">
+                                    <li><Link to="/">Home</Link></li>
+                                    <li><Link to="/about">About</Link></li>
+                                    <li><Link to="/destination">Destinations</Link></li>
+                                    <li><Link to="/blog">Travel Insights</Link></li>
+                                    <li><Link to="/contact">Plan Your Trip</Link></li>
+                                </ul>
                             </div>
                         </div>
-                        <div className="col-md-6 col-xl-auto">
+
+                        <div className="col-md-6 col-xl-3">
                             <div className="widget footer-widget">
-                                <h3 className="widget_title">Get In Touch</h3>
-                                <div className="th-widget-contact">
+                                <h3 className="widget_title">Bangkok Office</h3>
+                                <div className="th-widget-contact victory-footer__contact">
                                     <div className="info-box_text">
                                         <div className="icon">
-                                            <img src="/assets/img/icon/phone.svg" alt="img" />
+                                            <img src="/assets/img/icon/phone.svg" alt="" />
                                         </div>
                                         <div className="details">
-                                            <p>
-                                                <Link to="tel:+01234567890" className="info-box_link">
-                                                    +01 234 567 890
-                                                </Link>
-                                            </p>
-                                            <p>
-                                                <Link to="tel:+09876543210" className="info-box_link">
-                                                    +09 876 543 210
-                                                </Link>
-                                            </p>
+                                            <p><a href={contact.landlineHref}>{contact.landline}</a></p>
+                                            <p><a href={contact.mobileHref}>{contact.mobile}</a></p>
                                         </div>
                                     </div>
                                     <div className="info-box_text">
                                         <div className="icon">
-                                            <img src="/assets/img/icon/envelope.svg" alt="img" />
+                                            <img src="/assets/img/icon/envelope.svg" alt="" />
                                         </div>
                                         <div className="details">
-                                            <p>
-                                                <Link
-                                                    to="mailto:info@victoryinternational.com"
-                                                    className="info-box_link"
-                                                >
-                                                    info@victoryinternational.com
-                                                </Link>
-                                            </p>
-                                            <p>
-                                                <Link
-                                                    to="mailto:support@victoryinternational.com"
-                                                    className="info-box_link"
-                                                >
-                                                    support@victoryinternational.com
-                                                </Link>
-                                            </p>
+                                            <p><a href={contact.emailHref}>{contact.email}</a></p>
                                         </div>
                                     </div>
                                     <div className="info-box_text">
                                         <div className="icon">
-                                            <img src="/assets/img/icon/location-dot.svg" alt="img" />
+                                            <img src="/assets/img/icon/location-dot.svg" alt="" />
                                         </div>
-                                        <div className="details">
-                                            <p>789 Inner Lane, Holy park, California, USA</p>
-                                        </div>
+                                        <address>{contact.address}</address>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-6 col-xl-auto">
-                            <div className="widget footer-widget">
-                                <h3 className="widget_title">Instagram Post</h3>
-                                <div className="sidebar-gallery">
-                                    <div className="gallery-thumb">
-                                        <img
-                                            src="/assets/img/widget/gallery_1_1.jpg"
-                                            alt="Gallery"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_1.jpg', e)}
-                                        />
-                                        <Link
-                                            to="///assets/img/widget/gallery_1_1.jpg"
-                                            className="gallery-btn popup-image"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_1.jpg', e)}
-                                        >
-                                            <i className="fab fa-instagram" />
-                                        </Link>
-                                    </div>
-                                    <div className="gallery-thumb">
-                                        <img
-                                            src="/assets/img/widget/gallery_1_2.jpg"
-                                            alt="Gallery"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_2.jpg', e)}
-                                        />
-                                        <Link
-                                            to="///assets/img/widget/gallery_1_2.jpg"
-                                            className="gallery-btn popup-image"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_2.jpg', e)}
-                                        >
-                                            <i className="fab fa-instagram" />
-                                        </Link>
-                                    </div>
-                                    <div className="gallery-thumb">
-                                        <img
-                                            src="/assets/img/widget/gallery_1_3.jpg"
-                                            alt="Gallery"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_3.jpg', e)}
-                                        />
-                                        <Link
-                                            to="///assets/img/widget/gallery_1_3.jpg"
-                                            className="gallery-btn popup-image"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_3.jpg', e)}
-                                        >
-                                            <i className="fab fa-instagram" />
-                                        </Link>
-                                    </div>
-                                    <div className="gallery-thumb">
-                                        <img
-                                            src="/assets/img/widget/gallery_1_4.jpg"
-                                            alt="Gallery"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_4.jpg', e)}
-                                        />
-                                        <Link
-                                            to="///assets/img/widget/gallery_1_4.jpg"
-                                            className="gallery-btn popup-image"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_4.jpg', e)}
-                                        >
-                                            <i className="fab fa-instagram" />
-                                        </Link>
-                                    </div>
-                                    <div className="gallery-thumb">
-                                        <img
-                                            src="/assets/img/widget/gallery_1_5.jpg"
-                                            alt="Gallery"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_5.jpg', e)}
-                                        />
-                                        <Link
-                                            to="///assets/img/widget/gallery_1_5.jpg"
-                                            className="gallery-btn popup-image"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_5.jpg', e)}
-                                        >
-                                            <i className="fab fa-instagram" />
-                                        </Link>
-                                    </div>
-                                    <div className="gallery-thumb">
-                                        <img
-                                            src="/assets/img/widget/gallery_1_6.jpg"
-                                            alt="Gallery"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_6.jpg', e)}
-                                        />
-                                        <Link
-                                            to="///assets/img/widget/gallery_1_6.jpg"
-                                            className="gallery-btn popup-image"
-                                            onClick={(e) => openModal('/assets/img/widget/gallery_1_6.jpg', e)}
-                                        >
-                                            <i className="fab fa-instagram" />
-                                        </Link>
-                                    </div>
-                                </div>
+
+                        <div className="col-md-6 col-xl-3">
+                            <div className="widget footer-widget victory-footer__planning">
+                                <p className="victory-footer__eyebrow">Have a Thailand brief?</p>
+                                <h3 className="widget_title">Let's plan it properly.</h3>
+                                <p>
+                                    Share your dates, group size, and priorities. Our Bangkok team
+                                    will shape the right next step.
+                                </p>
+                                <Link className="th-btn victory-footer__cta" to="/contact">
+                                    Start a proposal
+                                    <i className="fa-regular fa-arrow-right" aria-hidden="true" />
+                                </Link>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div className="copyright-wrap">
                 <div className="container">
-                    <div className="row justify-content-between align-items-center">
-                        <div className="col-md-6">
-                            <p className="copyright-text">
-                                Copyright 2025 <Link to="/">Victory International</Link>. All Rights
-                                Reserved.
-                            </p>
-                        </div>
-                        <div className="col-md-6 text-end d-none d-md-block">
-                            <div className="footer-card">
-                                <span className="title">We Accept</span>
-                                <img src="/assets/img/shape/cards.png" alt="" />
-                            </div>
-                        </div>
-                    </div>
+                    <p className="copyright-text">
+                        {CMS.footer.copyright}
+                    </p>
                 </div>
             </div>
-            <div
-                className="shape-mockup movingX d-none d-xxl-block"
-                style={{ top: '24%', left: '5%' }}
-            >
-                <img src="/assets/img/shape/shape_8.png" alt="shape" />
-            </div>
-            <Modal isOpen={isModalOpen} closeModal={closeModal} imageSrc={modalImage} />
         </footer>
-
-    )
+    );
 }
 
-export default FooterFour
+export default FooterFour;

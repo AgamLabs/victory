@@ -3,10 +3,8 @@ import HeaderOne from '../Components/Header/HeaderOne'
 import BannerOne from '../Components/Banner/BannerOne'
 import AboutOne from '../Components/About/AboutOne'
 import DestinationOne from '../Components/Destination/DestinationOne'
-import TestimonialOne from '../Components/Testimonials/TestimonialOne'
 import BlogOne from '../Components/Blog/BlogOne'
-import FooterOne from '../Components/Footer/FooterOne'
-import FloatingSocial from '../Components/FloatingSocial/FloatingSocial'
+import FooterFour from '../Components/Footer/FooterFour'
 
 function HomeOne() {
     return (
@@ -19,9 +17,8 @@ function HomeOne() {
             {/* <TourGuide /> */}
             {/* <TestimonialOne /> */}
             <BlogOne />
-            <FooterOne />
+            <FooterFour />
             {/* <ScrollToTop /> */}
-            <FloatingSocial />
         </div>
     )
 }

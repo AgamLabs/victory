@@ -66,9 +66,14 @@ const CMS = {
     ],
   },
     contact: {
-      phone: "+256 214 203 215",
-      email: "info@victory.example",
-      address: "Bangkok, Thailand",
+      landline: "+66 2 120 4305",
+      landlineHref: "tel:+6621204305",
+      mobile: "+66 62 463 8671",
+      mobileHref: "tel:+66624638671",
+      email: "dinesh@victoryint.asia",
+      emailHref: "mailto:dinesh@victoryint.asia",
+      whatsappHref: "https://wa.me/66624638671",
+      address: "1119, 2nd Floor, Soi Charoen Krung 43, Bang Rak, Bangkok 10500, Thailand",
     },
     social: {
       facebook: "https://www.facebook.com/",

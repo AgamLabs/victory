@@ -253,6 +253,98 @@
   }
 }
 
+.victory-footer .widget-area {
+  padding: 72px 0 56px;
+}
+
+.victory-footer .about-logo img {
+  width: auto;
+  height: 52px;
+}
+
+.victory-footer .about-text,
+.victory-footer__planning p,
+.victory-footer address,
+.victory-footer a {
+  overflow-wrap: anywhere;
+}
+
+.victory-footer .th-social a {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+.victory-footer__contact .details p,
+.victory-footer__contact address {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.victory-footer__contact .details a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.victory-footer__planning {
+  max-width: 340px;
+}
+
+.victory-footer__eyebrow {
+  margin-bottom: 8px;
+  color: #72d4e6 !important;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.victory-footer__planning .widget_title {
+  margin-bottom: 16px;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.victory-footer__cta {
+  min-height: 48px;
+  margin-top: 12px;
+  padding: 14px 20px;
+  border-radius: 4px;
+  background-color: #1ca8cb;
+  color: #fff;
+}
+
+.victory-footer__cta:hover {
+  background-color: #fff;
+  color: #113d48;
+}
+
+.victory-footer .copyright-wrap {
+  padding: 22px 0;
+}
+
+.victory-footer .copyright-text {
+  margin: 0;
+  text-align: left;
+}
+
+.victory-footer a:focus-visible {
+  outline: 3px solid #72d4e6;
+  outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+  .victory-footer .widget-area {
+    padding: 56px 0 40px;
+  }
+
+  .victory-footer .copyright-text {
+    text-align: center;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
