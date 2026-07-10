@@ -182,6 +182,77 @@
   outline-offset: 4px;
 }
 
+@media (max-width: 991px) {
+  .victory-hero__content {
+    max-width: 660px;
+    padding: 76px 0;
+  }
+
+  .victory-hero h1 {
+    max-width: 640px;
+    font-size: 52px;
+    line-height: 1.1;
+  }
+}
+
+@media (max-width: 767px) {
+  .victory-hero {
+    height: calc(100svh - 128px);
+    min-height: 580px;
+    max-height: 680px;
+  }
+
+  .victory-hero__media {
+    background-position: 54% center;
+  }
+
+  .victory-hero__content {
+    max-width: 100%;
+    padding: 60px 0 68px;
+  }
+
+  .victory-hero__eyebrow {
+    margin-bottom: 12px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .victory-hero h1 {
+    max-width: 100%;
+    margin-bottom: 20px;
+    font-size: 42px;
+    line-height: 1.12;
+  }
+
+  .victory-hero__summary {
+    max-width: 100%;
+    margin-bottom: 26px;
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  .victory-hero__actions {
+    display: grid;
+    justify-items: start;
+    gap: 16px;
+  }
+
+  .victory-hero__primary,
+  .victory-hero__secondary {
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 400px) {
+  .victory-hero h1 {
+    font-size: 38px;
+  }
+
+  .victory-hero__summary {
+    font-size: 16px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
