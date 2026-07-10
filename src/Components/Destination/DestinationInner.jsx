@@ -1,313 +1,151 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import DestinationCard from './DestinationCard';
-import posts from '../data/data-destination.json';
-import DestinationCardTwo from './DestinationCardTwo';
+import React, { useMemo } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
+import destinations, { destinationRegions } from '../../cms/destinations';
 
 function DestinationInner() {
-    const [activeTab, setActiveTab] = useState('tab-grid');
-    const [currentPage, setCurrentPage] = useState(1);
-    const postsPerPage = 9;
+    const [searchParams, setSearchParams] = useSearchParams();
+    const query = searchParams.get('q') || '';
+    const region = searchParams.get('region') || 'all';
 
-    const totalPages = Math.ceil(posts.length / postsPerPage);
-    const indexOfLastPost = currentPage * postsPerPage;
-    const indexOfFirstPost = indexOfLastPost - postsPerPage;
-    const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+    const filteredDestinations = useMemo(() => {
+        const normalizedQuery = query.trim().toLowerCase();
 
-    const handlePageChange = (page) => {
-        setCurrentPage(page);
+        return destinations.filter((destination) => {
+            const matchesRegion = region === 'all' || destination.regionKey === region;
+            const searchableText = [
+                destination.name,
+                destination.region,
+                destination.summary,
+                ...destination.bestFor,
+            ].join(' ').toLowerCase();
+
+            return matchesRegion && (!normalizedQuery || searchableText.includes(normalizedQuery));
+        });
+    }, [query, region]);
+
+    const updateParams = (updates) => {
+        const nextParams = new URLSearchParams(searchParams);
+
+        Object.entries(updates).forEach(([key, value]) => {
+            if (!value || value === 'all') {
+                nextParams.delete(key);
+            } else {
+                nextParams.set(key, value);
+            }
+        });
+
+        setSearchParams(nextParams, { replace: true });
     };
-    return (
-        <section className="space">
-            <div className="container">
-                <div className="th-sort-bar">
-                    <div className="row justify-content-between align-items-center">
-                        <div className="col-md-4">
-                            <div className="search-form-area">
-                                <form className="search-form">
-                                    <input type="text" placeholder="Search" />
-                                    <button type="submit">
-                                        <i className="fa-light fa-magnifying-glass" />
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                        <div className="col-md-auto">
-                            <div className="sorting-filter-wrap">
-                                <div className="nav" role="tablist">
-                                    <Link
-                                        to="#"
-                                        id="tab-destination-grid"
-                                        data-bs-toggle="tab"
-                                        data-bs-target="#tab-grid"
-                                        role="tab"
-                                        aria-controls="tab-grid"
-                                        aria-selected="true"
-                                        className={`${activeTab === 'tab-grid' ? 'active' : ''}`}
-                                        type="button"
-                                        onClick={() => setActiveTab('tab-grid')}
-                                    >
-                                        <i className="fa-light fa-grid-2" />
-                                    </Link>
-                                    <Link
-                                        to="#"
-                                        id="tab-destination-list"
-                                        data-bs-toggle="tab"
-                                        data-bs-target="#tab-list"
-                                        role="tab"
-                                        aria-controls="tab-list"
-                                        aria-selected="false"
-                                        className={`${activeTab === 'tab-list' ? 'active' : ''}`}
-                                        onClick={() => setActiveTab('tab-list')}
-                                    >
-                                        <i className="fa-solid fa-list" />
-                                    </Link>
-                                </div>
-                                <form className="woocommerce-ordering" method="get">
-                                    <select
-                                        name="orderby"
-                                        className="orderby"
-                                        aria-label="destination order"
-                                    >
-                                        <option value="menu_order" >
-                                            Default Sorting
-                                        </option>
-                                        <option value="popularity">Sort by popularity</option>
-                                        <option value="rating">Sort by average rating</option>
-                                        <option value="date">Sort by latest</option>
-                                        <option value="price">Sort by price: low to high</option>
-                                        <option value="price-desc">Sort by price: high to low</option>
-                                    </select>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-xxl-9 col-lg-8">
-                        <div className="tab-content" id="nav-tabContent">
-                            <div className={`tab-pane fade ${activeTab === 'tab-grid' ? 'show active' : ''}`} id="tab-grid" role="tabpanel"
-                            >
-                                <div className="row gy-30">
-                                    {currentPosts.map((data, index) => (
-                                        <div key={index} className="col-xxl-4 col-xl-6">
-                                            <DestinationCard
-                                                destinationID={data.id}
-                                                destinationImage={`${data.image}`}
-                                                destinationTitle={data.title}
-                                                destinationPrice={data.price}
-                                            />
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                            <div className={`tab-pane fade ${activeTab === 'tab-list' ? 'show active' : ''}`} id="tab-list" role="tabpanel"
-                            >
-                                <div className="row gy-30">
-                                    {currentPosts.map((data, index) => (
-                                        <div key={index} className="col-12">
-                                            <DestinationCardTwo
-                                                destinationID={data.id}
-                                                destinationImage={`${data.image}`}
-                                                destinationTitle={data.title}
-                                                destinationPrice={data.price}
-                                            />
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                        <div className="th-pagination text-center mt-60 mb-0">
-                            <ul>
-                                {Array.from({ length: totalPages }, (_, i) => (
-                                    <li key={i}>
-                                        <Link
-                                            className={currentPage === i + 1 ? 'active' : ''}
-                                            to="#"
-                                            onClick={() => handlePageChange(i + 1)}
-                                        >
-                                            {i + 1}
-                                        </Link>
-                                    </li>
-                                ))}
-                                {currentPage < totalPages && (
-                                    <li>
-                                        <Link className="next-page" to="#" onClick={() => handlePageChange(currentPage + 1)}>
-                                            Next <img src="/assets/img/icon/arrow-right4.svg" alt="" />
-                                        </Link>
-                                    </li>
-                                )}
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="col-xxl-3 col-lg-4">
-                        <aside className="sidebar-area style2">
-                            <div className="widget widget_categories  ">
-                                <h3 className="widget_title">Categories</h3>
-                                <ul>
-                                    <li>
-                                        <Link to="/blog">
-                                            <img src="/assets/img/theme-img/map.svg" alt="" />
-                                            City Tour
-                                        </Link>
-                                        <span>(8)</span>
-                                    </li>
-                                    <li>
-                                        <Link to="/blog">
-                                            <img src="/assets/img/theme-img/map.svg" alt="" />
-                                            Beach Tours
-                                        </Link>
-                                        <span>(6)</span>
-                                    </li>
-                                    <li>
-                                        <Link to="/blog">
-                                            <img src="/assets/img/theme-img/map.svg" alt="" />
-                                            Wildlife Tours
-                                        </Link>
-                                        <span>(2)</span>
-                                    </li>
-                                    <li>
-                                        <Link to="/blog">
-                                            <img src="/assets/img/theme-img/map.svg" alt="" />
-                                            News &amp; Tips
-                                        </Link>
-                                        <span>(7)</span>
-                                    </li>
-                                    <li>
-                                        <Link to="/blog">
-                                            <img src="/assets/img/theme-img/map.svg" alt="" />
-                                            Adventure Tours
-                                        </Link>
-                                        <span>(9)</span>
-                                    </li>
-                                    <li>
-                                        <Link to="/blog">
-                                            <img src="/assets/img/theme-img/map.svg" alt="" />
-                                            Mountain Tours
-                                        </Link>
-                                        <span>(10)</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="widget  ">
-                                <h3 className="widget_title">Recent Posts</h3>
-                                <div className="recent-post-wrap">
-                                    <div className="recent-post">
-                                        <div className="media-img">
-                                            <Link to="/blog/1">
-                                                <img
-                                                    src="/assets/img/blog/recent-post-1-1.jpg"
-                                                    alt="Blog"
-                                                />
-                                            </Link>
-                                        </div>
-                                        <div className="media-body">
-                                            <h4 className="post-title">
-                                                <Link className="text-inherit" to="/blog/1">
-                                                    Exploring The Green Spaces Of the island maldives
-                                                </Link>
-                                            </h4>
-                                            <div className="recent-post-meta">
-                                                <Link to="/blog">
-                                                    <i className="fa-regular fa-calendar" />
-                                                    22/6/ 2025
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="recent-post">
-                                        <div className="media-img">
-                                            <Link to="/blog/1">
-                                                <img
-                                                    src="/assets/img/blog/recent-post-1-2.jpg"
-                                                    alt="Blog"
-                                                />
-                                            </Link>
-                                        </div>
-                                        <div className="media-body">
-                                            <h4 className="post-title">
-                                                <Link className="text-inherit" to="/blog/1">
-                                                    Harmony With Nature Of Belgium Tour and travle
-                                                </Link>
-                                            </h4>
-                                            <div className="recent-post-meta">
-                                                <Link to="/blog">
-                                                    <i className="fa-regular fa-calendar" />
-                                                    25/6/ 2025
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="recent-post">
-                                        <div className="media-img">
-                                            <Link to="/blog/1">
-                                                <img
-                                                    src="/assets/img/blog/recent-post-1-3.jpg"
-                                                    alt="Blog"
-                                                />
-                                            </Link>
-                                        </div>
-                                        <div className="media-body">
-                                            <h4 className="post-title">
-                                                <Link className="text-inherit" to="/blog/1">
-                                                    Exploring The Green Spaces Of Realar Residence
-                                                </Link>
-                                            </h4>
-                                            <div className="recent-post-meta">
-                                                <Link to="/blog">
-                                                    <i className="fa-regular fa-calendar" />
-                                                    27/6/ 2025
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="widget widget_tag_cloud  ">
-                                <h3 className="widget_title">Popular Tags</h3>
-                                <div className="tagcloud">
-                                    <Link to="/blog">Tour</Link>
-                                    <Link to="/blog">Adventure</Link>
-                                    <Link to="/blog">Rent</Link>
-                                    <Link to="/blog">Innovate</Link>
-                                    <Link to="/blog">Hotel</Link>
-                                    <Link to="/blog">Modern</Link>
-                                    <Link to="/blog">Luxury</Link>
-                                    <Link to="/blog">Travel</Link>
-                                </div>
-                            </div>
-                            <div
-                                className="widget widget_offer  "
-                                data-bg-src="/assets/img/bg/widget_bg_1.jpg"
-                                style={{ backgroundImage: "url(/assets/img/bg/widget_bg_1.jpg)" }}
-                            >
-                                <div className="offer-banner">
-                                    <div className="offer">
-                                        <h6 className="box-title">
-                                            Need Help? We Are Here To Help You
-                                        </h6>
-                                        <div className="banner-logo">
-                                            <img src="/assets/img/logo_1.png" alt="Victory International" style={{maxHeight: "50px", width: "auto"}} />
-                                        </div>
-                                        <div className="offer">
-                                            <h6 className="offer-title">You Get Online support</h6>
-                                            <Link className="offter-num" to={+256214203215}>
-                                                +256 214 203 215
-                                            </Link>
-                                        </div>
-                                        <Link to="/contact" className="th-btn style2 th-icon">
-                                            Read More
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </aside>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-    )
+    const clearFilters = () => setSearchParams({}, { replace: true });
+
+    return (
+        <main className="victory-destinations">
+            <section className="victory-destinations__intro" aria-labelledby="destination-index-title">
+                <div className="container">
+                    <div className="victory-destinations__heading">
+                        <div>
+                            <p className="victory-section-eyebrow">One country, many program styles</p>
+                            <h1 id="destination-index-title">Find the right Thailand for your brief</h1>
+                        </div>
+                        <p>
+                            Compare city, heritage, coast, and island options. Every route can be
+                            shaped around group profile, timing, pace, and operational needs.
+                        </p>
+                    </div>
+
+                    <div className="victory-destination-tools">
+                        <div className="victory-destination-search">
+                            <label htmlFor="destination-search">Search destinations</label>
+                            <div className="victory-destination-search__control">
+                                <i className="fa-regular fa-magnifying-glass" aria-hidden="true" />
+                                <input
+                                    id="destination-search"
+                                    type="search"
+                                    value={query}
+                                    placeholder="Try Bangkok, islands, or MICE"
+                                    onChange={(event) => updateParams({ q: event.target.value })}
+                                />
+                            </div>
+                        </div>
+
+                        <div className="victory-region-filter" aria-label="Filter by region">
+                            <span>Region</span>
+                            <div className="victory-region-filter__options">
+                                {destinationRegions.map((option) => (
+                                    <button
+                                        key={option.key}
+                                        type="button"
+                                        aria-pressed={region === option.key}
+                                        onClick={() => updateParams({ region: option.key })}
+                                    >
+                                        {option.label}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    <p className="victory-destination-count" aria-live="polite">
+                        {filteredDestinations.length} {filteredDestinations.length === 1 ? 'destination' : 'destinations'}
+                    </p>
+                </div>
+            </section>
+
+            <section className="victory-destinations__results" aria-label="Thailand destinations">
+                <div className="container">
+                    {filteredDestinations.length > 0 ? (
+                        <div className="victory-destination-grid">
+                            {filteredDestinations.map((destination, index) => (
+                                <article className="victory-destination-card" key={destination.slug}>
+                                    <Link className="victory-destination-card__image" to={`/destination/${destination.slug}`}>
+                                        <img
+                                            src={destination.image}
+                                            alt={destination.imageAlt}
+                                            width="720"
+                                            height="540"
+                                            loading={index < 2 ? 'eager' : 'lazy'}
+                                        />
+                                    </Link>
+                                    <div className="victory-destination-card__body">
+                                        <p className="victory-destination-card__region">{destination.region}</p>
+                                        <h2><Link to={`/destination/${destination.slug}`}>{destination.name}</Link></h2>
+                                        <p>{destination.summary}</p>
+                                        <ul aria-label={`Best for ${destination.name}`}>
+                                            {destination.bestFor.slice(0, 3).map((item) => <li key={item}>{item}</li>)}
+                                        </ul>
+                                        <Link className="victory-text-link" to={`/destination/${destination.slug}`}>
+                                            Explore destination
+                                            <i className="fa-regular fa-arrow-right" aria-hidden="true" />
+                                        </Link>
+                                    </div>
+                                </article>
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="victory-destination-empty">
+                            <h2>No destinations match those filters</h2>
+                            <p>Clear the filters or share the brief and we will recommend the right route.</p>
+                            <button type="button" className="th-btn" onClick={clearFilters}>Clear filters</button>
+                        </div>
+                    )}
+                </div>
+            </section>
+
+            <section className="victory-destination-cta" aria-labelledby="destination-cta-title">
+                <div className="container victory-destination-cta__inner">
+                    <div>
+                        <p className="victory-section-eyebrow">Multi-region journeys</p>
+                        <h2 id="destination-cta-title">Need a route that connects several parts of Thailand?</h2>
+                    </div>
+                    <Link className="th-btn" to="/contact">
+                        Share your brief
+                        <i className="fa-regular fa-arrow-right" aria-hidden="true" />
+                    </Link>
+                </div>
+            </section>
+        </main>
+    );
 }
 
-export default DestinationInner
+export default DestinationInner;
