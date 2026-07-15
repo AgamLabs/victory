@@ -23,7 +23,7 @@ function BlogOne() {
         <div className="victory-home-insights__grid">
           {articles.slice(0, 3).map((article) => (
             <article key={article.slug} className="victory-home-insight">
-              <Link className="victory-home-insight__media" to={`/blog/${article.legacyId}`}>
+              <Link className="victory-home-insight__media" to={`/blog/${article.slug}`}>
                 <img src={article.image} alt={article.imageAlt} loading="lazy" />
               </Link>
               <div className="victory-insights-meta">
@@ -31,9 +31,9 @@ function BlogOne() {
                 <span>{article.readTime}</span>
               </div>
               <h3>
-                <Link to={`/blog/${article.legacyId}`}>{article.title}</Link>
+                <Link to={`/blog/${article.slug}`}>{article.title}</Link>
               </h3>
-              <Link className="victory-text-link" to={`/blog/${article.legacyId}`}>
+              <Link className="victory-text-link" to={`/blog/${article.slug}`}>
                 Read insight
                 <i className="fa-regular fa-arrow-right" aria-hidden="true" />
               </Link>

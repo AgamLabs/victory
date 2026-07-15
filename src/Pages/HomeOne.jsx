@@ -3,6 +3,7 @@ import HeaderOne from '../Components/Header/HeaderOne'
 import BannerOne from '../Components/Banner/BannerOne'
 import AboutOne from '../Components/About/AboutOne'
 import DestinationOne from '../Components/Destination/DestinationOne'
+import GalleryFive from '../Components/Gallery/GalleryFive'
 import BlogOne from '../Components/Blog/BlogOne'
 import FooterFour from '../Components/Footer/FooterFour'
 
@@ -13,7 +14,7 @@ function HomeOne() {
             <BannerOne />
             <AboutOne />
             <DestinationOne />
-            {/* <GalleryOne /> */}
+            <GalleryFive />
             {/* <TourGuide /> */}
             {/* <TestimonialOne /> */}
             <BlogOne />

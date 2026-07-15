@@ -17,7 +17,7 @@ const Modal = ({ isOpen, closeModal, imageSrc }) => {
     return (
         <div className={`modal-overlay ${visible ? "show" : ""}`} onClick={closeModal}>
             <div className={`modal-content ${visible ? "active" : ""}`} onClick={(e) => e.stopPropagation()}>
-                <button className="close-btn" onClick={closeModal}>×</button>
+                <button className="close-btn" onClick={closeModal} aria-label="Close image preview">×</button>
                 <img src={imageSrc} alt="Modal content" className="modal-image" />
             </div>
         </div>

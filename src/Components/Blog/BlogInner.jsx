@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import articles from '../../cms/articles';
 
-const articleHref = (article) => `/blog/${article.legacyId}`;
+const articleHref = (article) => `/blog/${article.slug}`;
 
 function BlogInner() {
     const [featuredArticle, ...moreArticles] = articles;
