@@ -1760,40 +1760,26 @@
   line-height: 1.65;
 }
 
-.victory-home-destinations__layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-  gap: 20px;
-}
-
-.victory-home-destinations__secondary {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+.victory-home-destinations__slider-wrap {
+  position: relative;
+  padding: 10px 0 54px;
 }
 
 .victory-home-destination {
   position: relative;
-  min-height: 270px;
   overflow: hidden;
   border-radius: 6px;
   background-color: #113d48;
-}
-
-.victory-home-destination--featured {
-  min-height: 560px;
 }
 
 .victory-home-destination > a,
 .victory-home-destination img {
   display: block;
   width: 100%;
-  height: 100%;
 }
 
 .victory-home-destination img {
-  position: absolute;
-  inset: 0;
+  height: clamp(360px, 42vw, 510px);
   object-fit: cover;
   transition: transform 320ms ease-out;
 }
@@ -1807,13 +1793,9 @@
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 20px;
-  background-color: rgba(5, 24, 29, 0.84);
+  padding: 64px 30px 28px;
+  background: linear-gradient(180deg, rgba(5, 24, 29, 0) 0%, rgba(5, 24, 29, 0.9) 84%);
   color: #fff;
-}
-
-.victory-home-destination--featured .victory-home-destination__content {
-  padding: 28px;
 }
 
 .victory-home-destination__content p {
@@ -1831,10 +1813,6 @@
   line-height: 1.2;
 }
 
-.victory-home-destination--featured .victory-home-destination__content h3 {
-  font-size: 34px;
-}
-
 .victory-home-destination__content span {
   display: inline-flex;
   align-items: center;
@@ -1845,20 +1823,80 @@
   font-weight: 800;
 }
 
+.victory-destination-slider {
+  overflow: visible !important;
+}
+
+.victory-destination-slider .swiper-slide {
+  opacity: 0.5;
+  filter: blur(3px);
+  transform: scale(0.9);
+  transition: filter 300ms ease-out, opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+.victory-destination-slider .swiper-slide-active {
+  opacity: 1;
+  filter: none;
+  transform: scale(1);
+}
+
+.victory-destination-slider .swiper-pagination {
+  bottom: -32px;
+}
+
+.victory-destination-slider .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: #7b969c;
+  opacity: 1;
+}
+
+.victory-destination-slider .swiper-pagination-bullet-active {
+  width: 24px;
+  border-radius: 8px;
+  background-color: #148bab;
+}
+
+.victory-home-destinations__controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.victory-slider-control {
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #b9cbcf;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #113d48;
+  transition: background-color 180ms ease-out, border-color 180ms ease-out, color 180ms ease-out;
+}
+
+.victory-slider-control:hover {
+  border-color: #113d48;
+  background-color: #113d48;
+  color: #fff;
+}
+
 .victory-home-destination a:focus-visible {
   outline: 4px solid #1ca8cb;
   outline-offset: -4px;
 }
 
+.victory-slider-control:focus-visible {
+  outline: 3px solid #1ca8cb;
+  outline-offset: 3px;
+}
+
 @media (max-width: 991px) {
-  .victory-home-destinations__heading,
-  .victory-home-destinations__layout {
+  .victory-home-destinations__heading {
     grid-template-columns: 1fr;
     gap: 32px;
-  }
-
-  .victory-home-destination--featured {
-    min-height: 460px;
   }
 }
 
@@ -1871,16 +1909,21 @@
     font-size: 36px;
   }
 
-  .victory-home-destinations__secondary {
-    grid-template-columns: 1fr;
+  .victory-home-destinations__slider-wrap {
+    margin-right: -12px;
+    padding-bottom: 46px;
   }
 
-  .victory-home-destination--featured {
-    min-height: 390px;
+  .victory-home-destination img {
+    height: 410px;
   }
 
-  .victory-home-destination {
-    min-height: 300px;
+  .victory-home-destination__content {
+    padding: 64px 24px 24px;
+  }
+
+  .victory-home-destinations__controls {
+    justify-content: flex-start;
   }
 }
 
