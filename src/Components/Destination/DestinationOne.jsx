@@ -68,6 +68,8 @@ function DestinationOne() {
                         centeredSlides
                         loop
                         grabCursor
+                        preventClicks={false}
+                        preventClicksPropagation={false}
                         speed={900}
                         autoplay={{
                             delay: 3600,
