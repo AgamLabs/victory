@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import HomeOne from './HomeOne'
 import About from './About'
 import LoadTop from '../Components/LoadTop'
@@ -9,22 +9,36 @@ import Blog from './Blog'
 import BlogDetails from './BlogDetails'
 import Contact from './Contact'
 import Error from './Error'
+import MotionEffects from '../Components/MotionEffects'
 
-function RouterPage() {
+function AnimatedRoutes() {
+  const location = useLocation()
+
   return (
-    <div>
-      <Router>
-        <LoadTop />
-        <Routes>
+    <>
+      <MotionEffects routeKey={location.pathname} />
+      <div key={location.pathname} className="victory-page-transition">
+        <Routes location={location}>
           <Route path="/" element={<HomeOne />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/destination" element={<Destination />}></Route>
           <Route path="/destination/:id" element={<DestinationDetails />} />
           <Route path="/blog" element={<Blog />}></Route>
           <Route path="/blog/:id" element={<BlogDetails />}></Route>
-          <Route path="/contact" element={<Contact />}></Route> 
+          <Route path="/contact" element={<Contact />}></Route>
           <Route path="*" element={<Error />}></Route>
         </Routes>
+      </div>
+    </>
+  )
+}
+
+function RouterPage() {
+  return (
+    <div>
+      <Router>
+        <LoadTop />
+        <AnimatedRoutes />
       </Router>
     </div>
   )
