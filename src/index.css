@@ -626,23 +626,7 @@
 }
 
 .victory-about-story__media {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  height: 620px;
-}
-
-.victory-about-story__media img.victory-about-story__image {
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  border-radius: 6px;
-  object-fit: cover;
-}
-
-.victory-about-story__image--primary {
-  grid-row: 1 / 3;
+  min-width: 0;
 }
 
 .victory-about-story__content h2,
@@ -873,10 +857,6 @@
   .victory-about-process__layout {
     gap: 48px;
   }
-
-  .victory-about-story__media {
-    height: 560px;
-  }
 }
 
 @media (max-width: 991px) {
@@ -884,10 +864,6 @@
   .victory-about-capabilities__heading,
   .victory-about-process__layout {
     grid-template-columns: 1fr;
-  }
-
-  .victory-about-story__media {
-    height: 520px;
   }
 
   .victory-about-capabilities__heading {
@@ -906,17 +882,6 @@
   .victory-about-story__layout,
   .victory-about-process__layout {
     gap: 40px;
-  }
-
-  .victory-about-story__media {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: 230px 145px;
-    height: auto;
-  }
-
-  .victory-about-story__image--primary {
-    grid-row: auto;
-    grid-column: 1 / -1;
   }
 
   .victory-about-story__content h2,
@@ -2108,19 +2073,6 @@
   line-height: 1.65;
 }
 
-.victory-destination-gallery__grid {
-  display: grid;
-  grid-template-columns: 1.25fr 0.75fr 0.75fr;
-  gap: 16px;
-}
-
-.victory-destination-gallery__grid img {
-  width: 100%;
-  height: 360px;
-  border-radius: 6px;
-  object-fit: cover;
-}
-
 .victory-related-destinations {
   padding: 88px 0;
   background-color: #f7fafb;
@@ -2217,13 +2169,6 @@
     border-left: 0;
   }
 
-  .victory-destination-gallery__grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .victory-destination-gallery__grid img:first-child {
-    grid-column: 1 / -1;
-  }
 }
 
 @media (max-width: 767px) {
@@ -2262,21 +2207,301 @@
     flex-direction: column;
   }
 
-  .victory-destination-gallery__grid,
   .victory-related-destinations__grid {
     grid-template-columns: 1fr;
   }
 
-  .victory-destination-gallery__grid img:first-child {
-    grid-column: auto;
-  }
-
-  .victory-destination-gallery__grid img {
-    height: 280px;
-  }
-
   .victory-detail-cta h2 {
     font-size: 31px;
+  }
+}
+
+.victory-image-slider {
+  min-width: 0;
+}
+
+.victory-image-slider__track {
+  padding-bottom: 34px;
+}
+
+.victory-image-slider__media {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background-color: #dcebed;
+  cursor: zoom-in;
+}
+
+.victory-image-slider__media img {
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  transition: transform 500ms ease-out;
+}
+
+.victory-image-slider--portrait .victory-image-slider__media img {
+  height: 600px;
+}
+
+@media (max-width: 1199px) {
+  .victory-image-slider--portrait .victory-image-slider__media img {
+    height: 540px;
+  }
+}
+
+@media (max-width: 991px) {
+  .victory-image-slider--portrait .victory-image-slider__media img {
+    height: 520px;
+  }
+}
+
+.victory-image-slider__media > span {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.94);
+  color: #113d48;
+  opacity: 0;
+  transform: translate3d(0, 8px, 0);
+  transition: opacity 220ms ease-out, transform 220ms ease-out;
+}
+
+.victory-image-slider__media:hover img {
+  transform: scale(1.025);
+}
+
+.victory-image-slider__media:hover > span,
+.victory-image-slider__media:focus-visible > span {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.victory-image-slider__media:focus-visible,
+.victory-image-slider__toolbar button:focus-visible,
+.victory-lightbox button:focus-visible {
+  outline: 3px solid #1ca8cb;
+  outline-offset: 3px;
+}
+
+.victory-image-slider .swiper-pagination {
+  bottom: 2px;
+}
+
+.victory-image-slider .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: #7b969c;
+  opacity: 1;
+}
+
+.victory-image-slider .swiper-pagination-bullet-active {
+  width: 24px;
+  border-radius: 8px;
+  background-color: #148bab;
+}
+
+.victory-image-slider__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.victory-image-slider__toolbar p {
+  margin: 0;
+  color: #5d747a;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.victory-image-slider__toolbar p span:first-child {
+  color: #113d48;
+}
+
+.victory-image-slider__toolbar > div {
+  display: flex;
+  gap: 10px;
+}
+
+.victory-image-slider__toolbar button,
+.victory-lightbox__nav,
+.victory-lightbox__close {
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #b9cbcf;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #113d48;
+  transition: background-color 180ms ease-out, border-color 180ms ease-out, color 180ms ease-out;
+}
+
+.victory-image-slider__toolbar button:hover {
+  border-color: #113d48;
+  background-color: #113d48;
+  color: #fff;
+}
+
+.modal-overlay.victory-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 120000;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 72px 100px;
+  background-color: rgba(5, 24, 29, 0.94);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 260ms ease-out, visibility 260ms ease-out;
+}
+
+.modal-overlay.victory-lightbox.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.victory-lightbox .modal-content {
+  position: relative;
+  max-width: none;
+  max-height: none;
+  overflow: visible;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  opacity: 0;
+  transform: translate3d(0, 16px, 0) scale(0.985);
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+.victory-lightbox.show .modal-content {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.victory-lightbox .modal-content img,
+.victory-lightbox .modal-image {
+  display: block;
+  width: auto;
+  max-width: min(1120px, 82vw);
+  height: auto;
+  max-height: 80vh;
+  margin: 0 auto;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+.victory-lightbox .victory-lightbox__close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border-color: rgba(255, 255, 255, 0.38);
+  background-color: rgba(5, 24, 29, 0.72);
+  color: #fff;
+}
+
+.victory-lightbox__nav {
+  position: fixed;
+  top: 50%;
+  border-color: rgba(255, 255, 255, 0.38);
+  background-color: rgba(255, 255, 255, 0.96);
+  transform: translateY(-50%);
+}
+
+.victory-lightbox__nav--previous {
+  left: 24px;
+}
+
+.victory-lightbox__nav--next {
+  right: 24px;
+}
+
+.victory-lightbox__nav:hover,
+.victory-lightbox .victory-lightbox__close:hover {
+  border-color: #1ca8cb;
+  background-color: #1ca8cb;
+  color: #fff;
+}
+
+.victory-lightbox__position {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  margin: 0;
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 767px) {
+  .victory-image-slider__media img {
+    height: 330px;
+  }
+
+  .victory-image-slider--portrait .victory-image-slider__media img {
+    height: 430px;
+  }
+
+  .scroll-top {
+    display: none;
+  }
+
+  .modal-overlay.victory-lightbox {
+    padding: 72px 16px 96px;
+  }
+
+  .victory-lightbox .modal-content img,
+  .victory-lightbox .modal-image {
+    max-width: calc(100vw - 32px);
+    max-height: 70vh;
+  }
+
+  .victory-lightbox__nav {
+    top: auto;
+    bottom: 20px;
+    transform: none;
+  }
+
+  .victory-lightbox__nav--previous {
+    left: 20px;
+  }
+
+  .victory-lightbox__nav--next {
+    right: 20px;
+  }
+
+  .victory-lightbox__position {
+    bottom: 34px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .victory-image-slider__media img,
+  .victory-image-slider__media > span,
+  .modal-overlay.victory-lightbox,
+  .victory-lightbox .modal-content {
+    transition: none;
   }
 }
 

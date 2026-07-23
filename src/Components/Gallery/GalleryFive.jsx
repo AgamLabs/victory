@@ -6,14 +6,13 @@ import Modal from './Modal';
 import 'swiper/css';
 
 function GalleryFive() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [modalImage, setModalImage] = useState('');
+    const [modalIndex, setModalIndex] = useState(null);
     const galleryImages = CMS.site?.galleries?.galleryFourCarousel || [];
     const galleryItems = [...galleryImages, ...galleryImages];
+    const modalImage = modalIndex === null ? '' : galleryImages[modalIndex];
 
-    const openModal = (imageSrc) => {
-        setModalImage(imageSrc);
-        setIsModalOpen(true);
+    const moveModal = (direction) => {
+        setModalIndex((index) => (index + direction + galleryImages.length) % galleryImages.length);
     };
 
     return (
@@ -39,7 +38,7 @@ function GalleryFive() {
                             <button
                                 type="button"
                                 className="victory-gallery-carousel__item"
-                                onClick={() => openModal(image)}
+                                onClick={() => setModalIndex(index % galleryImages.length)}
                                 aria-label={`View Thailand travel image ${(index % galleryImages.length) + 1}`}
                             >
                                 <img
@@ -55,7 +54,15 @@ function GalleryFive() {
                     ))}
                 </Swiper>
             </div>
-            <Modal isOpen={isModalOpen} closeModal={() => setIsModalOpen(false)} imageSrc={modalImage} />
+            <Modal
+                isOpen={modalIndex !== null}
+                closeModal={() => setModalIndex(null)}
+                imageSrc={modalImage}
+                imageAlt={modalIndex === null ? '' : `Thailand travel gallery image ${modalIndex + 1}`}
+                onPrevious={galleryImages.length > 1 ? () => moveModal(-1) : undefined}
+                onNext={galleryImages.length > 1 ? () => moveModal(1) : undefined}
+                positionLabel={modalIndex === null ? '' : `${modalIndex + 1} / ${galleryImages.length}`}
+            />
         </section>
     );
 }

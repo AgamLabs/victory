@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import destinations from '../../cms/destinations';
+import ImageGallerySlider from '../Gallery/ImageGallerySlider';
 
 function DestinationDetailsMain({ destination }) {
     const relatedDestinations = destinations
@@ -91,18 +92,13 @@ function DestinationDetailsMain({ destination }) {
                         </div>
                         <p>Final venues, routes, and activities are matched to season, group profile, and availability.</p>
                     </div>
-                    <div className="victory-destination-gallery__grid">
-                        {destination.gallery.map((image, index) => (
-                            <img
-                                key={image}
-                                src={image}
-                                alt={`${destination.name} travel view ${index + 1}`}
-                                width="800"
-                                height="600"
-                                loading="lazy"
-                            />
-                        ))}
-                    </div>
+                    <ImageGallerySlider
+                        images={destination.gallery.map((image, index) => ({
+                            src: image,
+                            alt: `${destination.name} travel view ${index + 1}`,
+                        }))}
+                        ariaLabel={`${destination.name} image gallery`}
+                    />
                 </div>
             </section>
 

@@ -1,30 +1,25 @@
 import { Link } from 'react-router-dom';
 import CMS from '../../cms/content';
+import ImageGallerySlider from '../Gallery/ImageGallerySlider';
 
 function AboutFour() {
    const { about } = CMS;
+   const storyImages = [
+      { src: about.images.main1, alt: "Long-tail boat beside Thailand's limestone cliffs" },
+      { src: about.images.main2, alt: 'Illuminated Thai temple in Bangkok' },
+      { src: about.images.main3, alt: 'Quiet tropical bay framed by limestone cliffs' },
+   ];
 
    return (
       <main className="victory-about">
          <section className="victory-about-story" aria-labelledby="victory-about-title">
             <div className="container victory-about-story__layout">
                <div className="victory-about-story__media" aria-label="Thailand destinations coordinated by Victory International">
-                  <img
-                     className="victory-about-story__image victory-about-story__image--primary"
-                     src={about.images.main1}
-                     alt="Long-tail boat beside Thailand's limestone cliffs"
-                  />
-                  <img
-                     className="victory-about-story__image"
-                     src={about.images.main2}
-                     alt="Illuminated Thai temple in Bangkok"
-                     loading="lazy"
-                  />
-                  <img
-                     className="victory-about-story__image"
-                     src={about.images.main3}
-                     alt="Quiet tropical bay framed by limestone cliffs"
-                     loading="lazy"
+                  <ImageGallerySlider
+                     images={storyImages}
+                     ariaLabel="Thailand destinations coordinated by Victory International"
+                     variant="portrait"
+                     priorityFirst
                   />
                </div>
 
