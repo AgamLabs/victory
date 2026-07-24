@@ -72,23 +72,23 @@ function DestinationOne() {
                         preventClicksPropagation={false}
                         speed={900}
                         autoplay={{
-                            delay: 3600,
+                            delay: 2000,
                             disableOnInteraction: false,
                             pauseOnMouseEnter: true,
                         }}
                         pagination={{ clickable: true }}
                         coverflowEffect={{
-                            rotate: 0,
+                            rotate: 8,
                             stretch: 0,
-                            depth: 180,
+                            depth: 220,
                             modifier: 1,
                             slideShadows: false,
                         }}
                         breakpoints={{
-                            0: { slidesPerView: 1.08, spaceBetween: 14 },
-                            576: { slidesPerView: 1.75, spaceBetween: 20 },
-                            992: { slidesPerView: 2.4, spaceBetween: 28 },
-                            1200: { slidesPerView: 3, spaceBetween: 32 },
+                            0: { slidesPerView: 1.22, spaceBetween: 14 },
+                            576: { slidesPerView: 1.48, spaceBetween: 18 },
+                            992: { slidesPerView: 1.72, spaceBetween: 24 },
+                            1200: { slidesPerView: 1.9, spaceBetween: 30 },
                         }}
                         className="victory-destination-slider"
                         onSwiper={setSlider}

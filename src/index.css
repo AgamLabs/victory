@@ -73,7 +73,6 @@
 
 .victory-hero {
   position: relative;
-  display: flex;
   height: calc(100vh - 140px);
   min-height: 560px;
   max-height: 680px;
@@ -81,6 +80,17 @@
   overflow: hidden;
   background-color: #113d48;
   color: #fff;
+}
+
+.victory-hero__slider,
+.victory-hero__slider .swiper-wrapper,
+.victory-hero__slider .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.victory-hero__slider .swiper-slide {
+  position: relative;
 }
 
 .victory-hero__media,
@@ -96,18 +106,24 @@
 }
 
 .victory-hero__overlay {
-  background-color: rgba(5, 24, 29, 0.58);
+  background:
+    linear-gradient(0deg, rgba(5, 24, 29, 0.86), rgba(5, 24, 29, 0.18) 68%),
+    linear-gradient(90deg, rgba(5, 24, 29, 0.62), rgba(5, 24, 29, 0) 68%);
 }
 
 .victory-hero__container {
   position: relative;
   z-index: 1;
   width: 100%;
+  height: 100%;
 }
 
 .victory-hero__content {
   max-width: 780px;
-  padding: 96px 0;
+  position: absolute;
+  bottom: 52px;
+  left: 12px;
+  padding: 0;
 }
 
 .victory-hero__eyebrow {
@@ -144,6 +160,29 @@
   display: flex;
   align-items: center;
   gap: 24px;
+}
+
+.victory-hero__slider .swiper-pagination {
+  right: max(24px, calc((100vw - 1320px) / 2));
+  bottom: 58px;
+  left: auto;
+  width: auto;
+}
+
+.victory-hero__slider .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  margin: 0 4px !important;
+  background-color: #fff;
+  opacity: 0.5;
+  transition: width 180ms ease-out, opacity 180ms ease-out;
+}
+
+.victory-hero__slider .swiper-pagination-bullet-active {
+  width: 30px;
+  border-radius: 8px;
+  background-color: #72d4e6;
+  opacity: 1;
 }
 
 .victory-hero__primary {
@@ -185,7 +224,6 @@
 @media (max-width: 991px) {
   .victory-hero__content {
     max-width: 660px;
-    padding: 76px 0;
   }
 
   .victory-hero h1 {
@@ -208,7 +246,8 @@
 
   .victory-hero__content {
     max-width: 100%;
-    padding: 60px 0 68px;
+    right: 12px;
+    bottom: 52px;
   }
 
   .victory-hero__eyebrow {
@@ -235,6 +274,11 @@
     display: grid;
     justify-items: start;
     gap: 16px;
+  }
+
+  .victory-hero__slider .swiper-pagination {
+    right: 24px;
+    bottom: 22px;
   }
 
   .victory-hero__primary,
@@ -1727,11 +1771,16 @@
 
 .victory-home-destinations__slider-wrap {
   position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   padding: 10px 0 54px;
+  overflow: hidden;
 }
 
 .victory-home-destination {
   position: relative;
+  width: min(620px, 100%);
+  margin: 0 auto;
   overflow: hidden;
   border-radius: 6px;
   background-color: #113d48;
@@ -1744,7 +1793,7 @@
 }
 
 .victory-home-destination img {
-  height: clamp(360px, 42vw, 510px);
+  height: clamp(360px, 38vw, 485px);
   object-fit: cover;
   transition: transform 320ms ease-out;
 }
@@ -1793,16 +1842,19 @@
 }
 
 .victory-destination-slider .swiper-slide {
-  opacity: 0.5;
-  filter: blur(3px);
-  transform: scale(0.9);
+  opacity: 0;
+  filter: saturate(0.7);
   transition: filter 300ms ease-out, opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+.victory-destination-slider .swiper-slide-prev,
+.victory-destination-slider .swiper-slide-next {
+  opacity: 0.58;
 }
 
 .victory-destination-slider .swiper-slide-active {
   opacity: 1;
-  filter: none;
-  transform: scale(1);
+  filter: saturate(1);
 }
 
 .victory-destination-slider .swiper-pagination {
@@ -1875,7 +1927,7 @@
   }
 
   .victory-home-destinations__slider-wrap {
-    margin-right: -12px;
+    margin-right: 0;
     padding-bottom: 46px;
   }
 
