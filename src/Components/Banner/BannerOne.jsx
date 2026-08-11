@@ -23,10 +23,10 @@ function BannerOne() {
             title: 'Culture, character, and confident planning.',
         },
         {
-            image: '/assets/img/destination/destination_1_3.jpg',
-            imageAlt: 'Long-tail boats among the limestone cliffs of the Phi Phi islands',
-            eyebrow: 'Island journeys made effortless',
-            title: 'Thailand’s natural beauty, thoughtfully connected.',
+            image: '/assets/img/hero/hero_bg2.avif',
+            imageAlt: 'Bangkok skyline and Chao Phraya River glowing at sunset',
+            eyebrow: 'Bangkok energy, expertly handled',
+            title: 'A remarkable city, connected with confidence.',
         },
     ];
 
